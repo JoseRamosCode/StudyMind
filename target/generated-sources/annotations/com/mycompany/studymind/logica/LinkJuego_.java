@@ -5,9 +5,9 @@ import javax.annotation.processing.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2025-04-26T18:32:59", comments="EclipseLink-2.7.10.v20211216-rNA")
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2025-05-06T15:28:40", comments="EclipseLink-2.7.10.v20211216-rNA")
 @StaticMetamodel(LinkJuego.class)
- class LinkJuego_ { 
+public class LinkJuego_ { 
 
     public static volatile SingularAttribute<LinkJuego, String> url;
     public static volatile SingularAttribute<LinkJuego, Juegos> juego;
