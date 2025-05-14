@@ -1,6 +1,7 @@
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\StudyMind.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\logica\Materia.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\logica\SesionEstudio.java
+C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\exceptions\IllegalOrphanException.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\logica\LinkJuego.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\persistencia\ControladoraPersistencia.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\persistencia\LinkJuegoJpaController.java
@@ -10,9 +11,11 @@ C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\persistencia\exceptions\PreexistingEntityException.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\persistencia\JuegosJpaController.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\logica\Juegos.java
+C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\exceptions\PreexistingEntityException.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\igu\SignUp.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\igu\Login.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\logica\Controladora.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\logica\Estudiante.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\persistencia\exceptions\NonexistentEntityException.java
+C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\exceptions\NonexistentEntityException.java
 C:\Users\joser\OneDrive\Documentos\NetBeansProjects\StudyMind\src\main\java\com\mycompany\studymind\persistencia\exceptions\IllegalOrphanException.java

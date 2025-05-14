@@ -1,4 +1,4 @@
-
+ 
 package com.mycompany.studymind.persistencia;
 
 import java.io.Serializable;
@@ -14,7 +14,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-
+ 
 public class SesionEstudioJpaController implements Serializable {
 
     public SesionEstudioJpaController(EntityManagerFactory emf) {
@@ -24,7 +24,6 @@ public class SesionEstudioJpaController implements Serializable {
      public SesionEstudioJpaController( ) {
         emf = Persistence.createEntityManagerFactory("StudyMindPU");
     }
-    
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {

@@ -1,7 +1,9 @@
 com\mycompany\studymind\logica\LinkJuego.class
+com\mycompany\studymind\exceptions\NonexistentEntityException.class
 com\mycompany\studymind\igu\SignUp$4.class
 com\mycompany\studymind\logica\Juegos.class
 com\mycompany\studymind\igu\Login$3.class
+com\mycompany\studymind\exceptions\PreexistingEntityException.class
 com\mycompany\studymind\persistencia\exceptions\PreexistingEntityException.class
 com\mycompany\studymind\igu\Login.class
 com\mycompany\studymind\igu\SignUp$2.class
@@ -11,6 +13,7 @@ com\mycompany\studymind\logica\SesionEstudio.class
 com\mycompany\studymind\logica\Materia_.class
 com\mycompany\studymind\persistencia\EstudianteJpaController.class
 com\mycompany\studymind\persistencia\LinkJuegoJpaController.class
+com\mycompany\studymind\exceptions\IllegalOrphanException.class
 com\mycompany\studymind\igu\SignUp$5.class
 com\mycompany\studymind\persistencia\exceptions\IllegalOrphanException.class
 com\mycompany\studymind\persistencia\SesionEstudioJpaController.class
