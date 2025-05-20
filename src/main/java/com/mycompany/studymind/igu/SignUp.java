@@ -271,8 +271,9 @@ public class SignUp extends javax.swing.JFrame {
         String nombre = txtNombre.getText();
         String correo = txtCorreo.getText();
         char[] contraseniaChars = txtContraseña.getPassword();
+        String contrasenia = new String(contraseniaChars);
         
-        control.guardar(nombre,correo,contraseniaChars);
+        control.guardar(nombre,correo,contrasenia);
         
         mostrarMensaje("Ha realizado su registro de manera correcta","Info","Registro exitoso");
     }//GEN-LAST:event_btnSignUpActionPerformed

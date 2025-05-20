@@ -1,3 +1,4 @@
+
 package com.mycompany.studymind.persistencia;
 
 import com.mycompany.studymind.logica.Juegos;
@@ -15,13 +16,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+ 
 public class JuegosJpaController implements Serializable {
 
     public JuegosJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
     
-    public JuegosJpaController( ) {
+     public JuegosJpaController( ) {
         emf = Persistence.createEntityManagerFactory("StudyMindPU");
     }
     
@@ -39,10 +41,10 @@ public class JuegosJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            SesionEstudio sesionestudio = juegos.getSesionestudio();
-            if (sesionestudio != null) {
-                sesionestudio = em.getReference(sesionestudio.getClass(), sesionestudio.getId_Sesion());
-                juegos.setSesionestudio(sesionestudio);
+            SesionEstudio sesionEstudio = juegos.getSesionEstudio();
+            if (sesionEstudio != null) {
+                sesionEstudio = em.getReference(sesionEstudio.getClass(), sesionEstudio.getId_Sesion());
+                juegos.setSesionEstudio(sesionEstudio);
             }
             List<LinkJuego> attachedLinks = new ArrayList<LinkJuego>();
             for (LinkJuego linksLinkJuegoToAttach : juegos.getLinks()) {
@@ -51,9 +53,9 @@ public class JuegosJpaController implements Serializable {
             }
             juegos.setLinks(attachedLinks);
             em.persist(juegos);
-            if (sesionestudio != null) {
-                sesionestudio.getJuegos().add(juegos);
-                sesionestudio = em.merge(sesionestudio);
+            if (sesionEstudio != null) {
+                sesionEstudio.getJuegos().add(juegos);
+                sesionEstudio = em.merge(sesionEstudio);
             }
             for (LinkJuego linksLinkJuego : juegos.getLinks()) {
                 Juegos oldJuegoOfLinksLinkJuego = linksLinkJuego.getJuego();
@@ -78,13 +80,13 @@ public class JuegosJpaController implements Serializable {
             em = getEntityManager();
             em.getTransaction().begin();
             Juegos persistentJuegos = em.find(Juegos.class, juegos.getId_Juegos());
-            SesionEstudio sesionestudioOld = persistentJuegos.getSesionestudio();
-            SesionEstudio sesionestudioNew = juegos.getSesionestudio();
+            SesionEstudio sesionEstudioOld = persistentJuegos.getSesionEstudio();
+            SesionEstudio sesionEstudioNew = juegos.getSesionEstudio();
             List<LinkJuego> linksOld = persistentJuegos.getLinks();
             List<LinkJuego> linksNew = juegos.getLinks();
-            if (sesionestudioNew != null) {
-                sesionestudioNew = em.getReference(sesionestudioNew.getClass(), sesionestudioNew.getId_Sesion());
-                juegos.setSesionestudio(sesionestudioNew);
+            if (sesionEstudioNew != null) {
+                sesionEstudioNew = em.getReference(sesionEstudioNew.getClass(), sesionEstudioNew.getId_Sesion());
+                juegos.setSesionEstudio(sesionEstudioNew);
             }
             List<LinkJuego> attachedLinksNew = new ArrayList<LinkJuego>();
             for (LinkJuego linksNewLinkJuegoToAttach : linksNew) {
@@ -94,13 +96,13 @@ public class JuegosJpaController implements Serializable {
             linksNew = attachedLinksNew;
             juegos.setLinks(linksNew);
             juegos = em.merge(juegos);
-            if (sesionestudioOld != null && !sesionestudioOld.equals(sesionestudioNew)) {
-                sesionestudioOld.getJuegos().remove(juegos);
-                sesionestudioOld = em.merge(sesionestudioOld);
+            if (sesionEstudioOld != null && !sesionEstudioOld.equals(sesionEstudioNew)) {
+                sesionEstudioOld.getJuegos().remove(juegos);
+                sesionEstudioOld = em.merge(sesionEstudioOld);
             }
-            if (sesionestudioNew != null && !sesionestudioNew.equals(sesionestudioOld)) {
-                sesionestudioNew.getJuegos().add(juegos);
-                sesionestudioNew = em.merge(sesionestudioNew);
+            if (sesionEstudioNew != null && !sesionEstudioNew.equals(sesionEstudioOld)) {
+                sesionEstudioNew.getJuegos().add(juegos);
+                sesionEstudioNew = em.merge(sesionEstudioNew);
             }
             for (LinkJuego linksOldLinkJuego : linksOld) {
                 if (!linksNew.contains(linksOldLinkJuego)) {
@@ -148,10 +150,10 @@ public class JuegosJpaController implements Serializable {
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The juegos with id " + id + " no longer exists.", enfe);
             }
-            SesionEstudio sesionestudio = juegos.getSesionestudio();
-            if (sesionestudio != null) {
-                sesionestudio.getJuegos().remove(juegos);
-                sesionestudio = em.merge(sesionestudio);
+            SesionEstudio sesionEstudio = juegos.getSesionEstudio();
+            if (sesionEstudio != null) {
+                sesionEstudio.getJuegos().remove(juegos);
+                sesionEstudio = em.merge(sesionEstudio);
             }
             List<LinkJuego> links = juegos.getLinks();
             for (LinkJuego linksLinkJuego : links) {

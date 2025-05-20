@@ -1,3 +1,4 @@
+
 package com.mycompany.studymind.persistencia;
 
 import java.io.Serializable;
@@ -23,6 +24,7 @@ public class LinkJuegoJpaController implements Serializable {
      public LinkJuegoJpaController( ) {
         emf = Persistence.createEntityManagerFactory("StudyMindPU");
     }
+    
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {

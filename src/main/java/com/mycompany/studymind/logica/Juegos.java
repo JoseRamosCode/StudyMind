@@ -30,16 +30,18 @@ public class Juegos implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "id_Sesion")
-    private SesionEstudio sesionestudio;
+    private SesionEstudio sesionEstudio;
     
     public Juegos() {
     }
 
-    public Juegos(int id_Juegos, String Categoria, SesionEstudio sesionestudio) {
+    public Juegos(int id_Juegos, String Categoria, SesionEstudio sesionEstudio) {
         this.id_Juegos = id_Juegos;
         this.Categoria = Categoria;
-        this.sesionestudio = sesionestudio;
+        this.sesionEstudio = sesionEstudio;
     }
+
+    
 
     public int getId_Juegos() {
         return id_Juegos;
@@ -65,13 +67,15 @@ public class Juegos implements Serializable {
         this.links = links;
     }
 
-    public SesionEstudio getSesionestudio() {
-        return sesionestudio;
+    public SesionEstudio getSesionEstudio() {
+        return sesionEstudio;
     }
 
-    public void setSesionestudio(SesionEstudio sesionestudio) {
-        this.sesionestudio = sesionestudio;
+    public void setSesionEstudio(SesionEstudio sesionEstudio) {
+        this.sesionEstudio = sesionEstudio;
     }
+
+    
     
     
 }

@@ -22,10 +22,10 @@ public class EstudianteJpaController implements Serializable {
     public EstudianteJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    
      public EstudianteJpaController( ) {
         emf = Persistence.createEntityManagerFactory("StudyMindPU");
     }
+    
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {

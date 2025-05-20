@@ -1,4 +1,5 @@
- package com.mycompany.studymind.persistencia;
+
+package com.mycompany.studymind.persistencia;
 
 import java.io.Serializable;
 import javax.persistence.Query;
@@ -7,13 +8,13 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import com.mycompany.studymind.logica.Estudiante;
 import com.mycompany.studymind.logica.Materia;
-import com.mycompany.studymind.persistencia.exceptions.NonexistentEntityException;
 import java.util.ArrayList;
 import java.util.List;
+import com.mycompany.studymind.logica.SesionEstudio;
+import com.mycompany.studymind.persistencia.exceptions.NonexistentEntityException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-
 
 public class MateriaJpaController implements Serializable {
 
@@ -21,7 +22,7 @@ public class MateriaJpaController implements Serializable {
         this.emf = emf;
     }
     
-    public MateriaJpaController( ) {
+     public MateriaJpaController( ) {
         emf = Persistence.createEntityManagerFactory("StudyMindPU");
     }
     
@@ -35,6 +36,9 @@ public class MateriaJpaController implements Serializable {
         if (materia.getEstudiantes() == null) {
             materia.setEstudiantes(new ArrayList<Estudiante>());
         }
+        if (materia.getSesionesEstudio() == null) {
+            materia.setSesionesEstudio(new ArrayList<SesionEstudio>());
+        }
         EntityManager em = null;
         try {
             em = getEntityManager();
@@ -45,10 +49,25 @@ public class MateriaJpaController implements Serializable {
                 attachedEstudiantes.add(estudiantesEstudianteToAttach);
             }
             materia.setEstudiantes(attachedEstudiantes);
+            List<SesionEstudio> attachedSesionesEstudio = new ArrayList<SesionEstudio>();
+            for (SesionEstudio sesionesEstudioSesionEstudioToAttach : materia.getSesionesEstudio()) {
+                sesionesEstudioSesionEstudioToAttach = em.getReference(sesionesEstudioSesionEstudioToAttach.getClass(), sesionesEstudioSesionEstudioToAttach.getId_Sesion());
+                attachedSesionesEstudio.add(sesionesEstudioSesionEstudioToAttach);
+            }
+            materia.setSesionesEstudio(attachedSesionesEstudio);
             em.persist(materia);
             for (Estudiante estudiantesEstudiante : materia.getEstudiantes()) {
                 estudiantesEstudiante.getMaterias().add(materia);
                 estudiantesEstudiante = em.merge(estudiantesEstudiante);
+            }
+            for (SesionEstudio sesionesEstudioSesionEstudio : materia.getSesionesEstudio()) {
+                Materia oldMateriaOfSesionesEstudioSesionEstudio = sesionesEstudioSesionEstudio.getMateria();
+                sesionesEstudioSesionEstudio.setMateria(materia);
+                sesionesEstudioSesionEstudio = em.merge(sesionesEstudioSesionEstudio);
+                if (oldMateriaOfSesionesEstudioSesionEstudio != null) {
+                    oldMateriaOfSesionesEstudioSesionEstudio.getSesionesEstudio().remove(sesionesEstudioSesionEstudio);
+                    oldMateriaOfSesionesEstudioSesionEstudio = em.merge(oldMateriaOfSesionesEstudioSesionEstudio);
+                }
             }
             em.getTransaction().commit();
         } finally {
@@ -66,6 +85,8 @@ public class MateriaJpaController implements Serializable {
             Materia persistentMateria = em.find(Materia.class, materia.getId_Materia());
             List<Estudiante> estudiantesOld = persistentMateria.getEstudiantes();
             List<Estudiante> estudiantesNew = materia.getEstudiantes();
+            List<SesionEstudio> sesionesEstudioOld = persistentMateria.getSesionesEstudio();
+            List<SesionEstudio> sesionesEstudioNew = materia.getSesionesEstudio();
             List<Estudiante> attachedEstudiantesNew = new ArrayList<Estudiante>();
             for (Estudiante estudiantesNewEstudianteToAttach : estudiantesNew) {
                 estudiantesNewEstudianteToAttach = em.getReference(estudiantesNewEstudianteToAttach.getClass(), estudiantesNewEstudianteToAttach.getId_Estudiante());
@@ -73,6 +94,13 @@ public class MateriaJpaController implements Serializable {
             }
             estudiantesNew = attachedEstudiantesNew;
             materia.setEstudiantes(estudiantesNew);
+            List<SesionEstudio> attachedSesionesEstudioNew = new ArrayList<SesionEstudio>();
+            for (SesionEstudio sesionesEstudioNewSesionEstudioToAttach : sesionesEstudioNew) {
+                sesionesEstudioNewSesionEstudioToAttach = em.getReference(sesionesEstudioNewSesionEstudioToAttach.getClass(), sesionesEstudioNewSesionEstudioToAttach.getId_Sesion());
+                attachedSesionesEstudioNew.add(sesionesEstudioNewSesionEstudioToAttach);
+            }
+            sesionesEstudioNew = attachedSesionesEstudioNew;
+            materia.setSesionesEstudio(sesionesEstudioNew);
             materia = em.merge(materia);
             for (Estudiante estudiantesOldEstudiante : estudiantesOld) {
                 if (!estudiantesNew.contains(estudiantesOldEstudiante)) {
@@ -84,6 +112,23 @@ public class MateriaJpaController implements Serializable {
                 if (!estudiantesOld.contains(estudiantesNewEstudiante)) {
                     estudiantesNewEstudiante.getMaterias().add(materia);
                     estudiantesNewEstudiante = em.merge(estudiantesNewEstudiante);
+                }
+            }
+            for (SesionEstudio sesionesEstudioOldSesionEstudio : sesionesEstudioOld) {
+                if (!sesionesEstudioNew.contains(sesionesEstudioOldSesionEstudio)) {
+                    sesionesEstudioOldSesionEstudio.setMateria(null);
+                    sesionesEstudioOldSesionEstudio = em.merge(sesionesEstudioOldSesionEstudio);
+                }
+            }
+            for (SesionEstudio sesionesEstudioNewSesionEstudio : sesionesEstudioNew) {
+                if (!sesionesEstudioOld.contains(sesionesEstudioNewSesionEstudio)) {
+                    Materia oldMateriaOfSesionesEstudioNewSesionEstudio = sesionesEstudioNewSesionEstudio.getMateria();
+                    sesionesEstudioNewSesionEstudio.setMateria(materia);
+                    sesionesEstudioNewSesionEstudio = em.merge(sesionesEstudioNewSesionEstudio);
+                    if (oldMateriaOfSesionesEstudioNewSesionEstudio != null && !oldMateriaOfSesionesEstudioNewSesionEstudio.equals(materia)) {
+                        oldMateriaOfSesionesEstudioNewSesionEstudio.getSesionesEstudio().remove(sesionesEstudioNewSesionEstudio);
+                        oldMateriaOfSesionesEstudioNewSesionEstudio = em.merge(oldMateriaOfSesionesEstudioNewSesionEstudio);
+                    }
                 }
             }
             em.getTransaction().commit();
@@ -119,6 +164,11 @@ public class MateriaJpaController implements Serializable {
             for (Estudiante estudiantesEstudiante : estudiantes) {
                 estudiantesEstudiante.getMaterias().remove(materia);
                 estudiantesEstudiante = em.merge(estudiantesEstudiante);
+            }
+            List<SesionEstudio> sesionesEstudio = materia.getSesionesEstudio();
+            for (SesionEstudio sesionesEstudioSesionEstudio : sesionesEstudio) {
+                sesionesEstudioSesionEstudio.setMateria(null);
+                sesionesEstudioSesionEstudio = em.merge(sesionesEstudioSesionEstudio);
             }
             em.remove(materia);
             em.getTransaction().commit();
