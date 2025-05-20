@@ -21,7 +21,7 @@ public class SesionEstudioJpaController implements Serializable {
         this.emf = emf;
     }
     
-     public SesionEstudioJpaController( ) {
+    public SesionEstudioJpaController( ) {
         emf = Persistence.createEntityManagerFactory("StudyMindPU");
     }
     private EntityManagerFactory emf = null;

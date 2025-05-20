@@ -1,5 +1,6 @@
-
+ 
 package com.mycompany.studymind.persistencia;
+
 import com.mycompany.studymind.logica.Estudiante;
 import java.io.Serializable;
 import javax.persistence.Query;
@@ -15,6 +16,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+ 
 public class EstudianteJpaController implements Serializable {
 
     public EstudianteJpaController(EntityManagerFactory emf) {
