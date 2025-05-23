@@ -16,16 +16,16 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+
 public class MateriaJpaController implements Serializable {
 
     public MateriaJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
     
-     public MateriaJpaController( ) {
+    public MateriaJpaController( ) {
         emf = Persistence.createEntityManagerFactory("StudyMindPU");
     }
-    
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
