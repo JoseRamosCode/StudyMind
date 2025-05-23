@@ -15,7 +15,7 @@ public class Materia implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_Materia;
-    private String nombre,descripcion;
+    private String nombre,docente,importancia;
     
     @ManyToMany(mappedBy = "materias")
     private List<Estudiante> estudiantes;
@@ -26,13 +26,16 @@ public class Materia implements Serializable {
     public Materia() {
     }
 
-    public Materia(int id_Materia, String nombre, String descripcion, List<Estudiante> estudiantes, List<SesionEstudio> sesionesEstudio) {
+    public Materia(int id_Materia, String nombre, String docente, String importancia, List<Estudiante> estudiantes, List<SesionEstudio> sesionesEstudio) {
         this.id_Materia = id_Materia;
         this.nombre = nombre;
-        this.descripcion = descripcion;
+        this.docente = docente;
+        this.importancia = importancia;
         this.estudiantes = estudiantes;
         this.sesionesEstudio = sesionesEstudio;
     }
+
+   
 
     public int getId_Materia() {
         return id_Materia;
@@ -50,13 +53,23 @@ public class Materia implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDocente() {
+        return docente;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDocente(String docente) {
+        this.docente = docente;
     }
+
+    public String getImportancia() {
+        return importancia;
+    }
+
+    public void setImportancia(String importancia) {
+        this.importancia = importancia;
+    }
+
+    
 
     public List<Estudiante> getEstudiantes() {
         return estudiantes;

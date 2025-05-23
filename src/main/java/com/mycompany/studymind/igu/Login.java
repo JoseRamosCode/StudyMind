@@ -1,18 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.mycompany.studymind.igu;
 
 import com.mycompany.studymind.logica.Controladora;
+import com.mycompany.studymind.logica.Estudiante;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
  
 public class Login extends javax.swing.JFrame {
 
-   Controladora control =  new Controladora();
+   Controladora control;
    
     public Login() {
         initComponents();
+        control = new Controladora();
     }
 
     
@@ -31,7 +32,7 @@ public class Login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtContraseña = new javax.swing.JPasswordField();
+        txtContrasenia = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         btnSignUp = new javax.swing.JButton();
@@ -43,7 +44,7 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
         jPanel1.setLayout(null);
 
-        Right.setBackground(new java.awt.Color(0, 102, 102));
+        Right.setBackground(new java.awt.Color(82, 109, 130));
         Right.setPreferredSize(new java.awt.Dimension(400, 500));
 
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\joser\\OneDrive\\Documentos\\NetBeansProjects\\StudyMind\\Icon\\workspace_table_study_work_furniture_icon_209731.png")); // NOI18N
@@ -117,17 +118,17 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
         jLabel3.setText("Contraseña");
 
-        txtContraseña.setBackground(new java.awt.Color(255, 255, 255));
-        txtContraseña.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txtContraseña.setForeground(new java.awt.Color(102, 102, 102));
-        txtContraseña.setCaretColor(new java.awt.Color(255, 255, 255));
-        txtContraseña.addActionListener(new java.awt.event.ActionListener() {
+        txtContrasenia.setBackground(new java.awt.Color(255, 255, 255));
+        txtContrasenia.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        txtContrasenia.setForeground(new java.awt.Color(102, 102, 102));
+        txtContrasenia.setCaretColor(new java.awt.Color(255, 255, 255));
+        txtContrasenia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtContraseñaActionPerformed(evt);
+                txtContraseniaActionPerformed(evt);
             }
         });
 
-        btnLogin.setBackground(new java.awt.Color(0, 102, 102));
+        btnLogin.setBackground(new java.awt.Color(157, 178, 191));
         btnLogin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
@@ -142,9 +143,9 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
         jLabel4.setText("No tengo una cuenta");
 
-        btnSignUp.setBackground(new java.awt.Color(255, 255, 255));
+        btnSignUp.setBackground(new java.awt.Color(157, 178, 191));
         btnSignUp.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnSignUp.setForeground(new java.awt.Color(255, 51, 51));
+        btnSignUp.setForeground(new java.awt.Color(255, 255, 255));
         btnSignUp.setText("Sign Up");
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,7 +169,7 @@ public class Login extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
+                    .addComponent(txtContrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel2)
                     .addComponent(txtCorreo))
@@ -186,7 +187,7 @@ public class Login extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(LeftLayout.createSequentialGroup()
@@ -221,11 +222,27 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCorreoActionPerformed
 
-    private void txtContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseñaActionPerformed
+    private void txtContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseniaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtContraseñaActionPerformed
+    }//GEN-LAST:event_txtContraseniaActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        
+        String correo = txtCorreo.getText();
+        String contrasenia = String.valueOf(txtContrasenia.getPassword());
+        Estudiante estudiante = control.validarEstudiante(correo,contrasenia);
+        
+        if(estudiante != null){
+//            Plantilla plantilla = new Plantilla(estudiante);
+//            plantilla.setVisible(true);
+//            plantilla.pack();
+//            plantilla.setLocationRelativeTo(null);
+//            this.dispose();
+        }else{
+            mostrarMensaje("Correo o contraseña incorrectos","Error","Acceso Denegado");
+            txtCorreo.setText("");
+             txtContrasenia.setText("");
+        }
         
       
         
@@ -239,7 +256,18 @@ public class Login extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_btnSignUpActionPerformed
 
-   
+    public void mostrarMensaje(String mensaje, String tipo, String titulo) {
+        JOptionPane optionPane = new JOptionPane(mensaje);
+        if (tipo.equals("Info")) {
+            optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        } else if (tipo.equals("Error")) {
+            optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+        JDialog dialog = optionPane.createDialog(titulo);
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Left;
@@ -255,7 +283,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField txtContraseña;
+    private javax.swing.JPasswordField txtContrasenia;
     private javax.swing.JTextField txtCorreo;
     // End of variables declaration//GEN-END:variables
 }

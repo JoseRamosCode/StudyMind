@@ -1,6 +1,7 @@
  package com.mycompany.studymind.logica;
 
 import com.mycompany.studymind.persistencia.ControladoraPersistencia;
+import java.util.List;
 
  
 public class Controladora {
@@ -17,6 +18,17 @@ public class Controladora {
         
         controlPersis.guardar(estudiante);
         
+    }
+
+    public Estudiante validarEstudiante(String correo, String contrasenia) {
+        List<Estudiante> listaEstudiantes = controlPersis.traerUsuarios();
+        
+        for(Estudiante estudiante: listaEstudiantes){
+            if(estudiante.getCorreo().equals(correo) && estudiante.getContrasenia().equals(contrasenia)){
+                return estudiante;
+            }
+        }
+        return null;
     }
     
 }

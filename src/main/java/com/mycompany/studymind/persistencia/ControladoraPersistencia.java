@@ -1,6 +1,7 @@
 package com.mycompany.studymind.persistencia;
 
 import com.mycompany.studymind.logica.Estudiante;
+import java.util.List;
 
 public class ControladoraPersistencia {
 
@@ -14,6 +15,12 @@ SesionEstudioJpaController sesionEstudioJpa = new SesionEstudioJpaController();
 
         estudianteJpa.create(estudiante);
 
+    }
+
+    public List<Estudiante> traerUsuarios() {
+
+        return estudianteJpa.findEstudianteEntities();
+        
     }
     
 }

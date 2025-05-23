@@ -96,7 +96,7 @@ public class SignUp extends javax.swing.JFrame {
 
         btnLogin.setBackground(new java.awt.Color(255, 255, 255));
         btnLogin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(255, 51, 51));
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +191,7 @@ public class SignUp extends javax.swing.JFrame {
         jPanel1.add(jPanel3);
         jPanel3.setBounds(400, 0, 400, 500);
 
-        Right.setBackground(new java.awt.Color(0, 102, 102));
+        Right.setBackground(new java.awt.Color(82, 109, 130));
         Right.setPreferredSize(new java.awt.Dimension(400, 500));
 
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\joser\\OneDrive\\Documentos\\NetBeansProjects\\StudyMind\\Icon\\workspace_table_study_work_furniture_icon_209731.png")); // NOI18N
