@@ -1,6 +1,7 @@
 package com.mycompany.studymind.persistencia;
 
 import com.mycompany.studymind.logica.Estudiante;
+import com.mycompany.studymind.logica.Materia;
 
 public class ControladoraPersistencia {
 
@@ -15,5 +16,9 @@ SesionEstudioJpaController sesionEstudioJpa = new SesionEstudioJpaController();
         estudianteJpa.create(estudiante);
 
     }
+    
+    public void guardarMateria(Materia materia) {
+    materiaJpa.create(materia);
+}
     
 }

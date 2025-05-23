@@ -46,8 +46,6 @@ public class Login extends javax.swing.JFrame {
         Right.setBackground(new java.awt.Color(0, 102, 102));
         Right.setPreferredSize(new java.awt.Dimension(400, 500));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\joser\\OneDrive\\Documentos\\NetBeansProjects\\StudyMind\\Icon\\workspace_table_study_work_furniture_icon_209731.png")); // NOI18N
-
         jLabel6.setBackground(new java.awt.Color(0, 102, 102));
         jLabel6.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,7 +102,6 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Correo");
 
-        txtCorreo.setBackground(new java.awt.Color(255, 255, 255));
         txtCorreo.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
         txtCorreo.setForeground(new java.awt.Color(102, 102, 102));
         txtCorreo.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +114,6 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
         jLabel3.setText("Contraseña");
 
-        txtContraseña.setBackground(new java.awt.Color(255, 255, 255));
         txtContraseña.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         txtContraseña.setForeground(new java.awt.Color(102, 102, 102));
         txtContraseña.setCaretColor(new java.awt.Color(255, 255, 255));
@@ -142,7 +138,6 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
         jLabel4.setText("No tengo una cuenta");
 
-        btnSignUp.setBackground(new java.awt.Color(255, 255, 255));
         btnSignUp.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnSignUp.setForeground(new java.awt.Color(255, 51, 51));
         btnSignUp.setText("Sign Up");
