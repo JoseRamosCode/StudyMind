@@ -5,8 +5,11 @@ import com.mycompany.studymind.igu.Horario;
 import com.mycompany.studymind.igu.Cronometro;
 import com.mycompany.studymind.igu.AgregarMateria;
 import com.mycompany.studymind.igu.Actividad;
+import com.mycompany.studymind.logica.Controladora;
 import com.mycompany.studymind.logica.Estudiante;
+import com.mycompany.studymind.logica.Materia;
 import java.awt.Color;
+import java.util.List;
 
 
 
@@ -14,14 +17,93 @@ import java.awt.Color;
 public class Horario extends javax.swing.JFrame {
 
     private Estudiante estudiante;
-
-    
+private Controladora control = new Controladora();
+  
     public Horario(Estudiante estudiante) {
         this.estudiante = estudiante;
     initComponents();
      lblUsuario.setText(estudiante.getNombre());
      
+    configurarTabla();
+    cargarMateriasDelEstudiante();
+    estilizarTabla();
+    
+    this.pack();
     }
+  
+    
+
+    
+    private void estilizarTabla() {
+  
+    jTable1.getTableHeader().setFont(new java.awt.Font("Roboto", java.awt.Font.BOLD, 16));
+    jTable1.getTableHeader().setOpaque(false);
+    jTable1.getTableHeader().setBackground(new java.awt.Color(82, 109, 130));
+    jTable1.getTableHeader().setForeground(java.awt.Color.WHITE);
+
+    
+    jTable1.setFont(new java.awt.Font("Roboto", java.awt.Font.PLAIN, 14));
+    jTable1.setRowHeight(28);
+
+   
+    javax.swing.table.DefaultTableCellRenderer centrado = new javax.swing.table.DefaultTableCellRenderer();
+    centrado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+    for (int i = 0; i < jTable1.getColumnCount(); i++) {
+        jTable1.getColumnModel().getColumn(i).setCellRenderer(centrado);
+    }
+
+  
+javax.swing.table.DefaultTableCellRenderer renderPersonalizado = new javax.swing.table.DefaultTableCellRenderer() {
+    @Override
+    public java.awt.Component getTableCellRendererComponent(javax.swing.JTable table, Object value,
+            boolean isSelected, boolean hasFocus, int row, int column) {
+
+        java.awt.Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+
+        if (!isSelected) {
+            c.setBackground(new java.awt.Color(221, 230, 237)); // ✅ tu color pastel
+        } else {
+            c.setBackground(new java.awt.Color(182, 205, 222)); // ✅ seleccionado
+        }
+
+        return c;
+    }
+};
+
+
+for (int i = 0; i < jTable1.getColumnCount(); i++) {
+    jTable1.getColumnModel().getColumn(i).setCellRenderer(renderPersonalizado);
+}
+
+
+}
+    private void configurarTabla() {
+    String[] columnas = {"Docente", "Materia", "Importancia"};
+
+    javax.swing.table.DefaultTableModel modelo = new javax.swing.table.DefaultTableModel(columnas, 0) {
+        @Override
+        public boolean isCellEditable(int row, int column) {
+            return false; 
+        }
+    };
+
+    jTable1.setModel(modelo);
+}
+    
+    private void cargarMateriasDelEstudiante() {
+    List<Materia> materias = control.obtenerMateriasDelEstudiante(estudiante);
+    javax.swing.table.DefaultTableModel modelo = (javax.swing.table.DefaultTableModel) jTable1.getModel();
+    modelo.setRowCount(0);
+
+    for (Materia materia : materias) {
+        Object[] fila = {
+            materia.getDocente(),
+            materia.getNombre(),
+            materia.getImportancia()
+        };
+        modelo.addRow(fila);
+    }
+}   
 
     
     @SuppressWarnings("unchecked")
@@ -94,6 +176,7 @@ public class Horario extends javax.swing.JFrame {
             }
         });
 
+        jTable1.setBackground(new java.awt.Color(157, 178, 191));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

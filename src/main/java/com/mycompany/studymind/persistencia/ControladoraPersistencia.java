@@ -1,7 +1,7 @@
 package com.mycompany.studymind.persistencia;
 
 import com.mycompany.studymind.logica.Estudiante;
-import com.mycompany.studymind.logica.Materia_backup;
+import com.mycompany.studymind.logica.Materia;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ SesionEstudioJpaController sesionEstudioJpa = new SesionEstudioJpaController();
         
     }
     
-    public void guardarMateria(Materia_backup materia) {
+    public void guardarMateria(Materia materia) {
     materiaJpa.create(materia);
 }
     
@@ -43,6 +43,10 @@ public boolean actualizar(Estudiante estudiante) {
 
  public Estudiante traerEstudiantePorId(int id) {
     return estudianteJpa.findEstudiante(id);
+}
+ 
+ public List<Materia> obtenerTodasLasMaterias() {
+    return materiaJpa.findMateriaEntities();
 }
   
 }

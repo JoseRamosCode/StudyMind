@@ -120,6 +120,7 @@ public class Login extends javax.swing.JFrame {
 
         txtCorreo.setBackground(new java.awt.Color(157, 178, 191));
         txtCorreo.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
+        txtCorreo.setForeground(new java.awt.Color(255, 255, 255));
         txtCorreo.setBorder(null);
         txtCorreo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,6 +134,7 @@ public class Login extends javax.swing.JFrame {
 
         txtContrasenia.setBackground(new java.awt.Color(157, 178, 191));
         txtContrasenia.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        txtContrasenia.setForeground(new java.awt.Color(255, 255, 255));
         txtContrasenia.setBorder(null);
         txtContrasenia.setCaretColor(new java.awt.Color(255, 255, 255));
         txtContrasenia.addActionListener(new java.awt.event.ActionListener() {
@@ -183,20 +185,19 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jSeparator3)
                     .addComponent(jSeparator1)
-                    .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtContrasenia)
-                        .addGroup(LeftLayout.createSequentialGroup()
-                            .addComponent(jLabel4)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jLabel3)
-                        .addComponent(jLabel2)
-                        .addGroup(LeftLayout.createSequentialGroup()
-                            .addGap(110, 110, 110)
-                            .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(LeftLayout.createSequentialGroup()
-                            .addGap(6, 6, 6)
-                            .addComponent(txtCorreo))))
+                    .addComponent(txtContrasenia)
+                    .addGroup(LeftLayout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addGroup(LeftLayout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(LeftLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(txtCorreo)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         LeftLayout.setVerticalGroup(

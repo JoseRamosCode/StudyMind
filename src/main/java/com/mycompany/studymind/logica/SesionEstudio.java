@@ -28,7 +28,7 @@ public class SesionEstudio implements Serializable {
     
     @ManyToOne
     @JoinColumn(name = "id_Materia")
-    private Materia_backup materia;
+    private Materia materia;
     
     @OneToMany(mappedBy = "sesionEstudio",cascade = CascadeType.ALL)
     private List<Juegos> juegos;
@@ -36,7 +36,7 @@ public class SesionEstudio implements Serializable {
     public SesionEstudio() {
     }
 
-    public SesionEstudio(int id_Sesion, String nombre, String descripcion, Estudiante estudiante, Materia_backup materia, List<Juegos> juegos) {
+    public SesionEstudio(int id_Sesion, String nombre, String descripcion, Estudiante estudiante, Materia materia, List<Juegos> juegos) {
         this.id_Sesion = id_Sesion;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -89,11 +89,11 @@ public class SesionEstudio implements Serializable {
         this.juegos = juegos;
     }
 
-    public Materia_backup getMateria() {
+    public Materia getMateria() {
         return materia;
     }
 
-    public void setMateria(Materia_backup materia) {
+    public void setMateria(Materia materia) {
         this.materia = materia;
     }
 

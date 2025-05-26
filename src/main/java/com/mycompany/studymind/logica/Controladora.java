@@ -1,6 +1,7 @@
  package com.mycompany.studymind.logica;
 
 import com.mycompany.studymind.persistencia.ControladoraPersistencia;
+import java.util.ArrayList;
  
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -41,7 +42,40 @@ public class Controladora {
 public Estudiante traerEstudiantePorId(int id) {
     return controlPersis.traerEstudiantePorId(id);
 }
+
+ public void guardarMateria(String materia, String docente, String prioridad, Estudiante estudiante) {
+        
+        Materia materia_ = new Materia();
+        materia_.setNombre(materia);
+        materia_.setDocente(docente);
+        materia_.setImportancia(prioridad);
+        
+        List<Estudiante> estudiantes = new ArrayList<>();
+        estudiantes.add(estudiante);
+        materia_.setEstudiantes(estudiantes);
+        
+        controlPersis.guardarMateria(materia_);
+       
+    }
+ 
+public List<Materia> obtenerMateriasDelEstudiante(Estudiante estudiante) {
+    List<Materia> todas = controlPersis.obtenerTodasLasMaterias();
+    List<Materia> asociadas = new ArrayList<>();
+
+    for (Materia m : todas) {
+        for (Estudiante e : m.getEstudiantes()) {
+            if (e.getId() == estudiante.getId()) {
+                asociadas.add(m);
+                break;
+            }
+        }
+    }
+
+    return asociadas;
 }
+}
+
+
 
  
 

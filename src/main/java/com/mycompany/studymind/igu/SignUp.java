@@ -64,6 +64,7 @@ public class SignUp extends javax.swing.JFrame {
 
         txtNombre.setBackground(new java.awt.Color(157, 178, 191));
         txtNombre.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
+        txtNombre.setForeground(new java.awt.Color(255, 255, 255));
         txtNombre.setBorder(null);
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +78,7 @@ public class SignUp extends javax.swing.JFrame {
 
         txtContraseña.setBackground(new java.awt.Color(157, 178, 191));
         txtContraseña.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        txtContraseña.setForeground(new java.awt.Color(255, 255, 255));
         txtContraseña.setBorder(null);
         txtContraseña.setCaretColor(new java.awt.Color(255, 255, 255));
         txtContraseña.addActionListener(new java.awt.event.ActionListener() {
@@ -116,6 +118,7 @@ public class SignUp extends javax.swing.JFrame {
 
         txtCorreo.setBackground(new java.awt.Color(157, 178, 191));
         txtCorreo.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
+        txtCorreo.setForeground(new java.awt.Color(255, 255, 255));
         txtCorreo.setBorder(null);
         txtCorreo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

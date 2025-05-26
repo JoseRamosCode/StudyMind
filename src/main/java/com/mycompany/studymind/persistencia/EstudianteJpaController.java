@@ -10,7 +10,7 @@ import javax.persistence.criteria.Root;
 import com.mycompany.studymind.logica.SesionEstudio;
 import java.util.ArrayList;
 import java.util.List;
-import com.mycompany.studymind.logica.Materia_backup;
+import com.mycompany.studymind.logica.Materia;
 import com.mycompany.studymind.persistencia.exceptions.NonexistentEntityException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -37,7 +37,7 @@ public class EstudianteJpaController implements Serializable {
             estudiante.setSesionEstudio(new ArrayList<SesionEstudio>());
         }
         if (estudiante.getMaterias() == null) {
-            estudiante.setMaterias(new ArrayList<Materia_backup>());
+            estudiante.setMaterias(new ArrayList<Materia>());
         }
         EntityManager em = null;
         try {
@@ -49,8 +49,8 @@ public class EstudianteJpaController implements Serializable {
                 attachedSesionEstudio.add(sesionEstudioSesionEstudioToAttach);
             }
             estudiante.setSesionEstudio(attachedSesionEstudio);
-            List<Materia_backup> attachedMaterias = new ArrayList<Materia_backup>();
-            for (Materia_backup materiasMateriaToAttach : estudiante.getMaterias()) {
+            List<Materia> attachedMaterias = new ArrayList<Materia>();
+            for (Materia materiasMateriaToAttach : estudiante.getMaterias()) {
                 materiasMateriaToAttach = em.getReference(materiasMateriaToAttach.getClass(), materiasMateriaToAttach.getId_Materia());
                 attachedMaterias.add(materiasMateriaToAttach);
             }
@@ -65,7 +65,7 @@ public class EstudianteJpaController implements Serializable {
                     oldEstudianteOfSesionEstudioSesionEstudio = em.merge(oldEstudianteOfSesionEstudioSesionEstudio);
                 }
             }
-            for (Materia_backup materiasMateria : estudiante.getMaterias()) {
+            for (Materia materiasMateria : estudiante.getMaterias()) {
                 materiasMateria.getEstudiantes().add(estudiante);
                 materiasMateria = em.merge(materiasMateria);
             }
@@ -85,8 +85,8 @@ public class EstudianteJpaController implements Serializable {
             Estudiante persistentEstudiante = em.find(Estudiante.class, estudiante.getId_Estudiante());
             List<SesionEstudio> sesionEstudioOld = persistentEstudiante.getSesionEstudio();
             List<SesionEstudio> sesionEstudioNew = estudiante.getSesionEstudio();
-            List<Materia_backup> materiasOld = persistentEstudiante.getMaterias();
-            List<Materia_backup> materiasNew = estudiante.getMaterias();
+            List<Materia> materiasOld = persistentEstudiante.getMaterias();
+            List<Materia> materiasNew = estudiante.getMaterias();
             List<SesionEstudio> attachedSesionEstudioNew = new ArrayList<SesionEstudio>();
             for (SesionEstudio sesionEstudioNewSesionEstudioToAttach : sesionEstudioNew) {
                 sesionEstudioNewSesionEstudioToAttach = em.getReference(sesionEstudioNewSesionEstudioToAttach.getClass(), sesionEstudioNewSesionEstudioToAttach.getId_Sesion());
@@ -94,8 +94,8 @@ public class EstudianteJpaController implements Serializable {
             }
             sesionEstudioNew = attachedSesionEstudioNew;
             estudiante.setSesionEstudio(sesionEstudioNew);
-            List<Materia_backup> attachedMateriasNew = new ArrayList<Materia_backup>();
-            for (Materia_backup materiasNewMateriaToAttach : materiasNew) {
+            List<Materia> attachedMateriasNew = new ArrayList<Materia>();
+            for (Materia materiasNewMateriaToAttach : materiasNew) {
                 materiasNewMateriaToAttach = em.getReference(materiasNewMateriaToAttach.getClass(), materiasNewMateriaToAttach.getId_Materia());
                 attachedMateriasNew.add(materiasNewMateriaToAttach);
             }
@@ -119,13 +119,13 @@ public class EstudianteJpaController implements Serializable {
                     }
                 }
             }
-            for (Materia_backup materiasOldMateria : materiasOld) {
+            for (Materia materiasOldMateria : materiasOld) {
                 if (!materiasNew.contains(materiasOldMateria)) {
                     materiasOldMateria.getEstudiantes().remove(estudiante);
                     materiasOldMateria = em.merge(materiasOldMateria);
                 }
             }
-            for (Materia_backup materiasNewMateria : materiasNew) {
+            for (Materia materiasNewMateria : materiasNew) {
                 if (!materiasOld.contains(materiasNewMateria)) {
                     materiasNewMateria.getEstudiantes().add(estudiante);
                     materiasNewMateria = em.merge(materiasNewMateria);
@@ -165,8 +165,8 @@ public class EstudianteJpaController implements Serializable {
                 sesionEstudioSesionEstudio.setEstudiante(null);
                 sesionEstudioSesionEstudio = em.merge(sesionEstudioSesionEstudio);
             }
-            List<Materia_backup> materias = estudiante.getMaterias();
-            for (Materia_backup materiasMateria : materias) {
+            List<Materia> materias = estudiante.getMaterias();
+            for (Materia materiasMateria : materias) {
                 materiasMateria.getEstudiantes().remove(estudiante);
                 materiasMateria = em.merge(materiasMateria);
             }

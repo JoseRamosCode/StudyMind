@@ -30,12 +30,12 @@ public class Estudiante implements Serializable {
              inverseJoinColumns = @JoinColumn(name = "id_Materia")
      )
      
-    private  List<Materia_backup> materias;
+    private  List<Materia> materias;
 
     public Estudiante() {
     }
 
-    public Estudiante(int id_Estudiante, String nombre, String correo, String contrasenia, List<SesionEstudio> sesionEstudio, List<Materia_backup> materias) {
+    public Estudiante(int id_Estudiante, String nombre, String correo, String contrasenia, List<SesionEstudio> sesionEstudio, List<Materia> materias) {
         this.id_Estudiante = id_Estudiante;
         this.nombre = nombre;
         this.correo = correo;
@@ -84,13 +84,17 @@ public class Estudiante implements Serializable {
         this.sesionEstudio = sesionEstudio;
     }
 
-    public List<Materia_backup> getMaterias() {
+    public List<Materia> getMaterias() {
         return materias;
     }
 
-    public void setMaterias(List<Materia_backup> materias) {
+    public void setMaterias(List<Materia> materias) {
         this.materias = materias;
     }
+
+    public int getId() {
+    return id_Estudiante;
+}
     
     
 }

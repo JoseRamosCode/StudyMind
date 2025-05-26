@@ -2,15 +2,18 @@
 package com.mycompany.studymind.igu;
 
 import com.mycompany.studymind.igu.Actividad;
+import com.mycompany.studymind.logica.Controladora;
 import com.mycompany.studymind.logica.Estudiante;
 import java.awt.Color;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 
 
  
 public class AgregarMateria extends javax.swing.JFrame {
 
-    
+    Controladora control = new Controladora();
    private Estudiante estudiante;
 
     
@@ -18,6 +21,8 @@ public class AgregarMateria extends javax.swing.JFrame {
         this.estudiante = estudiante;
     initComponents();
     lblUsuario.setText(estudiante.getNombre());
+    
+    
     }
 
     
@@ -597,6 +602,15 @@ public class AgregarMateria extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPrioridadActionPerformed
 
     private void lblGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseClicked
+        String materia = txtNombre.getText();
+        String docente = txtDocente1.getText();
+        String prioridad = txtPrioridad.getText();
+        
+       control.guardarMateria(materia,docente,prioridad,estudiante);
+        
+        
+       mostrarMensaje("La materia se ha registrado de manera correcta.","Info","Materia Registrada");
+       
         Horario horario = new Horario(estudiante);
         horario.setVisible(true);
         horario.setLocationRelativeTo(null);
@@ -610,8 +624,27 @@ public class AgregarMateria extends javax.swing.JFrame {
     private void lblGuardarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseExited
         pnlBoton.setBackground(new Color(82, 109, 130));
     }//GEN-LAST:event_lblGuardarMouseExited
-
+public void mostrarMensaje(String mensaje, String tipo, String titulo) {
+        JOptionPane optionPane = new JOptionPane(mensaje);
+        if (tipo.equals("Info")) {
+            optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        } else if (tipo.equals("Error")) {
+            optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+        JDialog dialog = optionPane.createDialog(titulo);
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
+    }
     private void pnlBotonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBotonMouseClicked
+        String materia = txtNombre.getText();
+        String docente = txtDocente1.getText();
+        String prioridad = txtPrioridad.getText();
+        
+       control.guardarMateria(materia,docente,prioridad,estudiante);
+        
+        
+       mostrarMensaje("La materia se ha registrado de manera correcta.","Info","Materia Registrada");
+       
         Horario horario = new Horario(estudiante);
         horario.setVisible(true);
         horario.setLocationRelativeTo(null);

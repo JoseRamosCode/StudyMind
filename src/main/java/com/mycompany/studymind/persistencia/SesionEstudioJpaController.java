@@ -7,7 +7,7 @@ import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import com.mycompany.studymind.logica.Estudiante;
-import com.mycompany.studymind.logica.Materia_backup;
+import com.mycompany.studymind.logica.Materia;
 import com.mycompany.studymind.logica.Juegos;
 import com.mycompany.studymind.logica.SesionEstudio;
 import com.mycompany.studymind.persistencia.exceptions.NonexistentEntityException;
@@ -47,7 +47,7 @@ public class SesionEstudioJpaController implements Serializable {
                 estudiante = em.getReference(estudiante.getClass(), estudiante.getId_Estudiante());
                 sesionEstudio.setEstudiante(estudiante);
             }
-            Materia_backup materia = sesionEstudio.getMateria();
+            Materia materia = sesionEstudio.getMateria();
             if (materia != null) {
                 materia = em.getReference(materia.getClass(), materia.getId_Materia());
                 sesionEstudio.setMateria(materia);
@@ -92,8 +92,8 @@ public class SesionEstudioJpaController implements Serializable {
             SesionEstudio persistentSesionEstudio = em.find(SesionEstudio.class, sesionEstudio.getId_Sesion());
             Estudiante estudianteOld = persistentSesionEstudio.getEstudiante();
             Estudiante estudianteNew = sesionEstudio.getEstudiante();
-            Materia_backup materiaOld = persistentSesionEstudio.getMateria();
-            Materia_backup materiaNew = sesionEstudio.getMateria();
+            Materia materiaOld = persistentSesionEstudio.getMateria();
+            Materia materiaNew = sesionEstudio.getMateria();
             List<Juegos> juegosOld = persistentSesionEstudio.getJuegos();
             List<Juegos> juegosNew = sesionEstudio.getJuegos();
             if (estudianteNew != null) {
@@ -179,7 +179,7 @@ public class SesionEstudioJpaController implements Serializable {
                 estudiante.getSesionEstudio().remove(sesionEstudio);
                 estudiante = em.merge(estudiante);
             }
-            Materia_backup materia = sesionEstudio.getMateria();
+            Materia materia = sesionEstudio.getMateria();
             if (materia != null) {
                 materia.getSesionesEstudio().remove(sesionEstudio);
                 materia = em.merge(materia);
