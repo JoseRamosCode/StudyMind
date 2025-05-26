@@ -5,8 +5,8 @@
     <class>com.mycompany.studymind.logica.Estudiante</class>
     <class>com.mycompany.studymind.logica.Juegos</class>
     <class>com.mycompany.studymind.logica.LinkJuego</class>
-    <class>com.mycompany.studymind.logica.Materia</class>
     <class>com.mycompany.studymind.logica.SesionEstudio</class>
+    <class>com.mycompany.studymind.logica.Materia_backup</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/base_prueba1?serverTimezone=UTC"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

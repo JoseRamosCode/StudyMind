@@ -3,6 +3,7 @@
 import com.mycompany.studymind.persistencia.ControladoraPersistencia;
  
 import java.util.List;
+import javax.persistence.EntityManager;
 
  
 public class Controladora {
@@ -33,6 +34,14 @@ public class Controladora {
         }
         return null;
     }
-    
-
+   public boolean actualizarEstudiante(Estudiante estudiante) {
+    return controlPersis.actualizar(estudiante);
 }
+   
+public Estudiante traerEstudiantePorId(int id) {
+    return controlPersis.traerEstudiantePorId(id);
+}
+}
+
+ 
+

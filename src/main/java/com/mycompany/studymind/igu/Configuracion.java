@@ -18,10 +18,10 @@ public class Configuracion extends javax.swing.JFrame {
         this.estudiante = estudiante;
     initComponents();
     lblUsuario.setText(estudiante.getNombre());
-    lblUsuario1.setText(estudiante.getNombre());
-    lblCorreo.setText(estudiante.getCorreo());
-    lblCorreo.setPreferredSize(new Dimension(lblCorreo.getPreferredSize().width, lblCorreo.getPreferredSize().height));
-    lblCorreo.setMaximumSize(new Dimension(Short.MAX_VALUE, Short.MAX_VALUE));
+    txtUsuario.setText(estudiante.getNombre());
+    txtCorreo.setText(estudiante.getCorreo());
+    txtCorreo.setPreferredSize(new Dimension(txtCorreo.getPreferredSize().width, txtCorreo.getPreferredSize().height));
+    txtCorreo.setMaximumSize(new Dimension(Short.MAX_VALUE, Short.MAX_VALUE));
     }
 
     
@@ -42,23 +42,23 @@ public class Configuracion extends javax.swing.JFrame {
         btnEstadisticasL = new javax.swing.JButton();
         btnConfiguracionL = new javax.swing.JButton();
         btnActividadesL = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
         btnCronometroL = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        pnlCamuflar = new javax.swing.JPanel();
         pnlCentral = new javax.swing.JPanel();
         lblMensaje = new javax.swing.JLabel();
-        lblNombreAsignatura = new javax.swing.JLabel();
-        lblNombreAsignatura1 = new javax.swing.JLabel();
-        lblNombreAsignatura2 = new javax.swing.JLabel();
-        pnlBoton2 = new javax.swing.JPanel();
-        lblGuardar2 = new javax.swing.JLabel();
-        pnlBoton3 = new javax.swing.JPanel();
-        lblGuardar3 = new javax.swing.JLabel();
-        pnlBoton4 = new javax.swing.JPanel();
-        lblGuardar4 = new javax.swing.JLabel();
         lblUsuario1 = new javax.swing.JLabel();
         lblCorreo = new javax.swing.JLabel();
+        lblContrasenia = new javax.swing.JLabel();
+        btnActualizar1 = new javax.swing.JPanel();
+        btnActualizar12 = new javax.swing.JLabel();
+        txtUsuario = new javax.swing.JLabel();
+        txtCorreo = new javax.swing.JLabel();
+        btnActualizar2 = new javax.swing.JPanel();
+        btnActualizar22 = new javax.swing.JLabel();
+        btnActualizar3 = new javax.swing.JPanel();
+        btnActualizar33 = new javax.swing.JLabel();
+        txtContrasenia = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -87,7 +87,7 @@ public class Configuracion extends javax.swing.JFrame {
             .addGroup(pnlHeadLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblLogotipo, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 446, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 456, Short.MAX_VALUE)
                 .addComponent(lblUsuario)
                 .addGap(74, 74, 74))
         );
@@ -104,7 +104,7 @@ public class Configuracion extends javax.swing.JFrame {
         );
 
         pnlPrincipal.add(pnlHead);
-        pnlHead.setBounds(0, 0, 1100, 100);
+        pnlHead.setBounds(0, 0, 1110, 100);
 
         pnlMenulargo.setBackground(new java.awt.Color(157, 178, 191));
         pnlMenulargo.setLayout(null);
@@ -122,7 +122,7 @@ public class Configuracion extends javax.swing.JFrame {
         pnlMenulargo.add(btnCronometro);
         btnCronometro.setBounds(20, 240, 52, 60);
 
-        btnActividades.setBackground(new java.awt.Color(221, 230, 237));
+        btnActividades.setBackground(new java.awt.Color(157, 178, 191));
         btnActividades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/actividad.png"))); // NOI18N
         btnActividades.setBorder(null);
         btnActividades.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -143,11 +143,16 @@ public class Configuracion extends javax.swing.JFrame {
         pnlMenulargo.add(btnEstadisticas);
         btnEstadisticas.setBounds(20, 420, 52, 49);
 
-        btnConfiguracion.setBackground(new java.awt.Color(157, 178, 191));
+        btnConfiguracion.setBackground(new java.awt.Color(221, 230, 237));
         btnConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/configuracion.png"))); // NOI18N
         btnConfiguracion.setBorder(null);
         btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfiguracion.setFocusPainted(false);
+        btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracionActionPerformed(evt);
+            }
+        });
         pnlMenulargo.add(btnConfiguracion);
         btnConfiguracion.setBounds(20, 520, 52, 49);
 
@@ -178,7 +183,7 @@ public class Configuracion extends javax.swing.JFrame {
         pnlMenulargo.add(btnEstadisticasL);
         btnEstadisticasL.setBounds(90, 440, 120, 24);
 
-        btnConfiguracionL.setBackground(new java.awt.Color(157, 178, 191));
+        btnConfiguracionL.setBackground(new java.awt.Color(221, 230, 237));
         btnConfiguracionL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
         btnConfiguracionL.setForeground(new java.awt.Color(255, 255, 255));
         btnConfiguracionL.setText("Ajustes");
@@ -205,22 +210,6 @@ public class Configuracion extends javax.swing.JFrame {
         pnlMenulargo.add(btnActividadesL);
         btnActividadesL.setBounds(90, 340, 101, 24);
 
-        jPanel4.setBackground(new java.awt.Color(157, 178, 191));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-        );
-
-        pnlMenulargo.add(jPanel4);
-        jPanel4.setBounds(0, 130, 210, 90);
-
         btnCronometroL.setBackground(new java.awt.Color(157, 178, 191));
         btnCronometroL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
         btnCronometroL.setForeground(new java.awt.Color(255, 255, 255));
@@ -236,7 +225,7 @@ public class Configuracion extends javax.swing.JFrame {
         btnCronometroL.setBounds(90, 260, 104, 24);
 
         btnMenu.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu.png"))); // NOI18N
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu (1).png"))); // NOI18N
         btnMenu.setBorder(null);
         btnMenu.setFocusPainted(false);
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -247,21 +236,21 @@ public class Configuracion extends javax.swing.JFrame {
         pnlMenulargo.add(btnMenu);
         btnMenu.setBounds(20, 10, 45, 45);
 
-        jPanel1.setBackground(new java.awt.Color(221, 230, 237));
+        pnlCamuflar.setBackground(new java.awt.Color(221, 230, 237));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlCamuflarLayout = new javax.swing.GroupLayout(pnlCamuflar);
+        pnlCamuflar.setLayout(pnlCamuflarLayout);
+        pnlCamuflarLayout.setHorizontalGroup(
+            pnlCamuflarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlCamuflarLayout.setVerticalGroup(
+            pnlCamuflarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        pnlMenulargo.add(jPanel1);
-        jPanel1.setBounds(0, 320, 90, 90);
+        pnlMenulargo.add(pnlCamuflar);
+        pnlCamuflar.setBounds(0, 510, 90, 90);
 
         pnlPrincipal.add(pnlMenulargo);
         pnlMenulargo.setBounds(0, 100, 90, 600);
@@ -272,229 +261,230 @@ public class Configuracion extends javax.swing.JFrame {
         lblMensaje.setForeground(new java.awt.Color(255, 255, 255));
         lblMensaje.setText("¿Tienes un cambio en mente?");
 
-        lblNombreAsignatura.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
-        lblNombreAsignatura.setForeground(new java.awt.Color(255, 255, 255));
-        lblNombreAsignatura.setText("Usuario:");
+        lblUsuario1.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
+        lblUsuario1.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsuario1.setText("Usuario:");
 
-        lblNombreAsignatura1.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
-        lblNombreAsignatura1.setForeground(new java.awt.Color(255, 255, 255));
-        lblNombreAsignatura1.setText("Correo:");
+        lblCorreo.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
+        lblCorreo.setForeground(new java.awt.Color(255, 255, 255));
+        lblCorreo.setText("Correo:");
 
-        lblNombreAsignatura2.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
-        lblNombreAsignatura2.setForeground(new java.awt.Color(255, 255, 255));
-        lblNombreAsignatura2.setText("Contraseña:");
+        lblContrasenia.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
+        lblContrasenia.setForeground(new java.awt.Color(255, 255, 255));
+        lblContrasenia.setText("Contraseña:");
 
-        pnlBoton2.setBackground(new java.awt.Color(82, 109, 130));
-        pnlBoton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnlBoton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnActualizar1.setBackground(new java.awt.Color(82, 109, 130));
+        btnActualizar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlBoton2MouseClicked(evt);
+                btnActualizar1MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlBoton2MouseEntered(evt);
+                btnActualizar1MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlBoton2MouseExited(evt);
+                btnActualizar1MouseExited(evt);
             }
         });
 
-        lblGuardar2.setFont(new java.awt.Font("Roboto Condensed", 0, 18)); // NOI18N
-        lblGuardar2.setForeground(new java.awt.Color(255, 255, 255));
-        lblGuardar2.setText("Actualizar");
-        lblGuardar2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblGuardar2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnActualizar12.setFont(new java.awt.Font("Roboto Condensed", 0, 18)); // NOI18N
+        btnActualizar12.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizar12.setText("Actualizar");
+        btnActualizar12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblGuardar2MouseClicked(evt);
+                btnActualizar12MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblGuardar2MouseEntered(evt);
+                btnActualizar12MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblGuardar2MouseExited(evt);
+                btnActualizar12MouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout pnlBoton2Layout = new javax.swing.GroupLayout(pnlBoton2);
-        pnlBoton2.setLayout(pnlBoton2Layout);
-        pnlBoton2Layout.setHorizontalGroup(
-            pnlBoton2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBoton2Layout.createSequentialGroup()
+        javax.swing.GroupLayout btnActualizar1Layout = new javax.swing.GroupLayout(btnActualizar1);
+        btnActualizar1.setLayout(btnActualizar1Layout);
+        btnActualizar1Layout.setHorizontalGroup(
+            btnActualizar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnActualizar1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(lblGuardar2)
+                .addComponent(btnActualizar12)
                 .addContainerGap(23, Short.MAX_VALUE))
         );
-        pnlBoton2Layout.setVerticalGroup(
-            pnlBoton2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBoton2Layout.createSequentialGroup()
+        btnActualizar1Layout.setVerticalGroup(
+            btnActualizar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnActualizar1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblGuardar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnActualizar12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        pnlBoton3.setBackground(new java.awt.Color(82, 109, 130));
-        pnlBoton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnlBoton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtUsuario.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        txtUsuario.setText("usuario");
+
+        txtCorreo.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
+        txtCorreo.setForeground(new java.awt.Color(255, 255, 255));
+        txtCorreo.setText("correo");
+
+        btnActualizar2.setBackground(new java.awt.Color(82, 109, 130));
+        btnActualizar2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlBoton3MouseClicked(evt);
+                btnActualizar2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlBoton3MouseEntered(evt);
+                btnActualizar2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlBoton3MouseExited(evt);
+                btnActualizar2MouseExited(evt);
             }
         });
 
-        lblGuardar3.setFont(new java.awt.Font("Roboto Condensed", 0, 18)); // NOI18N
-        lblGuardar3.setForeground(new java.awt.Color(255, 255, 255));
-        lblGuardar3.setText("Actualizar");
-        lblGuardar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblGuardar3.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnActualizar22.setFont(new java.awt.Font("Roboto Condensed", 0, 18)); // NOI18N
+        btnActualizar22.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizar22.setText("Actualizar");
+        btnActualizar22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblGuardar3MouseClicked(evt);
+                btnActualizar22MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblGuardar3MouseEntered(evt);
+                btnActualizar22MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblGuardar3MouseExited(evt);
+                btnActualizar22MouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout pnlBoton3Layout = new javax.swing.GroupLayout(pnlBoton3);
-        pnlBoton3.setLayout(pnlBoton3Layout);
-        pnlBoton3Layout.setHorizontalGroup(
-            pnlBoton3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBoton3Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(lblGuardar3)
-                .addContainerGap(30, Short.MAX_VALUE))
+        javax.swing.GroupLayout btnActualizar2Layout = new javax.swing.GroupLayout(btnActualizar2);
+        btnActualizar2.setLayout(btnActualizar2Layout);
+        btnActualizar2Layout.setHorizontalGroup(
+            btnActualizar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnActualizar2Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(btnActualizar22)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
-        pnlBoton3Layout.setVerticalGroup(
-            pnlBoton3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBoton3Layout.createSequentialGroup()
+        btnActualizar2Layout.setVerticalGroup(
+            btnActualizar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnActualizar2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblGuardar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnActualizar22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        pnlBoton4.setBackground(new java.awt.Color(82, 109, 130));
-        pnlBoton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnlBoton4.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnActualizar3.setBackground(new java.awt.Color(82, 109, 130));
+        btnActualizar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlBoton4MouseClicked(evt);
+                btnActualizar3MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlBoton4MouseEntered(evt);
+                btnActualizar3MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlBoton4MouseExited(evt);
+                btnActualizar3MouseExited(evt);
             }
         });
 
-        lblGuardar4.setFont(new java.awt.Font("Roboto Condensed", 0, 18)); // NOI18N
-        lblGuardar4.setForeground(new java.awt.Color(255, 255, 255));
-        lblGuardar4.setText("Actualizar");
-        lblGuardar4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblGuardar4.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnActualizar33.setFont(new java.awt.Font("Roboto Condensed", 0, 18)); // NOI18N
+        btnActualizar33.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizar33.setText("Actualizar");
+        btnActualizar33.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar33.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblGuardar4MouseClicked(evt);
+                btnActualizar33MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblGuardar4MouseEntered(evt);
+                btnActualizar33MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblGuardar4MouseExited(evt);
+                btnActualizar33MouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout pnlBoton4Layout = new javax.swing.GroupLayout(pnlBoton4);
-        pnlBoton4.setLayout(pnlBoton4Layout);
-        pnlBoton4Layout.setHorizontalGroup(
-            pnlBoton4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBoton4Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(lblGuardar4)
-                .addContainerGap(30, Short.MAX_VALUE))
+        javax.swing.GroupLayout btnActualizar3Layout = new javax.swing.GroupLayout(btnActualizar3);
+        btnActualizar3.setLayout(btnActualizar3Layout);
+        btnActualizar3Layout.setHorizontalGroup(
+            btnActualizar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnActualizar3Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(btnActualizar33)
+                .addContainerGap(23, Short.MAX_VALUE))
         );
-        pnlBoton4Layout.setVerticalGroup(
-            pnlBoton4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBoton4Layout.createSequentialGroup()
+        btnActualizar3Layout.setVerticalGroup(
+            btnActualizar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnActualizar3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblGuardar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnActualizar33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        lblUsuario1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        lblUsuario1.setForeground(new java.awt.Color(255, 255, 255));
-        lblUsuario1.setText("usuario");
-
-        lblCorreo.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        lblCorreo.setForeground(new java.awt.Color(255, 255, 255));
-        lblCorreo.setText("        correo");
+        txtContrasenia.setBackground(new java.awt.Color(157, 178, 191));
+        txtContrasenia.setForeground(new java.awt.Color(255, 255, 255));
+        txtContrasenia.setText("jPasswordField1");
+        txtContrasenia.setBorder(null);
 
         javax.swing.GroupLayout pnlCentralLayout = new javax.swing.GroupLayout(pnlCentral);
         pnlCentral.setLayout(pnlCentralLayout);
         pnlCentralLayout.setHorizontalGroup(
             pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCentralLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(108, 108, 108)
                 .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                            .addComponent(pnlBoton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(314, 314, 314))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                            .addComponent(lblNombreAsignatura1)
-                            .addGap(359, 359, 359)))
                     .addGroup(pnlCentralLayout.createSequentialGroup()
                         .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pnlBoton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblUsuario1)
+                            .addComponent(lblCorreo))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlCentralLayout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(lblCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())))
-            .addGroup(pnlCentralLayout.createSequentialGroup()
-                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(100, 100, 100))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
+                                .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnActualizar2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnActualizar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(297, 297, 297)
-                        .addComponent(lblUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(pnlBoton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(288, 288, 288)
-                        .addComponent(lblNombreAsignatura))
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(280, 280, 280)
-                        .addComponent(lblNombreAsignatura2))
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(lblMensaje)))
-                .addGap(0, 163, Short.MAX_VALUE))
+                        .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblMensaje)
+                            .addGroup(pnlCentralLayout.createSequentialGroup()
+                                .addComponent(lblContrasenia)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(67, 67, 67)
+                                .addComponent(btnActualizar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 163, Short.MAX_VALUE))))
         );
         pnlCentralLayout.setVerticalGroup(
             pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCentralLayout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(lblMensaje)
-                .addGap(18, 18, 18)
-                .addComponent(lblNombreAsignatura)
-                .addGap(5, 5, 5)
-                .addComponent(lblUsuario1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlBoton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74)
+                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblUsuario1)
+                        .addComponent(txtUsuario))
+                    .addComponent(btnActualizar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblCorreo)
+                        .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnActualizar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
-                .addComponent(lblNombreAsignatura1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlBoton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(lblNombreAsignatura2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlBoton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblContrasenia)
+                        .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnActualizar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(182, Short.MAX_VALUE))
         );
 
         pnlPrincipal.add(pnlCentral);
@@ -504,10 +494,7 @@ public class Configuracion extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 1102, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -525,7 +512,7 @@ public class Configuracion extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCronometroActionPerformed
 
     private void btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesActionPerformed
-        Configuracion actividad = new Configuracion(estudiante);
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
@@ -561,86 +548,108 @@ public class Configuracion extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCronometroLActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        Actividad2 actividad2 = new Actividad2(estudiante);
-        actividad2.setVisible(true);
-        actividad2.setLocationRelativeTo(null);
+        Configuracion2 configuracion = new Configuracion2(estudiante);
+        configuracion.setVisible(true);
+        configuracion.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
 
-    private void lblGuardar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar2MouseClicked
-        Actualizar actualizar = new Actualizar(estudiante);
+    private void btnActualizar12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar12MouseClicked
+        ActualizarUsuario actualizar = new ActualizarUsuario(estudiante);
         actualizar.setVisible(true);
         actualizar.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_lblGuardar2MouseClicked
+    }//GEN-LAST:event_btnActualizar12MouseClicked
 
-    private void lblGuardar2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar2MouseEntered
+    private void btnActualizar12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar12MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblGuardar2MouseEntered
+    }//GEN-LAST:event_btnActualizar12MouseEntered
 
-    private void lblGuardar2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar2MouseExited
+    private void btnActualizar12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar12MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblGuardar2MouseExited
+    }//GEN-LAST:event_btnActualizar12MouseExited
 
-    private void pnlBoton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton2MouseClicked
+    private void btnActualizar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar1MouseClicked
+        ActualizarUsuario actualizar = new ActualizarUsuario(estudiante);
+        actualizar.setVisible(true);
+        actualizar.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnActualizar1MouseClicked
 
-    private void pnlBoton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton2MouseEntered
+    private void btnActualizar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar1MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton2MouseEntered
+    }//GEN-LAST:event_btnActualizar1MouseEntered
 
-    private void pnlBoton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton2MouseExited
+    private void btnActualizar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar1MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton2MouseExited
+    }//GEN-LAST:event_btnActualizar1MouseExited
 
-    private void lblGuardar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar3MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblGuardar3MouseClicked
+    private void btnActualizar22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar22MouseClicked
+        ActualizarCorreo actualizar = new ActualizarCorreo(estudiante);
+        actualizar.setVisible(true);
+        actualizar.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnActualizar22MouseClicked
 
-    private void lblGuardar3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar3MouseEntered
+    private void btnActualizar22MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar22MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblGuardar3MouseEntered
+    }//GEN-LAST:event_btnActualizar22MouseEntered
 
-    private void lblGuardar3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar3MouseExited
+    private void btnActualizar22MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar22MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblGuardar3MouseExited
+    }//GEN-LAST:event_btnActualizar22MouseExited
 
-    private void pnlBoton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton3MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton3MouseClicked
+    private void btnActualizar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar2MouseClicked
+        ActualizarCorreo actualizar = new ActualizarCorreo(estudiante);
+        actualizar.setVisible(true);
+        actualizar.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnActualizar2MouseClicked
 
-    private void pnlBoton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton3MouseEntered
+    private void btnActualizar2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar2MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton3MouseEntered
+    }//GEN-LAST:event_btnActualizar2MouseEntered
 
-    private void pnlBoton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton3MouseExited
+    private void btnActualizar2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar2MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton3MouseExited
+    }//GEN-LAST:event_btnActualizar2MouseExited
 
-    private void lblGuardar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblGuardar4MouseClicked
+    private void btnActualizar33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar33MouseClicked
+        ActualizarContrasenia actualizar = new ActualizarContrasenia(estudiante);
+        actualizar.setVisible(true);
+        actualizar.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnActualizar33MouseClicked
 
-    private void lblGuardar4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar4MouseEntered
+    private void btnActualizar33MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar33MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblGuardar4MouseEntered
+    }//GEN-LAST:event_btnActualizar33MouseEntered
 
-    private void lblGuardar4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar4MouseExited
+    private void btnActualizar33MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar33MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_lblGuardar4MouseExited
+    }//GEN-LAST:event_btnActualizar33MouseExited
 
-    private void pnlBoton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton4MouseClicked
+    private void btnActualizar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar3MouseClicked
+        ActualizarUsuario actualizar = new ActualizarUsuario(estudiante);
+        actualizar.setVisible(true);
+        actualizar.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnActualizar3MouseClicked
 
-    private void pnlBoton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton4MouseEntered
+    private void btnActualizar3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar3MouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton4MouseEntered
+    }//GEN-LAST:event_btnActualizar3MouseEntered
 
-    private void pnlBoton4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton4MouseExited
+    private void btnActualizar3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizar3MouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton4MouseExited
+    }//GEN-LAST:event_btnActualizar3MouseExited
+
+    private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
+        Configuracion configuracion = new Configuracion(estudiante);
+        configuracion.setVisible(true);
+        configuracion.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnConfiguracionActionPerformed
 
     
     
@@ -648,6 +657,12 @@ public class Configuracion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActividades;
     private javax.swing.JButton btnActividadesL;
+    private javax.swing.JPanel btnActualizar1;
+    private javax.swing.JLabel btnActualizar12;
+    private javax.swing.JPanel btnActualizar2;
+    private javax.swing.JLabel btnActualizar22;
+    private javax.swing.JPanel btnActualizar3;
+    private javax.swing.JLabel btnActualizar33;
     private javax.swing.JButton btnConfiguracion;
     private javax.swing.JButton btnConfiguracionL;
     private javax.swing.JButton btnCronometro;
@@ -656,26 +671,20 @@ public class Configuracion extends javax.swing.JFrame {
     private javax.swing.JButton btnEstadisticasL;
     private javax.swing.JButton btnHorario;
     private javax.swing.JButton btnMenu;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblContrasenia;
     private javax.swing.JLabel lblCorreo;
-    private javax.swing.JLabel lblGuardar2;
-    private javax.swing.JLabel lblGuardar3;
-    private javax.swing.JLabel lblGuardar4;
     private javax.swing.JLabel lblLogotipo;
     private javax.swing.JLabel lblMensaje;
-    private javax.swing.JLabel lblNombreAsignatura;
-    private javax.swing.JLabel lblNombreAsignatura1;
-    private javax.swing.JLabel lblNombreAsignatura2;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JLabel lblUsuario1;
-    private javax.swing.JPanel pnlBoton2;
-    private javax.swing.JPanel pnlBoton3;
-    private javax.swing.JPanel pnlBoton4;
+    private javax.swing.JPanel pnlCamuflar;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlHead;
     private javax.swing.JPanel pnlMenulargo;
     private javax.swing.JPanel pnlPrincipal;
+    private javax.swing.JPasswordField txtContrasenia;
+    private javax.swing.JLabel txtCorreo;
+    private javax.swing.JLabel txtUsuario;
     // End of variables declaration//GEN-END:variables
 
 

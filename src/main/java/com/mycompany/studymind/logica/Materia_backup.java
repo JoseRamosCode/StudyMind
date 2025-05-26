@@ -11,7 +11,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Materia implements Serializable {
+public class Materia_backup implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_Materia;
@@ -23,10 +23,10 @@ public class Materia implements Serializable {
     @OneToMany(mappedBy = "materia", cascade = CascadeType.ALL)
     private List<SesionEstudio> sesionesEstudio;
 
-    public Materia() {
+    public Materia_backup() {
     }
 
-    public Materia(int id_Materia, String nombre, String docente, String importancia, List<Estudiante> estudiantes, List<SesionEstudio> sesionesEstudio) {
+    public Materia_backup(int id_Materia, String nombre, String docente, String importancia, List<Estudiante> estudiantes, List<SesionEstudio> sesionesEstudio) {
         this.id_Materia = id_Materia;
         this.nombre = nombre;
         this.docente = docente;

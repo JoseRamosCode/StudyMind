@@ -23,18 +23,19 @@ public class Estudiante implements Serializable {
     @OneToMany(mappedBy = "estudiante", cascade = CascadeType.ALL)
     private List<SesionEstudio> sesionEstudio;
     
-     @ManyToMany
+    @ManyToMany
      @JoinTable(
              name = "estudiante_materia",
              joinColumns = @JoinColumn(name = "id_Estudiante"),
              inverseJoinColumns = @JoinColumn(name = "id_Materia")
      )
-    private  List<Materia> materias;
+     
+    private  List<Materia_backup> materias;
 
     public Estudiante() {
     }
 
-    public Estudiante(int id_Estudiante, String nombre, String correo, String contrasenia, List<SesionEstudio> sesionEstudio, List<Materia> materias) {
+    public Estudiante(int id_Estudiante, String nombre, String correo, String contrasenia, List<SesionEstudio> sesionEstudio, List<Materia_backup> materias) {
         this.id_Estudiante = id_Estudiante;
         this.nombre = nombre;
         this.correo = correo;
@@ -83,11 +84,11 @@ public class Estudiante implements Serializable {
         this.sesionEstudio = sesionEstudio;
     }
 
-    public List<Materia> getMaterias() {
+    public List<Materia_backup> getMaterias() {
         return materias;
     }
 
-    public void setMaterias(List<Materia> materias) {
+    public void setMaterias(List<Materia_backup> materias) {
         this.materias = materias;
     }
     

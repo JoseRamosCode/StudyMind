@@ -1,7 +1,7 @@
 package com.mycompany.studymind.persistencia;
 
 import com.mycompany.studymind.logica.Estudiante;
-import com.mycompany.studymind.logica.Materia;
+import com.mycompany.studymind.logica.Materia_backup;
 
 import java.util.List;
 
@@ -25,10 +25,24 @@ SesionEstudioJpaController sesionEstudioJpa = new SesionEstudioJpaController();
         
     }
     
-    public void guardarMateria(Materia materia) {
+    public void guardarMateria(Materia_backup materia) {
     materiaJpa.create(materia);
 }
     
-    
-    
+public boolean actualizar(Estudiante estudiante) {
+    try {
+        estudianteJpa.edit(estudiante);
+        System.out.println("Estudiante actualizado: " + estudiante.getNombre());
+        return true;
+    } catch (Exception e) {
+        System.err.println("ERROR AL ACTUALIZAR ESTUDIANTE:");
+        e.printStackTrace(); 
+        return false;
+    }
+}
+
+ public Estudiante traerEstudiantePorId(int id) {
+    return estudianteJpa.findEstudiante(id);
+}
+  
 }
