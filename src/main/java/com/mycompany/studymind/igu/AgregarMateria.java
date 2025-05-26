@@ -2,14 +2,20 @@
 package com.mycompany.studymind.igu;
 
 import com.mycompany.studymind.igu.Actividad;
+import com.mycompany.studymind.logica.Controladora;
 import com.mycompany.studymind.logica.Estudiante;
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 
 
  
 public class AgregarMateria extends javax.swing.JFrame {
 
+    Controladora control = new Controladora();
     
    private Estudiante estudiante;
 
@@ -80,6 +86,7 @@ public class AgregarMateria extends javax.swing.JFrame {
         txtNombre.setForeground(new java.awt.Color(230, 230, 230));
         txtNombre.setText("Ingrese el nombre de la materia");
         txtNombre.setBorder(null);
+        txtNombre.setName("txtMateria"); // NOI18N
         txtNombre.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 txtNombreMousePressed(evt);
@@ -607,6 +614,16 @@ public class AgregarMateria extends javax.swing.JFrame {
     }//GEN-LAST:event_lblGuardarMouseExited
 
     private void pnlBotonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBotonMouseClicked
+        
+        String materia = txtNombre.getText();
+        String docente = txtDocente1.getText();
+        String prioridad = txtPrioridad.getText();
+        
+       control.guardarMateria(materia,docente,prioridad,estudiante);
+        
+        
+       mostrarMensaje("La materia se ha registrado de manera correcta.","Info","Materia Registrada");
+       
         Horario horario = new Horario(estudiante);
         horario.setVisible(true);
         horario.setLocationRelativeTo(null);
@@ -721,7 +738,17 @@ public class AgregarMateria extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnMenu1ActionPerformed
 
-    
+     public void mostrarMensaje(String mensaje, String tipo, String titulo) {
+        JOptionPane optionPane = new JOptionPane(mensaje);
+        if (tipo.equals("Info")) {
+            optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        } else if (tipo.equals("Error")) {
+            optionPane.setMessageType(JOptionPane.ERROR_MESSAGE);
+        }
+        JDialog dialog = optionPane.createDialog(titulo);
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

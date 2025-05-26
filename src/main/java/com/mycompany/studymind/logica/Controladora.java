@@ -1,6 +1,7 @@
  package com.mycompany.studymind.logica;
 
 import com.mycompany.studymind.persistencia.ControladoraPersistencia;
+import java.util.ArrayList;
  
 import java.util.List;
 
@@ -32,6 +33,21 @@ public class Controladora {
             }
         }
         return null;
+    }
+
+    public void guardarMateria(String materia, String docente, String prioridad, Estudiante estudiante) {
+        //Creamos la Materia y le asignamos lo valores.
+        Materia materia_ = new Materia();
+        materia_.setNombre(materia);
+        materia_.setDocente(docente);
+        materia_.setImportancia(prioridad);
+        
+        List<Estudiante> estudiantes = new ArrayList<>();
+        estudiantes.add(estudiante);
+        materia_.setEstudiantes(estudiantes);
+        
+        controlPersis.guardarMateria(materia_);
+       
     }
     
 

@@ -472,7 +472,7 @@ private Estudiante estudiante;
                         UIManager.put("OptionPane.messageFont", new Font("Roboto", Font.PLAIN, 16));
                         UIManager.put("Button.font", new Font("Roboto", Font.BOLD, 14));
 
-                        JOptionPane.showMessageDialog(null, "¡Tiempo terminado!");
+                        JOptionPane.showMessageDialog(null, "Tiempo terminado");
 
                         Actividad actividad = new Actividad(estudiante);
                         actividad.setVisible(true);

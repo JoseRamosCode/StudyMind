@@ -2,20 +2,14 @@
 package com.mycompany.studymind.igu;
 
 import com.mycompany.studymind.logica.Estudiante;
-import java.awt.Color;
-import java.awt.Dimension;
-import javax.swing.JOptionPane;
 
-
-
- 
-public class Actualizar extends javax.swing.JFrame {
+public class Actualizar1 extends javax.swing.JFrame {
 
     
     private Estudiante estudiante;
 
     
-    public Actualizar(Estudiante estudiante) {
+    public Actualizar1(Estudiante estudiante) {
         this.estudiante = estudiante;
     initComponents();
     lblUsuario.setText(estudiante.getNombre());
@@ -220,7 +214,7 @@ public class Actualizar extends javax.swing.JFrame {
         );
 
         pnlMenulargo.add(jPanel4);
-        jPanel4.setBounds(0, 130, 210, 90);
+        jPanel4.setBounds(0, 130, 210, 0);
 
         btnCronometroL.setBackground(new java.awt.Color(157, 178, 191));
         btnCronometroL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
@@ -278,7 +272,7 @@ public class Actualizar extends javax.swing.JFrame {
         );
 
         pnlMenulargo.add(jPanel2);
-        jPanel2.setBounds(0, 510, 100, 80);
+        jPanel2.setBounds(0, 510, 0, 80);
 
         pnlPrincipal.add(pnlMenulargo);
         pnlMenulargo.setBounds(0, 100, 90, 600);
@@ -513,7 +507,7 @@ public class Actualizar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCronometroActionPerformed
 
     private void btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesActionPerformed
-        Actualizar actividad = new Actualizar(estudiante);
+        Actualizar1 actividad = new Actualizar1(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
@@ -535,7 +529,7 @@ public class Actualizar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
 
     private void btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLActionPerformed
-        Actualizar actividad = new Actualizar(estudiante);
+        Actualizar1 actividad = new Actualizar1(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();

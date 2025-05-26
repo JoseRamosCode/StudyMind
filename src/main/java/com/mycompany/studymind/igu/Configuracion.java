@@ -568,7 +568,7 @@ public class Configuracion extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void lblGuardar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar2MouseClicked
-        Actualizar actualizar = new Actualizar(estudiante);
+        Actualizar1 actualizar = new Actualizar1(estudiante);
         actualizar.setVisible(true);
         actualizar.setLocationRelativeTo(null);
         this.dispose();
@@ -583,7 +583,10 @@ public class Configuracion extends javax.swing.JFrame {
     }//GEN-LAST:event_lblGuardar2MouseExited
 
     private void pnlBoton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton2MouseClicked
-        // TODO add your handling code here:
+         Actualizar1 actualizar = new Actualizar1(estudiante);
+         actualizar.setVisible(true);
+         actualizar.setLocationRelativeTo(null);
+         this.dispose();        
     }//GEN-LAST:event_pnlBoton2MouseClicked
 
     private void pnlBoton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton2MouseEntered
