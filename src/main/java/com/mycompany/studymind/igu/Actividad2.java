@@ -34,7 +34,7 @@ public class Actividad2 extends javax.swing.JFrame {
         btnEstadisticasL = new javax.swing.JButton();
         btnConfiguracionL = new javax.swing.JButton();
         btnHorarioL = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        pnlCamulfado = new javax.swing.JPanel();
         btnActividadesL = new javax.swing.JButton();
         btnCronometroL = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
@@ -42,7 +42,7 @@ public class Actividad2 extends javax.swing.JFrame {
         lblUsuario = new javax.swing.JLabel();
         lblLogotipo = new javax.swing.JLabel();
         pnlCentral = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        lblImagen = new javax.swing.JLabel();
         lblMensaje = new javax.swing.JLabel();
         btnGeneraractividad = new javax.swing.JButton();
 
@@ -95,6 +95,11 @@ public class Actividad2 extends javax.swing.JFrame {
         btnConfiguracion.setBorder(null);
         btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfiguracion.setFocusPainted(false);
+        btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracionActionPerformed(evt);
+            }
+        });
         pnlMenulargo.add(btnConfiguracion);
         btnConfiguracion.setBounds(20, 520, 52, 49);
 
@@ -152,7 +157,7 @@ public class Actividad2 extends javax.swing.JFrame {
         pnlMenulargo.add(btnHorarioL);
         btnHorarioL.setBounds(80, 160, 120, 24);
 
-        jPanel4.setBackground(new java.awt.Color(221, 230, 237));
+        pnlCamulfado.setBackground(new java.awt.Color(221, 230, 237));
 
         btnActividadesL.setBackground(new java.awt.Color(221, 230, 237));
         btnActividadesL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
@@ -166,25 +171,25 @@ public class Actividad2 extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlCamulfadoLayout = new javax.swing.GroupLayout(pnlCamulfado);
+        pnlCamulfado.setLayout(pnlCamulfadoLayout);
+        pnlCamulfadoLayout.setHorizontalGroup(
+            pnlCamulfadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCamulfadoLayout.createSequentialGroup()
                 .addContainerGap(103, Short.MAX_VALUE)
                 .addComponent(btnActividadesL)
                 .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        pnlCamulfadoLayout.setVerticalGroup(
+            pnlCamulfadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCamulfadoLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(btnActividadesL)
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
-        pnlMenulargo.add(jPanel4);
-        jPanel4.setBounds(0, 320, 210, 90);
+        pnlMenulargo.add(pnlCamulfado);
+        pnlCamulfado.setBounds(0, 320, 210, 90);
 
         btnCronometroL.setBackground(new java.awt.Color(157, 178, 191));
         btnCronometroL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
@@ -201,7 +206,7 @@ public class Actividad2 extends javax.swing.JFrame {
         btnCronometroL.setBounds(90, 260, 104, 24);
 
         btnMenu.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu.png"))); // NOI18N
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu (1).png"))); // NOI18N
         btnMenu.setBorder(null);
         btnMenu.setFocusPainted(false);
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -256,8 +261,8 @@ public class Actividad2 extends javax.swing.JFrame {
 
         pnlCentral.setBackground(new java.awt.Color(157, 178, 191));
 
-        jLabel2.setBackground(new java.awt.Color(240, 245, 250));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Baymax con mariposa(1)(1).png"))); // NOI18N
+        lblImagen.setBackground(new java.awt.Color(240, 245, 250));
+        lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Baymax con mariposa(1)(1).png"))); // NOI18N
 
         lblMensaje.setFont(new java.awt.Font("Roboto Condensed Black", 0, 36)); // NOI18N
         lblMensaje.setForeground(new java.awt.Color(255, 255, 255));
@@ -282,8 +287,8 @@ public class Actividad2 extends javax.swing.JFrame {
             .addGroup(pnlCentralLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnGeneraractividad, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(pnlCentralLayout.createSequentialGroup()
                 .addGap(108, 108, 108)
                 .addComponent(lblMensaje)
@@ -294,13 +299,10 @@ public class Actividad2 extends javax.swing.JFrame {
             .addGroup(pnlCentralLayout.createSequentialGroup()
                 .addContainerGap(97, Short.MAX_VALUE)
                 .addComponent(lblMensaje)
+                .addGap(80, 80, 80)
                 .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(jLabel2))
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(btnGeneraractividad, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(lblImagen)
+                    .addComponent(btnGeneraractividad, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pnlPrincipal.add(pnlCentral);
@@ -330,9 +332,9 @@ public class Actividad2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        Horario Horario = new Horario(estudiante); // crea la ventana
-        Horario.setVisible(true);                      // la hace visible
-        Horario.setLocationRelativeTo(null);           // la centra
+        Horario Horario = new Horario(estudiante); 
+        Horario.setVisible(true);                      
+        Horario.setLocationRelativeTo(null);           
         this.dispose();
     }//GEN-LAST:event_jButton16ActionPerformed
 
@@ -342,14 +344,6 @@ public class Actividad2 extends javax.swing.JFrame {
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void btnGeneraractividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGeneraractividadActionPerformed
-        Links linksVista = new Links();  // Suponiendo que Links es una clase que representa la vista a la que deseas ir
-        linksVista.setVisible(true);     // Hacer visible la nueva vista
-        linksVista.pack();               // Ajustar el tamaño de la ventana
-        linksVista.setLocationRelativeTo(null);  // Centrar la ventana
-        this.dispose();
-    }//GEN-LAST:event_btnGeneraractividadActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         Actividad actividad = new Actividad(estudiante);
@@ -380,7 +374,11 @@ public class Actividad2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHorarioLActionPerformed
 
     private void btnConfiguracionLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionLActionPerformed
-        // TODO add your handling code here:
+        Configuracion configuracion = new Configuracion(estudiante);  
+        configuracion.setVisible(true);    
+        configuracion.pack();               
+        configuracion.setLocationRelativeTo(null);  
+        this.dispose();
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
 
     private void btnEstadisticasLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasLActionPerformed
@@ -408,6 +406,22 @@ public class Actividad2 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnCronometroActionPerformed
 
+    private void btnGeneraractividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGeneraractividadActionPerformed
+        Links linksVista = new Links(estudiante);
+        linksVista.setVisible(true);
+        linksVista.pack();
+        linksVista.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnGeneraractividadActionPerformed
+
+    private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
+        Configuracion configuracion = new Configuracion(estudiante);  
+        configuracion.setVisible(true);    
+        configuracion.pack();               
+        configuracion.setLocationRelativeTo(null);  
+        this.dispose();
+    }//GEN-LAST:event_btnConfiguracionActionPerformed
+
     
     
 
@@ -424,11 +438,11 @@ public class Actividad2 extends javax.swing.JFrame {
     private javax.swing.JButton btnHorario;
     private javax.swing.JButton btnHorarioL;
     private javax.swing.JButton btnMenu;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblLogotipo;
     private javax.swing.JLabel lblMensaje;
     private javax.swing.JLabel lblUsuario;
+    private javax.swing.JPanel pnlCamulfado;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlHead;
     private javax.swing.JPanel pnlMenulargo;

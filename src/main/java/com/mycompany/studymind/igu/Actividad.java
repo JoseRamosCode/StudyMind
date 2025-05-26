@@ -37,12 +37,11 @@ public class Actividad extends javax.swing.JFrame {
         btnEstadisticasL = new javax.swing.JButton();
         btnConfiguracionL = new javax.swing.JButton();
         btnActividadesL = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
         btnCronometroL = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        pnlCamuflado = new javax.swing.JPanel();
         pnlCentral = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        lblImagen = new javax.swing.JLabel();
         lblMensaje = new javax.swing.JLabel();
         btnGeneraractividad = new javax.swing.JButton();
 
@@ -134,6 +133,11 @@ public class Actividad extends javax.swing.JFrame {
         btnConfiguracion.setBorder(null);
         btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfiguracion.setFocusPainted(false);
+        btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracionActionPerformed(evt);
+            }
+        });
         pnlMenulargo.add(btnConfiguracion);
         btnConfiguracion.setBounds(20, 520, 52, 49);
 
@@ -191,22 +195,6 @@ public class Actividad extends javax.swing.JFrame {
         pnlMenulargo.add(btnActividadesL);
         btnActividadesL.setBounds(90, 340, 101, 24);
 
-        jPanel4.setBackground(new java.awt.Color(157, 178, 191));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-        );
-
-        pnlMenulargo.add(jPanel4);
-        jPanel4.setBounds(0, 130, 210, 90);
-
         btnCronometroL.setBackground(new java.awt.Color(157, 178, 191));
         btnCronometroL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
         btnCronometroL.setForeground(new java.awt.Color(255, 255, 255));
@@ -222,7 +210,7 @@ public class Actividad extends javax.swing.JFrame {
         btnCronometroL.setBounds(90, 260, 104, 24);
 
         btnMenu.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu.png"))); // NOI18N
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu (1).png"))); // NOI18N
         btnMenu.setBorder(null);
         btnMenu.setFocusPainted(false);
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -233,29 +221,29 @@ public class Actividad extends javax.swing.JFrame {
         pnlMenulargo.add(btnMenu);
         btnMenu.setBounds(20, 10, 45, 45);
 
-        jPanel1.setBackground(new java.awt.Color(221, 230, 237));
+        pnlCamuflado.setBackground(new java.awt.Color(221, 230, 237));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlCamufladoLayout = new javax.swing.GroupLayout(pnlCamuflado);
+        pnlCamuflado.setLayout(pnlCamufladoLayout);
+        pnlCamufladoLayout.setHorizontalGroup(
+            pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlCamufladoLayout.setVerticalGroup(
+            pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        pnlMenulargo.add(jPanel1);
-        jPanel1.setBounds(0, 320, 90, 90);
+        pnlMenulargo.add(pnlCamuflado);
+        pnlCamuflado.setBounds(0, 320, 90, 90);
 
         pnlPrincipal.add(pnlMenulargo);
         pnlMenulargo.setBounds(0, 100, 90, 600);
 
         pnlCentral.setBackground(new java.awt.Color(157, 178, 191));
 
-        jLabel2.setBackground(new java.awt.Color(240, 245, 250));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Baymax con mariposa(1)(1).png"))); // NOI18N
+        lblImagen.setBackground(new java.awt.Color(240, 245, 250));
+        lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Baymax con mariposa(1)(1).png"))); // NOI18N
 
         lblMensaje.setFont(new java.awt.Font("Roboto Condensed Black", 0, 36)); // NOI18N
         lblMensaje.setForeground(new java.awt.Color(255, 255, 255));
@@ -281,7 +269,7 @@ public class Actividad extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnGeneraractividad, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(pnlCentralLayout.createSequentialGroup()
                 .addGap(108, 108, 108)
                 .addComponent(lblMensaje)
@@ -294,7 +282,7 @@ public class Actividad extends javax.swing.JFrame {
                 .addComponent(lblMensaje)
                 .addGap(80, 80, 80)
                 .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
+                    .addComponent(lblImagen)
                     .addComponent(btnGeneraractividad, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -368,12 +356,20 @@ public class Actividad extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void btnGeneraractividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGeneraractividadActionPerformed
-        Links linksVista = new Links();  // Suponiendo que Links es una clase que representa la vista a la que deseas ir
-        linksVista.setVisible(true);     // Hacer visible la nueva vista
-        linksVista.pack();               // Ajustar el tamaño de la ventana
-        linksVista.setLocationRelativeTo(null);  // Centrar la ventana
+        Links linksVista = new Links(estudiante);  
+        linksVista.setVisible(true);    
+        linksVista.pack();               
+        linksVista.setLocationRelativeTo(null);  
         this.dispose();
     }//GEN-LAST:event_btnGeneraractividadActionPerformed
+
+    private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
+        Configuracion configuracion = new Configuracion(estudiante);  
+        configuracion.setVisible(true);    
+        configuracion.pack();               
+        configuracion.setLocationRelativeTo(null);  
+        this.dispose();
+    }//GEN-LAST:event_btnConfiguracionActionPerformed
 
     
     
@@ -390,12 +386,11 @@ public class Actividad extends javax.swing.JFrame {
     private javax.swing.JButton btnGeneraractividad;
     private javax.swing.JButton btnHorario;
     private javax.swing.JButton btnMenu;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblLogotipo;
     private javax.swing.JLabel lblMensaje;
     private javax.swing.JLabel lblUsuario;
+    private javax.swing.JPanel pnlCamuflado;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlHead;
     private javax.swing.JPanel pnlMenulargo;

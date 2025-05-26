@@ -7,7 +7,7 @@ import javax.persistence.EntityNotFoundException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import com.mycompany.studymind.logica.Estudiante;
-import com.mycompany.studymind.logica.Materia;
+import com.mycompany.studymind.logica.Materia_backup;
 import java.util.ArrayList;
 import java.util.List;
 import com.mycompany.studymind.logica.SesionEstudio;
@@ -32,7 +32,7 @@ public class MateriaJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Materia materia) {
+    public void create(Materia_backup materia) {
         if (materia.getEstudiantes() == null) {
             materia.setEstudiantes(new ArrayList<Estudiante>());
         }
@@ -61,7 +61,7 @@ public class MateriaJpaController implements Serializable {
                 estudiantesEstudiante = em.merge(estudiantesEstudiante);
             }
             for (SesionEstudio sesionesEstudioSesionEstudio : materia.getSesionesEstudio()) {
-                Materia oldMateriaOfSesionesEstudioSesionEstudio = sesionesEstudioSesionEstudio.getMateria();
+                Materia_backup oldMateriaOfSesionesEstudioSesionEstudio = sesionesEstudioSesionEstudio.getMateria();
                 sesionesEstudioSesionEstudio.setMateria(materia);
                 sesionesEstudioSesionEstudio = em.merge(sesionesEstudioSesionEstudio);
                 if (oldMateriaOfSesionesEstudioSesionEstudio != null) {
@@ -77,12 +77,12 @@ public class MateriaJpaController implements Serializable {
         }
     }
 
-    public void edit(Materia materia) throws NonexistentEntityException, Exception {
+    public void edit(Materia_backup materia) throws NonexistentEntityException, Exception {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Materia persistentMateria = em.find(Materia.class, materia.getId_Materia());
+            Materia_backup persistentMateria = em.find(Materia_backup.class, materia.getId_Materia());
             List<Estudiante> estudiantesOld = persistentMateria.getEstudiantes();
             List<Estudiante> estudiantesNew = materia.getEstudiantes();
             List<SesionEstudio> sesionesEstudioOld = persistentMateria.getSesionesEstudio();
@@ -122,7 +122,7 @@ public class MateriaJpaController implements Serializable {
             }
             for (SesionEstudio sesionesEstudioNewSesionEstudio : sesionesEstudioNew) {
                 if (!sesionesEstudioOld.contains(sesionesEstudioNewSesionEstudio)) {
-                    Materia oldMateriaOfSesionesEstudioNewSesionEstudio = sesionesEstudioNewSesionEstudio.getMateria();
+                    Materia_backup oldMateriaOfSesionesEstudioNewSesionEstudio = sesionesEstudioNewSesionEstudio.getMateria();
                     sesionesEstudioNewSesionEstudio.setMateria(materia);
                     sesionesEstudioNewSesionEstudio = em.merge(sesionesEstudioNewSesionEstudio);
                     if (oldMateriaOfSesionesEstudioNewSesionEstudio != null && !oldMateriaOfSesionesEstudioNewSesionEstudio.equals(materia)) {
@@ -153,9 +153,9 @@ public class MateriaJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Materia materia;
+            Materia_backup materia;
             try {
-                materia = em.getReference(Materia.class, id);
+                materia = em.getReference(Materia_backup.class, id);
                 materia.getId_Materia();
             } catch (EntityNotFoundException enfe) {
                 throw new NonexistentEntityException("The materia with id " + id + " no longer exists.", enfe);
@@ -179,19 +179,19 @@ public class MateriaJpaController implements Serializable {
         }
     }
 
-    public List<Materia> findMateriaEntities() {
+    public List<Materia_backup> findMateriaEntities() {
         return findMateriaEntities(true, -1, -1);
     }
 
-    public List<Materia> findMateriaEntities(int maxResults, int firstResult) {
+    public List<Materia_backup> findMateriaEntities(int maxResults, int firstResult) {
         return findMateriaEntities(false, maxResults, firstResult);
     }
 
-    private List<Materia> findMateriaEntities(boolean all, int maxResults, int firstResult) {
+    private List<Materia_backup> findMateriaEntities(boolean all, int maxResults, int firstResult) {
         EntityManager em = getEntityManager();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-            cq.select(cq.from(Materia.class));
+            cq.select(cq.from(Materia_backup.class));
             Query q = em.createQuery(cq);
             if (!all) {
                 q.setMaxResults(maxResults);
@@ -203,10 +203,10 @@ public class MateriaJpaController implements Serializable {
         }
     }
 
-    public Materia findMateria(int id) {
+    public Materia_backup findMateria(int id) {
         EntityManager em = getEntityManager();
         try {
-            return em.find(Materia.class, id);
+            return em.find(Materia_backup.class, id);
         } finally {
             em.close();
         }
@@ -216,7 +216,7 @@ public class MateriaJpaController implements Serializable {
         EntityManager em = getEntityManager();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-            Root<Materia> rt = cq.from(Materia.class);
+            Root<Materia_backup> rt = cq.from(Materia_backup.class);
             cq.select(em.getCriteriaBuilder().count(rt));
             Query q = em.createQuery(cq);
             return ((Long) q.getSingleResult()).intValue();

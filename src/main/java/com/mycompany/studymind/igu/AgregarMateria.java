@@ -391,8 +391,13 @@ public class AgregarMateria extends javax.swing.JFrame {
         btnConfiguracion1.setBorder(null);
         btnConfiguracion1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfiguracion1.setFocusPainted(false);
+        btnConfiguracion1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracion1ActionPerformed(evt);
+            }
+        });
         pnlMenulargo1.add(btnConfiguracion1);
-        btnConfiguracion1.setBounds(20, 520, 52, 49);
+        btnConfiguracion1.setBounds(20, 530, 52, 49);
 
         btnEstadisticasL1.setBackground(new java.awt.Color(157, 178, 191));
         btnEstadisticasL1.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
@@ -501,7 +506,7 @@ public class AgregarMateria extends javax.swing.JFrame {
         btnCronometroL1.setBounds(90, 260, 104, 24);
 
         btnMenu1.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu.png"))); // NOI18N
+        btnMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu (1).png"))); // NOI18N
         btnMenu1.setBorder(null);
         btnMenu1.setFocusPainted(false);
         btnMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -720,6 +725,14 @@ public class AgregarMateria extends javax.swing.JFrame {
         actividad2.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnMenu1ActionPerformed
+
+    private void btnConfiguracion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracion1ActionPerformed
+        Configuracion configuracion = new Configuracion(estudiante);  
+        configuracion.setVisible(true);    
+        configuracion.pack();               
+        configuracion.setLocationRelativeTo(null);  
+        this.dispose();
+    }//GEN-LAST:event_btnConfiguracion1ActionPerformed
 
     
     

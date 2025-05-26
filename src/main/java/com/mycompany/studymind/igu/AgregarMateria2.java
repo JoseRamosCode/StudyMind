@@ -150,6 +150,11 @@ public class AgregarMateria2 extends javax.swing.JFrame {
         btnConfiguracion.setBorder(null);
         btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfiguracion.setFocusPainted(false);
+        btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracionActionPerformed(evt);
+            }
+        });
         pnlMenulargo.add(btnConfiguracion);
         btnConfiguracion.setBounds(20, 520, 52, 49);
 
@@ -247,7 +252,7 @@ public class AgregarMateria2 extends javax.swing.JFrame {
         btnCronometroL.setBounds(90, 260, 104, 24);
 
         btnMenu.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\menu.png")); // NOI18N
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu (1).png"))); // NOI18N
         btnMenu.setBorder(null);
         btnMenu.setFocusPainted(false);
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -557,7 +562,11 @@ public class AgregarMateria2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEstadisticasLActionPerformed
 
     private void btnConfiguracionLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionLActionPerformed
-        // TODO add your handling code here:
+        Configuracion configuracion = new Configuracion(estudiante);  
+        configuracion.setVisible(true);    
+        configuracion.pack();               
+        configuracion.setLocationRelativeTo(null);  
+        this.dispose();
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
 
     private void btnHorarioLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioLActionPerformed
@@ -676,6 +685,14 @@ public class AgregarMateria2 extends javax.swing.JFrame {
     private void pnlBotonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBotonMouseExited
         pnlBoton.setBackground(new Color(82, 109, 130));
     }//GEN-LAST:event_pnlBotonMouseExited
+
+    private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
+        Configuracion configuracion = new Configuracion(estudiante);  
+        configuracion.setVisible(true);    
+        configuracion.pack();               
+        configuracion.setLocationRelativeTo(null);  
+        this.dispose();
+    }//GEN-LAST:event_btnConfiguracionActionPerformed
 
     
     

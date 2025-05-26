@@ -1,7 +1,6 @@
  
 package com.mycompany.studymind.igu;
 
-import com.mycompany.studymind.igu.Links;
 import com.mycompany.studymind.igu.Horario;
 import com.mycompany.studymind.igu.Cronometro;
 import com.mycompany.studymind.igu.Actividad;
@@ -9,82 +8,86 @@ import com.mycompany.studymind.logica.Estudiante;
 import java.awt.Color;
 import java.util.Random;
 
+
+
  
 public class Links2 extends javax.swing.JFrame {
 
     private Estudiante estudiante;
-    public Links2() {
+
+    
+ 
+    public Links2(Estudiante estudiante) {
           this.estudiante = estudiante;
     initComponents();
     lblUsuario.setText(estudiante.getNombre());
- 
 
-        jButton1.setBackground(new java.awt.Color(82, 109, 130));
-        jButton1.setFont(new java.awt.Font("Roboto Condensed", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("INGRESA AQUI PARA ACCEDER AL JUEGO");
+        btnAccederLinks.setBackground(new java.awt.Color(82, 109, 130));
+        btnAccederLinks.setFont(new java.awt.Font("Roboto Condensed", 0, 24)); // NOI18N
+        btnAccederLinks.setForeground(new java.awt.Color(255, 255, 255));
+        btnAccederLinks.setText("INGRESA AQUI PARA ACCEDER AL JUEGO");
 
-        // Añadir el ActionListener para el botón
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        
+        btnAccederLinks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                abrirLinkAleatorio();  // Llamar al método para abrir un enlace aleatorio
+                abrirLinkAleatorio();  
             }
         });
     }
 
         private void abrirLinkAleatorio() {
-        // Definir los tres enlaces posibles
+        
         String[] links = {
             "https://www.cokitos.com/blinky-tablas-de-multiplicar/play/",
             "https://www.cokitos.com/problemas-matematicos/play/",
             "https://www.cokitos.com/monos-matematicos-tablas-de-multiplicar/play/",
-                "https://www.cokitos.com/blinky-tablas-de-multiplicar/play/",
-"https://www.cokitos.com/problemas-matematicos/play/",
-"https://www.cokitos.com/monos-matematicos-tablas-de-multiplicar/play/",
-"https://www.youtube.com/channel/UCrMjO627KgknV0CO1RoGAEQ/featured?view_as=subscriber",
-"https://www.cokitos.com/ranas-saltarinas-logica/play/",
-"https://www.cokitos.com/acertijos-de-cruzar-el-rio/play/",
-"https://www.cokitos.com/desafio-matematico-sistema-de-ecuaciones/play/",
-"https://www.cokitos.com/dibujos-en-3d/play/",
-"https://www.cokitos.com/juego-dificil-de-habilidad/play/",
-"https://www.cokitos.com/rellenar-ajedrez/play/",
-"https://www.cokitos.com/rebota-la-pelota/play/",
-"https://www.cokitos.com/problemas-de-reflexion-de-la-luz-en-espejos/play/",
-"https://www.cokitos.com/cuadricula-de-tangram/play/",
-"https://www.cokitos.com/tangram-para-adultos/play/",
-"https://www.cokitos.com/rompecabezas-logico/play/",
-"https://www.cokitos.com/pentominos-online/play/",
-"https://www.cokitos.com/tangram-de-animales/play/",
-"https://www.cokitos.com/encerrar-al-cerdo/play/",
-"https://www.cokitos.com/encerrar-al-raton/play/",
-"https://www.cokitos.com/escape-logico/play/",
-"https://www.cokitos.com/simon-says/play/",
-"https://www.cokitos.com/memoria-visual/play/",
-"https://www.cokitos.com/patron-de-memoria/play/",
-"https://www.cokitos.com/test-de-memoria-visual-y-atencion/play/",
-"https://www.cokitos.com/memotest/play/",
-"https://www.cokitos.com/kobadoo-memorizar-numeros/play/",
-"https://www.cokitos.com/juego-crear-y-memorizar-la-secuencia/",
-"https://www.cokitos.com/desafios-de-memoria/play/",
-"https://www.cokitos.com/memory-de-colores/play/",
-"https://www.cokitos.com/simon-dice-multijugador/play/",
-"https://www.cokitos.com/desbloquear-los-barcos-puzzle-logico/play/",
+            "https://www.cokitos.com/blinky-tablas-de-multiplicar/play/",
+            "https://www.cokitos.com/problemas-matematicos/play/",
+            "https://www.cokitos.com/monos-matematicos-tablas-de-multiplicar/play/",
+            "https://www.youtube.com/channel/UCrMjO627KgknV0CO1RoGAEQ/featured?view_as=subscriber",
+            "https://www.cokitos.com/ranas-saltarinas-logica/play/",
+            "https://www.cokitos.com/acertijos-de-cruzar-el-rio/play/",
+            "https://www.cokitos.com/desafio-matematico-sistema-de-ecuaciones/play/",
+            "https://www.cokitos.com/dibujos-en-3d/play/",
+            "https://www.cokitos.com/juego-dificil-de-habilidad/play/",
+            "https://www.cokitos.com/rellenar-ajedrez/play/",
+            "https://www.cokitos.com/rebota-la-pelota/play/",
+            "https://www.cokitos.com/problemas-de-reflexion-de-la-luz-en-espejos/play/",
+            "https://www.cokitos.com/cuadricula-de-tangram/play/",
+            "https://www.cokitos.com/tangram-para-adultos/play/",
+            "https://www.cokitos.com/rompecabezas-logico/play/",
+            "https://www.cokitos.com/pentominos-online/play/",
+            "https://www.cokitos.com/tangram-de-animales/play/",
+            "https://www.cokitos.com/encerrar-al-cerdo/play/",
+            "https://www.cokitos.com/encerrar-al-raton/play/",
+            "https://www.cokitos.com/escape-logico/play/",
+            "https://www.cokitos.com/simon-says/play/",
+            "https://www.cokitos.com/memoria-visual/play/",
+            "https://www.cokitos.com/patron-de-memoria/play/",
+            "https://www.cokitos.com/test-de-memoria-visual-y-atencion/play/",
+            "https://www.cokitos.com/memotest/play/",
+            "https://www.cokitos.com/kobadoo-memorizar-numeros/play/",
+            "https://www.cokitos.com/juego-crear-y-memorizar-la-secuencia/",
+            "https://www.cokitos.com/desafios-de-memoria/play/",
+            "https://www.cokitos.com/memory-de-colores/play/",
+            "https://www.cokitos.com/simon-dice-multijugador/play/",
+            "https://www.cokitos.com/desbloquear-los-barcos-puzzle-logico/play/",
 "https://www.cokitos.com/desbloquear-el-regalo-de-navidad/play/",
 
         };
 
-        // Crear un objeto Random para seleccionar un enlace aleatorio
+       
         Random rand = new Random();
-        int index = rand.nextInt(links.length);  // Generar un número aleatorio entre 0 y el tamaño del arreglo
+        int index = rand.nextInt(links.length);  
 
-        // Obtener el enlace aleatorio
+        
         String enlaceAleatorio = links[index];
 
         try {
-            // Abrir el enlace en el navegador
+            
             java.awt.Desktop.getDesktop().browse(java.net.URI.create(enlaceAleatorio));
         } catch (java.io.IOException e) {
-            e.printStackTrace();  // Manejo de errores
+            e.printStackTrace(); 
         }
     }
     @SuppressWarnings("unchecked")
@@ -95,6 +98,10 @@ public class Links2 extends javax.swing.JFrame {
         pnlHead = new javax.swing.JPanel();
         lblUsuario = new javax.swing.JLabel();
         lblLogotipo = new javax.swing.JLabel();
+        pnlCentral = new javax.swing.JPanel();
+        lblImagen = new javax.swing.JLabel();
+        lblMensaje = new javax.swing.JLabel();
+        btnAccederLinks = new javax.swing.JButton();
         pnlMenulargo = new javax.swing.JPanel();
         btnCronometro = new javax.swing.JButton();
         btnActividades = new javax.swing.JButton();
@@ -103,15 +110,11 @@ public class Links2 extends javax.swing.JFrame {
         btnHorario = new javax.swing.JButton();
         btnEstadisticasL = new javax.swing.JButton();
         btnConfiguracionL = new javax.swing.JButton();
+        btnHorarioL = new javax.swing.JButton();
+        pnlCamulfado = new javax.swing.JPanel();
         btnActividadesL = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        btnCronometroL = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        pnlCentral = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        lblMensaje = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnCronometroL = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -130,7 +133,7 @@ public class Links2 extends javax.swing.JFrame {
         lblLogotipo.setBackground(new java.awt.Color(0, 102, 102));
         lblLogotipo.setFont(new java.awt.Font("Roboto", 1, 48)); // NOI18N
         lblLogotipo.setForeground(new java.awt.Color(255, 255, 255));
-        lblLogotipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/logotipo.png"))); // NOI18N
+        lblLogotipo.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\logotipo.png")); // NOI18N
 
         javax.swing.GroupLayout pnlHeadLayout = new javax.swing.GroupLayout(pnlHead);
         pnlHead.setLayout(pnlHeadLayout);
@@ -157,6 +160,58 @@ public class Links2 extends javax.swing.JFrame {
 
         pnlPrincipal.add(pnlHead);
         pnlHead.setBounds(0, 0, 1100, 100);
+
+        pnlCentral.setBackground(new java.awt.Color(157, 178, 191));
+
+        lblImagen.setBackground(new java.awt.Color(240, 245, 250));
+        lblImagen.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\Baymax con mariposa(1)(1).png")); // NOI18N
+
+        lblMensaje.setFont(new java.awt.Font("Roboto Condensed Black", 0, 36)); // NOI18N
+        lblMensaje.setForeground(new java.awt.Color(255, 255, 255));
+        lblMensaje.setText("Se ha generado la actividad con exito.");
+
+        btnAccederLinks.setBackground(new java.awt.Color(82, 109, 130));
+        btnAccederLinks.setFont(new java.awt.Font("Roboto Condensed", 0, 24)); // NOI18N
+        btnAccederLinks.setForeground(new java.awt.Color(255, 255, 255));
+        btnAccederLinks.setText("INGRESA AQUI PARA ACCEDER AL JUEGO");
+        btnAccederLinks.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAccederLinks.setFocusPainted(false);
+        btnAccederLinks.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAccederLinksActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlCentralLayout = new javax.swing.GroupLayout(pnlCentral);
+        pnlCentral.setLayout(pnlCentralLayout);
+        pnlCentralLayout.setHorizontalGroup(
+            pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
+                .addContainerGap(58, Short.MAX_VALUE)
+                .addComponent(btnAccederLinks, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(pnlCentralLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(lblMensaje)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlCentralLayout.setVerticalGroup(
+            pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCentralLayout.createSequentialGroup()
+                .addContainerGap(143, Short.MAX_VALUE)
+                .addComponent(lblMensaje)
+                .addGap(34, 34, 34)
+                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblImagen, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
+                        .addComponent(btnAccederLinks, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(120, 120, 120))))
+        );
+
+        pnlPrincipal.add(pnlCentral);
+        pnlCentral.setBounds(370, 180, 700, 470);
 
         pnlMenulargo.setBackground(new java.awt.Color(157, 178, 191));
         pnlMenulargo.setLayout(null);
@@ -200,6 +255,11 @@ public class Links2 extends javax.swing.JFrame {
         btnConfiguracion.setBorder(null);
         btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfiguracion.setFocusPainted(false);
+        btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracionActionPerformed(evt);
+            }
+        });
         pnlMenulargo.add(btnConfiguracion);
         btnConfiguracion.setBounds(20, 520, 52, 49);
 
@@ -243,6 +303,22 @@ public class Links2 extends javax.swing.JFrame {
         pnlMenulargo.add(btnConfiguracionL);
         btnConfiguracionL.setBounds(80, 530, 130, 24);
 
+        btnHorarioL.setBackground(new java.awt.Color(157, 178, 191));
+        btnHorarioL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
+        btnHorarioL.setForeground(new java.awt.Color(255, 255, 255));
+        btnHorarioL.setText("Horario");
+        btnHorarioL.setBorder(null);
+        btnHorarioL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnHorarioL.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHorarioLActionPerformed(evt);
+            }
+        });
+        pnlMenulargo.add(btnHorarioL);
+        btnHorarioL.setBounds(80, 160, 120, 24);
+
+        pnlCamulfado.setBackground(new java.awt.Color(221, 230, 237));
+
         btnActividadesL.setBackground(new java.awt.Color(221, 230, 237));
         btnActividadesL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
         btnActividadesL.setForeground(new java.awt.Color(255, 255, 255));
@@ -254,24 +330,38 @@ public class Links2 extends javax.swing.JFrame {
                 btnActividadesLActionPerformed(evt);
             }
         });
-        pnlMenulargo.add(btnActividadesL);
-        btnActividadesL.setBounds(90, 340, 101, 24);
 
-        jPanel4.setBackground(new java.awt.Color(157, 178, 191));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
+        javax.swing.GroupLayout pnlCamulfadoLayout = new javax.swing.GroupLayout(pnlCamulfado);
+        pnlCamulfado.setLayout(pnlCamulfadoLayout);
+        pnlCamulfadoLayout.setHorizontalGroup(
+            pnlCamulfadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCamulfadoLayout.createSequentialGroup()
+                .addContainerGap(91, Short.MAX_VALUE)
+                .addComponent(btnActividadesL)
+                .addGap(18, 18, 18))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+        pnlCamulfadoLayout.setVerticalGroup(
+            pnlCamulfadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCamulfadoLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(btnActividadesL)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
-        pnlMenulargo.add(jPanel4);
-        jPanel4.setBounds(0, 130, 210, 90);
+        pnlMenulargo.add(pnlCamulfado);
+        pnlCamulfado.setBounds(0, 310, 210, 90);
+
+        btnMenu.setBackground(new java.awt.Color(157, 178, 191));
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu (1).png"))); // NOI18N
+        btnMenu.setBorder(null);
+        btnMenu.setFocusPainted(false);
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
+        pnlMenulargo.add(btnMenu);
+        btnMenu.setBounds(20, 10, 45, 45);
 
         btnCronometroL.setBackground(new java.awt.Color(157, 178, 191));
         btnCronometroL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
@@ -285,90 +375,10 @@ public class Links2 extends javax.swing.JFrame {
             }
         });
         pnlMenulargo.add(btnCronometroL);
-        btnCronometroL.setBounds(90, 260, 104, 24);
-
-        btnMenu.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu.png"))); // NOI18N
-        btnMenu.setBorder(null);
-        btnMenu.setFocusPainted(false);
-        btnMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenuActionPerformed(evt);
-            }
-        });
-        pnlMenulargo.add(btnMenu);
-        btnMenu.setBounds(20, 10, 45, 45);
-
-        jPanel1.setBackground(new java.awt.Color(221, 230, 237));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 230, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-        );
-
-        pnlMenulargo.add(jPanel1);
-        jPanel1.setBounds(0, 320, 230, 90);
+        btnCronometroL.setBounds(90, 250, 104, 24);
 
         pnlPrincipal.add(pnlMenulargo);
-        pnlMenulargo.setBounds(0, 100, 230, 600);
-
-        pnlCentral.setBackground(new java.awt.Color(157, 178, 191));
-
-        jLabel2.setBackground(new java.awt.Color(240, 245, 250));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Baymax con mariposa(1)(1).png"))); // NOI18N
-
-        lblMensaje.setFont(new java.awt.Font("Roboto Condensed Black", 0, 36)); // NOI18N
-        lblMensaje.setForeground(new java.awt.Color(255, 255, 255));
-        lblMensaje.setText("Se ha generado la actividad con exito.");
-
-        jButton1.setBackground(new java.awt.Color(82, 109, 130));
-        jButton1.setFont(new java.awt.Font("Roboto Condensed", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("INGRESA AQUI PARA ACCEDER AL JUEGO");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnlCentralLayout = new javax.swing.GroupLayout(pnlCentral);
-        pnlCentral.setLayout(pnlCentralLayout);
-        pnlCentralLayout.setHorizontalGroup(
-            pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                .addContainerGap(58, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(pnlCentralLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(lblMensaje)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnlCentralLayout.setVerticalGroup(
-            pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlCentralLayout.createSequentialGroup()
-                .addContainerGap(143, Short.MAX_VALUE)
-                .addComponent(lblMensaje)
-                .addGap(34, 34, 34)
-                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(120, 120, 120))))
-        );
-
-        pnlPrincipal.add(pnlCentral);
-        pnlCentral.setBounds(370, 180, 700, 470);
+        pnlMenulargo.setBounds(0, 100, 210, 600);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -385,6 +395,10 @@ public class Links2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAccederLinksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederLinksActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAccederLinksActionPerformed
 
     private void btnCronometroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroActionPerformed
         Cronometro Cronometro = new Cronometro(estudiante);
@@ -412,7 +426,11 @@ public class Links2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEstadisticasLActionPerformed
 
     private void btnConfiguracionLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionLActionPerformed
-        // TODO add your handling code here:
+        Configuracion configuracion = new Configuracion(estudiante);  
+        configuracion.setVisible(true);    
+        configuracion.pack();               
+        configuracion.setLocationRelativeTo(null);  
+        this.dispose();
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
 
     private void btnHorarioLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioLActionPerformed
@@ -422,13 +440,6 @@ public class Links2 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnHorarioLActionPerformed
 
-    private void btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLActionPerformed
-        Actividad actividad = new Actividad(estudiante);
-        actividad.setVisible(true);
-        actividad.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnActividadesLActionPerformed
-
     private void btnCronometroLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroLActionPerformed
         Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
@@ -437,20 +448,32 @@ public class Links2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCronometroLActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        Actividad2 actividad = new Actividad2(estudiante);
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLActionPerformed
+        Actividad actividad = new Actividad(estudiante);
+        actividad.setVisible(true);
+        actividad.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnActividadesLActionPerformed
+
+    private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
+        Configuracion configuracion = new Configuracion(estudiante);  
+        configuracion.setVisible(true);    
+        configuracion.pack();               
+        configuracion.setLocationRelativeTo(null);  
+        this.dispose();
+    }//GEN-LAST:event_btnConfiguracionActionPerformed
 
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAccederLinks;
     private javax.swing.JButton btnActividades;
     private javax.swing.JButton btnActividadesL;
     private javax.swing.JButton btnConfiguracion;
@@ -460,14 +483,13 @@ public class Links2 extends javax.swing.JFrame {
     private javax.swing.JButton btnEstadisticas;
     private javax.swing.JButton btnEstadisticasL;
     private javax.swing.JButton btnHorario;
+    private javax.swing.JButton btnHorarioL;
     private javax.swing.JButton btnMenu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblLogotipo;
     private javax.swing.JLabel lblMensaje;
     private javax.swing.JLabel lblUsuario;
+    private javax.swing.JPanel pnlCamulfado;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlHead;
     private javax.swing.JPanel pnlMenulargo;
