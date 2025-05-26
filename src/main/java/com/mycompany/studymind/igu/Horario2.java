@@ -5,6 +5,7 @@ import com.mycompany.studymind.igu.Horario;
 import com.mycompany.studymind.igu.Cronometro;
 import com.mycompany.studymind.igu.AgregarMateria;
 import com.mycompany.studymind.igu.Actividad;
+import com.mycompany.studymind.logica.Estudiante;
 import java.awt.Color;
 
 
@@ -13,8 +14,13 @@ import java.awt.Color;
 public class Horario2 extends javax.swing.JFrame {
 
     
-    public Horario2() {
-        initComponents();
+    private Estudiante estudiante;
+
+    
+    public Horario2(Estudiante estudiante) {
+        this.estudiante = estudiante;
+    initComponents();
+    lblUsuario.setText(estudiante.getNombre());
     }
 
     
@@ -65,7 +71,7 @@ public class Horario2 extends javax.swing.JFrame {
         lblLogotipo.setBackground(new java.awt.Color(0, 102, 102));
         lblLogotipo.setFont(new java.awt.Font("Roboto", 1, 48)); // NOI18N
         lblLogotipo.setForeground(new java.awt.Color(255, 255, 255));
-        lblLogotipo.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\logotipo.png")); // NOI18N
+        lblLogotipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/logotipo.png"))); // NOI18N
 
         javax.swing.GroupLayout pnlHeadLayout = new javax.swing.GroupLayout(pnlHead);
         pnlHead.setLayout(pnlHeadLayout);
@@ -97,7 +103,7 @@ public class Horario2 extends javax.swing.JFrame {
         pnlMenulargo1.setLayout(null);
 
         btnCronometro1.setBackground(new java.awt.Color(157, 178, 191));
-        btnCronometro1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\cronometro1.png")); // NOI18N
+        btnCronometro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/cronometro1.png"))); // NOI18N
         btnCronometro1.setBorder(null);
         btnCronometro1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCronometro1.setFocusPainted(false);
@@ -107,10 +113,10 @@ public class Horario2 extends javax.swing.JFrame {
             }
         });
         pnlMenulargo1.add(btnCronometro1);
-        btnCronometro1.setBounds(20, 240, 52, 60);
+        btnCronometro1.setBounds(10, 240, 52, 60);
 
         btnActividades1.setBackground(new java.awt.Color(157, 178, 191));
-        btnActividades1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\actividad.png")); // NOI18N
+        btnActividades1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/actividad.png"))); // NOI18N
         btnActividades1.setBorder(null);
         btnActividades1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnActividades1.setFocusPainted(false);
@@ -120,23 +126,28 @@ public class Horario2 extends javax.swing.JFrame {
             }
         });
         pnlMenulargo1.add(btnActividades1);
-        btnActividades1.setBounds(20, 330, 52, 60);
+        btnActividades1.setBounds(10, 330, 52, 60);
 
         btnEstadisticas1.setBackground(new java.awt.Color(157, 178, 191));
-        btnEstadisticas1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\estadistico.png")); // NOI18N
+        btnEstadisticas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/estadistico.png"))); // NOI18N
         btnEstadisticas1.setBorder(null);
         btnEstadisticas1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEstadisticas1.setFocusPainted(false);
         pnlMenulargo1.add(btnEstadisticas1);
-        btnEstadisticas1.setBounds(20, 420, 52, 49);
+        btnEstadisticas1.setBounds(10, 420, 52, 49);
 
         btnConfiguracion1.setBackground(new java.awt.Color(157, 178, 191));
-        btnConfiguracion1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\configuracion.png")); // NOI18N
+        btnConfiguracion1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/configuracion.png"))); // NOI18N
         btnConfiguracion1.setBorder(null);
         btnConfiguracion1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfiguracion1.setFocusPainted(false);
+        btnConfiguracion1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracion1ActionPerformed(evt);
+            }
+        });
         pnlMenulargo1.add(btnConfiguracion1);
-        btnConfiguracion1.setBounds(20, 520, 52, 49);
+        btnConfiguracion1.setBounds(10, 520, 52, 49);
 
         btnEstadisticasL1.setBackground(new java.awt.Color(157, 178, 191));
         btnEstadisticasL1.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
@@ -180,7 +191,7 @@ public class Horario2 extends javax.swing.JFrame {
         });
 
         btnHorario1.setBackground(new java.awt.Color(221, 230, 237));
-        btnHorario1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\horario.png")); // NOI18N
+        btnHorario1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/horario.png"))); // NOI18N
         btnHorario1.setBorder(null);
         btnHorario1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnHorario1.setFocusPainted(false);
@@ -195,9 +206,9 @@ public class Horario2 extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(btnHorario1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnHorarioL1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12))
         );
@@ -206,12 +217,12 @@ public class Horario2 extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(btnHorario1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(btnHorarioL1)))
-                .addContainerGap(22, Short.MAX_VALUE))
+                        .addComponent(btnHorarioL1))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(btnHorario1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pnlMenulargo1.add(jPanel5);
@@ -232,7 +243,7 @@ public class Horario2 extends javax.swing.JFrame {
         btnCronometroL1.setBounds(90, 260, 104, 24);
 
         btnMenu1.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\menu.png")); // NOI18N
+        btnMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu.png"))); // NOI18N
         btnMenu1.setBorder(null);
         btnMenu1.setFocusPainted(false);
         btnMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -263,7 +274,7 @@ public class Horario2 extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(157, 178, 191));
 
         jLabel2.setBackground(new java.awt.Color(240, 245, 250));
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\Baymax.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Baymax.png"))); // NOI18N
 
         btnGuardar.setBackground(new java.awt.Color(82, 109, 130));
         btnGuardar.setFont(new java.awt.Font("Roboto Condensed", 0, 24)); // NOI18N
@@ -360,14 +371,14 @@ public class Horario2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCronometroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometroActionPerformed
 
     private void btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
@@ -382,53 +393,60 @@ public class Horario2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
 
     private void btnHorarioLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioLActionPerformed
-        Horario Horario = new Horario();
+        Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnHorarioLActionPerformed
 
     private void btnHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioActionPerformed
-        Horario Horario = new Horario();
+        Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnHorarioActionPerformed
 
     private void btnCronometroLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroLActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometroLActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividadesLActionPerformed
 
     private void btnCronometro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometro1ActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometro1ActionPerformed
 
     private void btnActividades1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividades1ActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividades1ActionPerformed
+
+    private void btnConfiguracion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracion1ActionPerformed
+        Configuracion configuracion = new Configuracion(estudiante);
+        configuracion.setVisible(true);
+        configuracion.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnConfiguracion1ActionPerformed
 
     private void btnEstadisticasL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasL1ActionPerformed
 
@@ -439,42 +457,42 @@ public class Horario2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConfiguracionL1ActionPerformed
 
     private void btnHorarioL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioL1ActionPerformed
-        Horario Horario = new Horario();
+        Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnHorarioL1ActionPerformed
 
     private void btnHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorario1ActionPerformed
-        Horario Horario = new Horario();
+        Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnHorario1ActionPerformed
 
     private void btnCronometroL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroL1ActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometroL1ActionPerformed
 
     private void btnMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu1ActionPerformed
-        Horario actividad = new Horario();
-        actividad.setVisible(true);
-        actividad.setLocationRelativeTo(null);
+        Horario2 horario2 = new Horario2(estudiante);
+        horario2.setVisible(true);
+        horario2.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnMenu1ActionPerformed
 
     private void btnActividadesL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesL1ActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividadesL1ActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        AgregarMateria agregarMateria = new AgregarMateria();
+        AgregarMateria agregarMateria = new AgregarMateria(estudiante);
         agregarMateria.setVisible(true);
         agregarMateria.setLocationRelativeTo(null);
         this.dispose();
@@ -492,42 +510,29 @@ public class Horario2 extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnActividades;
     private javax.swing.JButton btnActividades1;
-    private javax.swing.JButton btnActividadesL;
     private javax.swing.JButton btnActividadesL1;
-    private javax.swing.JButton btnConfiguracion;
     private javax.swing.JButton btnConfiguracion1;
-    private javax.swing.JButton btnConfiguracionL;
     private javax.swing.JButton btnConfiguracionL1;
-    private javax.swing.JButton btnCronometro;
     private javax.swing.JButton btnCronometro1;
-    private javax.swing.JButton btnCronometroL;
     private javax.swing.JButton btnCronometroL1;
-    private javax.swing.JButton btnEstadisticas;
     private javax.swing.JButton btnEstadisticas1;
-    private javax.swing.JButton btnEstadisticasL;
     private javax.swing.JButton btnEstadisticasL1;
     private javax.swing.JButton btnGuardar;
-    private javax.swing.JButton btnHorario;
     private javax.swing.JButton btnHorario1;
-    private javax.swing.JButton btnHorarioL;
     private javax.swing.JButton btnHorarioL1;
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnLimpiar1;
-    private javax.swing.JButton btnMenu;
     private javax.swing.JButton btnMenu1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblLogotipo;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JPanel pnlHead;
-    private javax.swing.JPanel pnlMenulargo;
     private javax.swing.JPanel pnlMenulargo1;
     // End of variables declaration//GEN-END:variables
 

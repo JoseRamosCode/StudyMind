@@ -2,6 +2,7 @@
 package com.mycompany.studymind.igu;
 
 import com.mycompany.studymind.igu.Actividad;
+import com.mycompany.studymind.logica.Estudiante;
 import java.awt.Color;
 
 
@@ -10,8 +11,13 @@ import java.awt.Color;
 public class AgregarMateria extends javax.swing.JFrame {
 
     
-    public AgregarMateria() {
-        initComponents();
+   private Estudiante estudiante;
+
+    
+    public AgregarMateria(Estudiante estudiante) {
+        this.estudiante = estudiante;
+    initComponents();
+    lblUsuario.setText(estudiante.getNombre());
     }
 
     
@@ -65,7 +71,7 @@ public class AgregarMateria extends javax.swing.JFrame {
         pnlCentral.setBackground(new java.awt.Color(157, 178, 191));
 
         lblImagen.setBackground(new java.awt.Color(240, 245, 250));
-        lblImagen.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\Baymax.png")); // NOI18N
+        lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Baymax.png"))); // NOI18N
 
         lblNombreDeAsignatura.setBackground(new java.awt.Color(157, 178, 191));
 
@@ -315,7 +321,7 @@ public class AgregarMateria extends javax.swing.JFrame {
         lblLogotipo.setBackground(new java.awt.Color(0, 102, 102));
         lblLogotipo.setFont(new java.awt.Font("Roboto", 1, 48)); // NOI18N
         lblLogotipo.setForeground(new java.awt.Color(255, 255, 255));
-        lblLogotipo.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\logotipo.png")); // NOI18N
+        lblLogotipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/logotipo.png"))); // NOI18N
 
         javax.swing.GroupLayout pnlHeadLayout = new javax.swing.GroupLayout(pnlHead);
         pnlHead.setLayout(pnlHeadLayout);
@@ -347,7 +353,7 @@ public class AgregarMateria extends javax.swing.JFrame {
         pnlMenulargo1.setLayout(null);
 
         btnCronometro1.setBackground(new java.awt.Color(157, 178, 191));
-        btnCronometro1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\cronometro1.png")); // NOI18N
+        btnCronometro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/cronometro1.png"))); // NOI18N
         btnCronometro1.setBorder(null);
         btnCronometro1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCronometro1.setFocusPainted(false);
@@ -360,7 +366,7 @@ public class AgregarMateria extends javax.swing.JFrame {
         btnCronometro1.setBounds(20, 240, 52, 60);
 
         btnActividades1.setBackground(new java.awt.Color(157, 178, 191));
-        btnActividades1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\actividad.png")); // NOI18N
+        btnActividades1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/actividad.png"))); // NOI18N
         btnActividades1.setBorder(null);
         btnActividades1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnActividades1.setFocusPainted(false);
@@ -373,7 +379,7 @@ public class AgregarMateria extends javax.swing.JFrame {
         btnActividades1.setBounds(20, 330, 52, 60);
 
         btnEstadisticas1.setBackground(new java.awt.Color(157, 178, 191));
-        btnEstadisticas1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\estadistico.png")); // NOI18N
+        btnEstadisticas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/estadistico.png"))); // NOI18N
         btnEstadisticas1.setBorder(null);
         btnEstadisticas1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEstadisticas1.setFocusPainted(false);
@@ -381,7 +387,7 @@ public class AgregarMateria extends javax.swing.JFrame {
         btnEstadisticas1.setBounds(20, 420, 52, 49);
 
         btnConfiguracion1.setBackground(new java.awt.Color(157, 178, 191));
-        btnConfiguracion1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\configuracion.png")); // NOI18N
+        btnConfiguracion1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/configuracion.png"))); // NOI18N
         btnConfiguracion1.setBorder(null);
         btnConfiguracion1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfiguracion1.setFocusPainted(false);
@@ -434,7 +440,7 @@ public class AgregarMateria extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(221, 230, 237));
 
         btnHorario1.setBackground(new java.awt.Color(221, 230, 237));
-        btnHorario1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\horario.png")); // NOI18N
+        btnHorario1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/horario.png"))); // NOI18N
         btnHorario1.setBorder(null);
         btnHorario1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnHorario1.setFocusPainted(false);
@@ -495,7 +501,7 @@ public class AgregarMateria extends javax.swing.JFrame {
         btnCronometroL1.setBounds(90, 260, 104, 24);
 
         btnMenu1.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\menu.png")); // NOI18N
+        btnMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu.png"))); // NOI18N
         btnMenu1.setBorder(null);
         btnMenu1.setFocusPainted(false);
         btnMenu1.addActionListener(new java.awt.event.ActionListener() {
@@ -586,7 +592,7 @@ public class AgregarMateria extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPrioridadActionPerformed
 
     private void lblGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardarMouseClicked
-        Horario horario = new Horario();
+        Horario horario = new Horario(estudiante);
         horario.setVisible(true);
         horario.setLocationRelativeTo(null);
         this.dispose();
@@ -601,7 +607,7 @@ public class AgregarMateria extends javax.swing.JFrame {
     }//GEN-LAST:event_lblGuardarMouseExited
 
     private void pnlBotonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBotonMouseClicked
-        Horario horario = new Horario();
+        Horario horario = new Horario(estudiante);
         horario.setVisible(true);
         horario.setLocationRelativeTo(null);
         this.dispose();
@@ -616,21 +622,21 @@ public class AgregarMateria extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlBotonMouseExited
 
     private void btnCronometroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometroActionPerformed
 
     private void btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividadesActionPerformed
 
     private void btnHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioActionPerformed
-        Horario Horario = new Horario();
+        Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
@@ -645,42 +651,42 @@ public class AgregarMateria extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
 
     private void btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividadesLActionPerformed
 
     private void btnCronometroLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroLActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometroLActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        Actividad2 actividad = new Actividad2();
-        actividad.setVisible(true);
-        actividad.setLocationRelativeTo(null);
+        Actividad2 actividad2 = new Actividad2(estudiante);
+        actividad2.setVisible(true);
+        actividad2.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void btnCronometro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometro1ActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometro1ActionPerformed
 
     private void btnActividades1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividades1ActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividades1ActionPerformed
 
     private void btnHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorario1ActionPerformed
-        Horario Horario = new Horario();
+        Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
@@ -695,23 +701,23 @@ public class AgregarMateria extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConfiguracionL1ActionPerformed
 
     private void btnActividadesL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesL1ActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividadesL1ActionPerformed
 
     private void btnCronometroL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroL1ActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometroL1ActionPerformed
 
     private void btnMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu1ActionPerformed
-        AgregarMateria2 actividad = new AgregarMateria2();
-        actividad.setVisible(true);
-        actividad.setLocationRelativeTo(null);
+        AgregarMateria2 actividad2 = new AgregarMateria2(estudiante);
+        actividad2.setVisible(true);
+        actividad2.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnMenu1ActionPerformed
 
@@ -719,30 +725,18 @@ public class AgregarMateria extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnActividades;
     private javax.swing.JButton btnActividades1;
-    private javax.swing.JButton btnActividadesL;
     private javax.swing.JButton btnActividadesL1;
-    private javax.swing.JButton btnConfiguracion;
     private javax.swing.JButton btnConfiguracion1;
-    private javax.swing.JButton btnConfiguracionL;
     private javax.swing.JButton btnConfiguracionL1;
-    private javax.swing.JButton btnCronometro;
     private javax.swing.JButton btnCronometro1;
-    private javax.swing.JButton btnCronometroL;
     private javax.swing.JButton btnCronometroL1;
-    private javax.swing.JButton btnEstadisticas;
     private javax.swing.JButton btnEstadisticas1;
-    private javax.swing.JButton btnEstadisticasL;
     private javax.swing.JButton btnEstadisticasL1;
-    private javax.swing.JButton btnHorario;
     private javax.swing.JButton btnHorario1;
-    private javax.swing.JButton btnMenu;
     private javax.swing.JButton btnMenu1;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator3;
@@ -759,7 +753,6 @@ public class AgregarMateria extends javax.swing.JFrame {
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlDocente;
     private javax.swing.JPanel pnlHead;
-    private javax.swing.JPanel pnlMenulargo;
     private javax.swing.JPanel pnlMenulargo1;
     private javax.swing.JPanel pnlPrincipal;
     private javax.swing.JPanel pnlPrioridad;

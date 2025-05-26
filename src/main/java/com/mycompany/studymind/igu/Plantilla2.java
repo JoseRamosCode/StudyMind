@@ -167,7 +167,7 @@ public class Plantilla2 extends javax.swing.JFrame {
         jLabel6.setBounds(80, 260, 140, 29);
 
         jPanel1.add(jPanel17);
-        jPanel17.setBounds(0, 90, 260, 620);
+        jPanel17.setBounds(0, 100, 260, 620);
 
         pnlHead.setBackground(new java.awt.Color(82, 109, 130));
 

@@ -4,6 +4,7 @@ package com.mycompany.studymind.igu;
 import com.mycompany.studymind.igu.Horario;
 import com.mycompany.studymind.igu.Cronometro;
 import com.mycompany.studymind.igu.Actividad;
+import com.mycompany.studymind.logica.Estudiante;
 import java.awt.Color;
 import java.util.Random;
 
@@ -12,9 +13,14 @@ import java.util.Random;
  
 public class Links extends javax.swing.JFrame {
 
+    private Estudiante estudiante;
+
     
+ 
     public Links() {
-          initComponents();
+          this.estudiante = estudiante;
+    initComponents();
+    lblUsuario.setText(estudiante.getNombre());
 
         jButton1.setBackground(new java.awt.Color(82, 109, 130));
         jButton1.setFont(new java.awt.Font("Roboto Condensed", 0, 24)); // NOI18N
@@ -384,21 +390,21 @@ public class Links extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCronometroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometroActionPerformed
 
     private void btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividadesActionPerformed
 
     private void btnHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioActionPerformed
-        Horario Horario = new Horario();
+        Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
@@ -413,21 +419,21 @@ public class Links extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
 
     private void btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividadesLActionPerformed
 
     private void btnCronometroLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroLActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometroLActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        Actividad2 actividad = new Actividad2();
+        Actividad2 actividad = new Actividad2(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();

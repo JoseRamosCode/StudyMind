@@ -73,7 +73,7 @@
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\cloai\OneDrive\Escritorio\Studymind\StudyMind\Icon\cronometro1.png"/>
+                  <Image iconType="3" name="/Iconos/cronometro1.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -98,7 +98,7 @@
                   <Color blue="ed" green="e6" red="dd" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\cloai\OneDrive\Escritorio\Studymind\StudyMind\Icon\actividad.png"/>
+                  <Image iconType="3" name="/Iconos/actividad.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -123,7 +123,7 @@
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\cloai\OneDrive\Escritorio\Studymind\StudyMind\Icon\estadistico.png"/>
+                  <Image iconType="3" name="/Iconos/estadistico.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -145,7 +145,7 @@
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\cloai\OneDrive\Escritorio\Studymind\StudyMind\Icon\configuracion.png"/>
+                  <Image iconType="3" name="/Iconos/configuracion.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -167,7 +167,7 @@
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\cloai\OneDrive\Escritorio\Studymind\StudyMind\Icon\horario.png"/>
+                  <Image iconType="3" name="/Iconos/horario.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -359,7 +359,7 @@
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\cloai\OneDrive\Escritorio\Studymind\StudyMind\Icon\menu.png"/>
+                  <Image iconType="3" name="/Iconos/menu.png"/>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
@@ -447,7 +447,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\cloai\OneDrive\Escritorio\Studymind\StudyMind\Icon\logotipo.png"/>
+                  <Image iconType="3" name="/Iconos/logotipo.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -471,7 +471,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="btnGeneraractividad" min="-2" pref="237" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" pref="238" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -486,10 +486,15 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace pref="97" max="32767" attributes="0"/>
                       <Component id="lblMensaje" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnGeneraractividad" alignment="0" min="-2" pref="67" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                              <Component id="btnGeneraractividad" min="-2" pref="67" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -502,7 +507,7 @@
                   <Color blue="fa" green="f5" red="f0" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\cloai\OneDrive\Escritorio\Studymind\StudyMind\Icon\Baymax con mariposa(1)(1).png"/>
+                  <Image iconType="3" name="/Iconos/Baymax con mariposa(1)(1).png"/>
                 </Property>
               </Properties>
             </Component>

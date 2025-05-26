@@ -2,12 +2,13 @@
 package com.mycompany.studymind;
 
 import com.mycompany.studymind.igu.Horario;
+import com.mycompany.studymind.igu.Login;
 
  
 public class StudyMind {
 
     public static void main(String[] args) {
-       Horario login = new Horario();
+       Login login = new Login();
        login.setVisible(true);
        login.pack();
        login.setLocationRelativeTo(null);

@@ -1,6 +1,7 @@
  
 package com.mycompany.studymind.igu;
 
+import com.mycompany.studymind.logica.Estudiante;
 import java.awt.Color;
 
 
@@ -9,8 +10,13 @@ import java.awt.Color;
 public class Actividad extends javax.swing.JFrame {
 
     
-    public Actividad() {
-        initComponents();
+    private Estudiante estudiante;
+
+    
+    public Actividad(Estudiante estudiante) {
+        this.estudiante = estudiante;
+    initComponents();
+    lblUsuario.setText(estudiante.getNombre());
     }
 
     
@@ -58,7 +64,7 @@ public class Actividad extends javax.swing.JFrame {
         lblLogotipo.setBackground(new java.awt.Color(0, 102, 102));
         lblLogotipo.setFont(new java.awt.Font("Roboto", 1, 48)); // NOI18N
         lblLogotipo.setForeground(new java.awt.Color(255, 255, 255));
-        lblLogotipo.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\logotipo.png")); // NOI18N
+        lblLogotipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/logotipo.png"))); // NOI18N
 
         javax.swing.GroupLayout pnlHeadLayout = new javax.swing.GroupLayout(pnlHead);
         pnlHead.setLayout(pnlHeadLayout);
@@ -90,7 +96,7 @@ public class Actividad extends javax.swing.JFrame {
         pnlMenulargo.setLayout(null);
 
         btnCronometro.setBackground(new java.awt.Color(157, 178, 191));
-        btnCronometro.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\cronometro1.png")); // NOI18N
+        btnCronometro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/cronometro1.png"))); // NOI18N
         btnCronometro.setBorder(null);
         btnCronometro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCronometro.setFocusPainted(false);
@@ -103,7 +109,7 @@ public class Actividad extends javax.swing.JFrame {
         btnCronometro.setBounds(20, 240, 52, 60);
 
         btnActividades.setBackground(new java.awt.Color(221, 230, 237));
-        btnActividades.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\actividad.png")); // NOI18N
+        btnActividades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/actividad.png"))); // NOI18N
         btnActividades.setBorder(null);
         btnActividades.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnActividades.setFocusPainted(false);
@@ -116,7 +122,7 @@ public class Actividad extends javax.swing.JFrame {
         btnActividades.setBounds(20, 330, 52, 60);
 
         btnEstadisticas.setBackground(new java.awt.Color(157, 178, 191));
-        btnEstadisticas.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\estadistico.png")); // NOI18N
+        btnEstadisticas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/estadistico.png"))); // NOI18N
         btnEstadisticas.setBorder(null);
         btnEstadisticas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEstadisticas.setFocusPainted(false);
@@ -124,7 +130,7 @@ public class Actividad extends javax.swing.JFrame {
         btnEstadisticas.setBounds(20, 420, 52, 49);
 
         btnConfiguracion.setBackground(new java.awt.Color(157, 178, 191));
-        btnConfiguracion.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\configuracion.png")); // NOI18N
+        btnConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/configuracion.png"))); // NOI18N
         btnConfiguracion.setBorder(null);
         btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfiguracion.setFocusPainted(false);
@@ -132,7 +138,7 @@ public class Actividad extends javax.swing.JFrame {
         btnConfiguracion.setBounds(20, 520, 52, 49);
 
         btnHorario.setBackground(new java.awt.Color(157, 178, 191));
-        btnHorario.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\horario.png")); // NOI18N
+        btnHorario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/horario.png"))); // NOI18N
         btnHorario.setBorder(null);
         btnHorario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnHorario.setFocusPainted(false);
@@ -216,7 +222,7 @@ public class Actividad extends javax.swing.JFrame {
         btnCronometroL.setBounds(90, 260, 104, 24);
 
         btnMenu.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\menu.png")); // NOI18N
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu.png"))); // NOI18N
         btnMenu.setBorder(null);
         btnMenu.setFocusPainted(false);
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -249,7 +255,7 @@ public class Actividad extends javax.swing.JFrame {
         pnlCentral.setBackground(new java.awt.Color(157, 178, 191));
 
         jLabel2.setBackground(new java.awt.Color(240, 245, 250));
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\Baymax con mariposa(1)(1).png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Baymax con mariposa(1)(1).png"))); // NOI18N
 
         lblMensaje.setFont(new java.awt.Font("Roboto Condensed Black", 0, 36)); // NOI18N
         lblMensaje.setForeground(new java.awt.Color(255, 255, 255));
@@ -312,21 +318,21 @@ public class Actividad extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCronometroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometroActionPerformed
 
     private void btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividadesActionPerformed
 
     private void btnHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioActionPerformed
-        Horario Horario = new Horario();
+        Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
@@ -341,23 +347,23 @@ public class Actividad extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
 
     private void btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLActionPerformed
-        Actividad actividad = new Actividad();
+        Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividadesLActionPerformed
 
     private void btnCronometroLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroLActionPerformed
-        Cronometro Cronometro = new Cronometro();
+        Cronometro Cronometro = new Cronometro(estudiante);
         Cronometro.setVisible(true);
         Cronometro.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnCronometroLActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        Actividad2 actividad = new Actividad2();
-        actividad.setVisible(true);
-        actividad.setLocationRelativeTo(null);
+        Actividad2 actividad2 = new Actividad2(estudiante);
+        actividad2.setVisible(true);
+        actividad2.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
 

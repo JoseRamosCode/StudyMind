@@ -34,14 +34,5 @@ public class Controladora {
         return null;
     }
     
-    public void guardarMateria(String nombre, String dia, String horaInicio, String horaFin) {
-    Materia materia = new Materia();
-    materia.setNombre(nombre);
-    
-    String descripcion = "Día: " + dia + ", " + horaInicio + " - " + horaFin;
-    materia.setDescripcion(descripcion);
-    
-    controlPersis.guardarMateria(materia);
-}
-    
+
 }

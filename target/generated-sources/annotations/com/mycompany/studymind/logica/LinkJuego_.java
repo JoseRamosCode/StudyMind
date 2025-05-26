@@ -5,11 +5,7 @@ import javax.annotation.processing.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-<<<<<<< HEAD
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2025-05-23T14:19:47", comments="EclipseLink-2.7.10.v20211216-rNA")
-=======
-@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2025-05-22T11:42:30", comments="EclipseLink-2.7.10.v20211216-rNA")
->>>>>>> Registro-Ingreso
+@Generated(value="org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor", date="2025-05-23T16:32:50", comments="EclipseLink-2.7.10.v20211216-rNA")
 @StaticMetamodel(LinkJuego.class)
 public class LinkJuego_ { 
 
