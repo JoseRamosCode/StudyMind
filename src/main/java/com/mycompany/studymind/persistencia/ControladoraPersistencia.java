@@ -29,6 +29,24 @@ SesionEstudioJpaController sesionEstudioJpa = new SesionEstudioJpaController();
     materiaJpa.create(materia);
 }
     
-    
-    
+public boolean actualizar(Estudiante estudiante) {
+    try {
+        estudianteJpa.edit(estudiante);
+        System.out.println("Estudiante actualizado: " + estudiante.getNombre());
+        return true;
+    } catch (Exception e) {
+        System.err.println("ERROR AL ACTUALIZAR ESTUDIANTE:");
+        e.printStackTrace(); 
+        return false;
+    }
+}
+
+ public Estudiante traerEstudiantePorId(int id) {
+    return estudianteJpa.findEstudiante(id);
+}
+ 
+ public List<Materia> obtenerTodasLasMaterias() {
+    return materiaJpa.findMateriaEntities();
+}
+  
 }

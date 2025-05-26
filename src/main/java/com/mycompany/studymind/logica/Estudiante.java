@@ -23,12 +23,13 @@ public class Estudiante implements Serializable {
     @OneToMany(mappedBy = "estudiante", cascade = CascadeType.ALL)
     private List<SesionEstudio> sesionEstudio;
     
-     @ManyToMany
+    @ManyToMany
      @JoinTable(
              name = "estudiante_materia",
              joinColumns = @JoinColumn(name = "id_Estudiante"),
              inverseJoinColumns = @JoinColumn(name = "id_Materia")
      )
+     
     private  List<Materia> materias;
 
     public Estudiante() {
@@ -90,6 +91,10 @@ public class Estudiante implements Serializable {
     public void setMaterias(List<Materia> materias) {
         this.materias = materias;
     }
+
+    public int getId() {
+    return id_Estudiante;
+}
     
     
 }

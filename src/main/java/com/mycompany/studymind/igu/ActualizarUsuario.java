@@ -1,6 +1,7 @@
  
 package com.mycompany.studymind.igu;
 
+import com.mycompany.studymind.logica.Controladora;
 import com.mycompany.studymind.logica.Estudiante;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -9,19 +10,18 @@ import javax.swing.JOptionPane;
 
 
  
-public class Actualizar extends javax.swing.JFrame {
+public class ActualizarUsuario extends javax.swing.JFrame {
 
     
     private Estudiante estudiante;
 
     
-    public Actualizar(Estudiante estudiante) {
-        this.estudiante = estudiante;
+    public ActualizarUsuario(Estudiante estudiante) {
+    this.estudiante = estudiante;
     initComponents();
     lblUsuario.setText(estudiante.getNombre());
-    lblUsuario1.setText(estudiante.getNombre());
-
-    }
+    
+}
 
     
     @SuppressWarnings("unchecked")
@@ -36,30 +36,26 @@ public class Actualizar extends javax.swing.JFrame {
         btnCronometro = new javax.swing.JButton();
         btnActividades = new javax.swing.JButton();
         btnEstadisticas = new javax.swing.JButton();
-        btnConfiguracion = new javax.swing.JButton();
         btnHorario = new javax.swing.JButton();
         btnEstadisticasL = new javax.swing.JButton();
         btnConfiguracionL = new javax.swing.JButton();
         btnActividadesL = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
         btnCronometroL = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        pnlCamuflado = new javax.swing.JPanel();
+        btnConfiguracion = new javax.swing.JButton();
         pnlCentral = new javax.swing.JPanel();
         lblMensaje = new javax.swing.JLabel();
-        lblNombreAsignatura = new javax.swing.JLabel();
-        pnlBoton3 = new javax.swing.JPanel();
-        lblGuardar3 = new javax.swing.JLabel();
-        lblUsuario1 = new javax.swing.JLabel();
-        lblNombreDeAsignatura = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        lblNombreDeAsignatura1 = new javax.swing.JPanel();
+        pnlActualizar = new javax.swing.JPanel();
+        lblActualizar = new javax.swing.JLabel();
+        pnlConfirmarContrasenia = new javax.swing.JPanel();
+        sepConfirmarContrasenia = new javax.swing.JSeparator();
+        txtPassword = new javax.swing.JPasswordField();
+        pnlNuevoUsuario = new javax.swing.JPanel();
         txtNuevoUsuario = new javax.swing.JTextField();
-        jSeparator2 = new javax.swing.JSeparator();
-        lblNombreAsignatura4 = new javax.swing.JLabel();
-        lblNombreAsignatura3 = new javax.swing.JLabel();
+        sepNuevoUsuario = new javax.swing.JSeparator();
+        lblNuevoUsuario = new javax.swing.JLabel();
+        lblConfirmarContrasenia = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -141,16 +137,13 @@ public class Actualizar extends javax.swing.JFrame {
         btnEstadisticas.setBorder(null);
         btnEstadisticas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEstadisticas.setFocusPainted(false);
+        btnEstadisticas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEstadisticasActionPerformed(evt);
+            }
+        });
         pnlMenulargo.add(btnEstadisticas);
         btnEstadisticas.setBounds(20, 420, 52, 49);
-
-        btnConfiguracion.setBackground(new java.awt.Color(221, 230, 237));
-        btnConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/configuracion.png"))); // NOI18N
-        btnConfiguracion.setBorder(null);
-        btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnConfiguracion.setFocusPainted(false);
-        pnlMenulargo.add(btnConfiguracion);
-        btnConfiguracion.setBounds(20, 520, 52, 49);
 
         btnHorario.setBackground(new java.awt.Color(157, 178, 191));
         btnHorario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/horario.png"))); // NOI18N
@@ -206,22 +199,6 @@ public class Actualizar extends javax.swing.JFrame {
         pnlMenulargo.add(btnActividadesL);
         btnActividadesL.setBounds(90, 340, 101, 24);
 
-        jPanel4.setBackground(new java.awt.Color(157, 178, 191));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-        );
-
-        pnlMenulargo.add(jPanel4);
-        jPanel4.setBounds(0, 130, 210, 90);
-
         btnCronometroL.setBackground(new java.awt.Color(157, 178, 191));
         btnCronometroL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
         btnCronometroL.setForeground(new java.awt.Color(255, 255, 255));
@@ -237,7 +214,7 @@ public class Actualizar extends javax.swing.JFrame {
         btnCronometroL.setBounds(90, 260, 104, 24);
 
         btnMenu.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu.png"))); // NOI18N
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu (1).png"))); // NOI18N
         btnMenu.setBorder(null);
         btnMenu.setFocusPainted(false);
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -248,37 +225,38 @@ public class Actualizar extends javax.swing.JFrame {
         pnlMenulargo.add(btnMenu);
         btnMenu.setBounds(20, 10, 45, 45);
 
-        jPanel1.setBackground(new java.awt.Color(157, 178, 191));
+        pnlCamuflado.setBackground(new java.awt.Color(221, 230, 237));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+        btnConfiguracion.setBackground(new java.awt.Color(221, 230, 237));
+        btnConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/configuracion.png"))); // NOI18N
+        btnConfiguracion.setBorder(null);
+        btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConfiguracion.setFocusPainted(false);
+        btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracionActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlCamufladoLayout = new javax.swing.GroupLayout(pnlCamuflado);
+        pnlCamuflado.setLayout(pnlCamufladoLayout);
+        pnlCamufladoLayout.setHorizontalGroup(
+            pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCamufladoLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
+        pnlCamufladoLayout.setVerticalGroup(
+            pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCamufladoLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(btnConfiguracion, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        pnlMenulargo.add(jPanel1);
-        jPanel1.setBounds(0, 320, 90, 90);
-
-        jPanel2.setBackground(new java.awt.Color(221, 230, 237));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
-
-        pnlMenulargo.add(jPanel2);
-        jPanel2.setBounds(0, 510, 100, 80);
+        pnlMenulargo.add(pnlCamuflado);
+        pnlCamuflado.setBounds(0, 520, 100, 80);
 
         pnlPrincipal.add(pnlMenulargo);
         pnlMenulargo.setBounds(0, 100, 90, 600);
@@ -289,94 +267,83 @@ public class Actualizar extends javax.swing.JFrame {
         lblMensaje.setForeground(new java.awt.Color(255, 255, 255));
         lblMensaje.setText("Actualización de contacto");
 
-        lblNombreAsignatura.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
-        lblNombreAsignatura.setForeground(new java.awt.Color(255, 255, 255));
-        lblNombreAsignatura.setText("Usuario actual:");
-
-        pnlBoton3.setBackground(new java.awt.Color(82, 109, 130));
-        pnlBoton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        pnlBoton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        pnlActualizar.setBackground(new java.awt.Color(82, 109, 130));
+        pnlActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pnlActualizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pnlBoton3MouseClicked(evt);
+                pnlActualizarMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pnlBoton3MouseEntered(evt);
+                pnlActualizarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                pnlBoton3MouseExited(evt);
+                pnlActualizarMouseExited(evt);
             }
         });
 
-        lblGuardar3.setFont(new java.awt.Font("Roboto Condensed", 0, 18)); // NOI18N
-        lblGuardar3.setForeground(new java.awt.Color(255, 255, 255));
-        lblGuardar3.setText("Actualizar");
-        lblGuardar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lblGuardar3.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblActualizar.setFont(new java.awt.Font("Roboto Condensed", 0, 18)); // NOI18N
+        lblActualizar.setForeground(new java.awt.Color(255, 255, 255));
+        lblActualizar.setText("Actualizar");
+        lblActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblActualizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblGuardar3MouseClicked(evt);
+                lblActualizarMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblGuardar3MouseEntered(evt);
+                lblActualizarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblGuardar3MouseExited(evt);
+                lblActualizarMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout pnlBoton3Layout = new javax.swing.GroupLayout(pnlBoton3);
-        pnlBoton3.setLayout(pnlBoton3Layout);
-        pnlBoton3Layout.setHorizontalGroup(
-            pnlBoton3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBoton3Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(lblGuardar3)
-                .addContainerGap(30, Short.MAX_VALUE))
+        javax.swing.GroupLayout pnlActualizarLayout = new javax.swing.GroupLayout(pnlActualizar);
+        pnlActualizar.setLayout(pnlActualizarLayout);
+        pnlActualizarLayout.setHorizontalGroup(
+            pnlActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlActualizarLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lblActualizar)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
-        pnlBoton3Layout.setVerticalGroup(
-            pnlBoton3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlBoton3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblGuardar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+        pnlActualizarLayout.setVerticalGroup(
+            pnlActualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblActualizar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
         );
 
-        lblUsuario1.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
-        lblUsuario1.setForeground(new java.awt.Color(255, 255, 255));
-        lblUsuario1.setText("usuario");
+        pnlConfirmarContrasenia.setBackground(new java.awt.Color(157, 178, 191));
 
-        lblNombreDeAsignatura.setBackground(new java.awt.Color(157, 178, 191));
+        sepConfirmarContrasenia.setForeground(new java.awt.Color(82, 109, 130));
 
-        jSeparator1.setForeground(new java.awt.Color(82, 109, 130));
-
-        jPasswordField1.setBackground(new java.awt.Color(157, 178, 191));
-        jPasswordField1.setForeground(new java.awt.Color(255, 255, 255));
-        jPasswordField1.setBorder(null);
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        txtPassword.setBackground(new java.awt.Color(157, 178, 191));
+        txtPassword.setForeground(new java.awt.Color(255, 255, 255));
+        txtPassword.setBorder(null);
+        txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                txtPasswordActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout lblNombreDeAsignaturaLayout = new javax.swing.GroupLayout(lblNombreDeAsignatura);
-        lblNombreDeAsignatura.setLayout(lblNombreDeAsignaturaLayout);
-        lblNombreDeAsignaturaLayout.setHorizontalGroup(
-            lblNombreDeAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lblNombreDeAsignaturaLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnlConfirmarContraseniaLayout = new javax.swing.GroupLayout(pnlConfirmarContrasenia);
+        pnlConfirmarContrasenia.setLayout(pnlConfirmarContraseniaLayout);
+        pnlConfirmarContraseniaLayout.setHorizontalGroup(
+            pnlConfirmarContraseniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlConfirmarContraseniaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(lblNombreDeAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(pnlConfirmarContraseniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sepConfirmarContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
-        lblNombreDeAsignaturaLayout.setVerticalGroup(
-            lblNombreDeAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lblNombreDeAsignaturaLayout.createSequentialGroup()
+        pnlConfirmarContraseniaLayout.setVerticalGroup(
+            pnlConfirmarContraseniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlConfirmarContraseniaLayout.createSequentialGroup()
                 .addContainerGap(13, Short.MAX_VALUE)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(sepConfirmarContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        lblNombreDeAsignatura1.setBackground(new java.awt.Color(157, 178, 191));
+        pnlNuevoUsuario.setBackground(new java.awt.Color(157, 178, 191));
 
         txtNuevoUsuario.setBackground(new java.awt.Color(157, 178, 191));
         txtNuevoUsuario.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
@@ -393,73 +360,66 @@ public class Actualizar extends javax.swing.JFrame {
             }
         });
 
-        jSeparator2.setForeground(new java.awt.Color(82, 109, 130));
+        sepNuevoUsuario.setForeground(new java.awt.Color(82, 109, 130));
 
-        lblNombreAsignatura4.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
-        lblNombreAsignatura4.setForeground(new java.awt.Color(255, 255, 255));
-        lblNombreAsignatura4.setText("Nuevo usuario");
+        lblNuevoUsuario.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
+        lblNuevoUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        lblNuevoUsuario.setText("Nuevo usuario:");
 
-        javax.swing.GroupLayout lblNombreDeAsignatura1Layout = new javax.swing.GroupLayout(lblNombreDeAsignatura1);
-        lblNombreDeAsignatura1.setLayout(lblNombreDeAsignatura1Layout);
-        lblNombreDeAsignatura1Layout.setHorizontalGroup(
-            lblNombreDeAsignatura1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lblNombreDeAsignatura1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlNuevoUsuarioLayout = new javax.swing.GroupLayout(pnlNuevoUsuario);
+        pnlNuevoUsuario.setLayout(pnlNuevoUsuarioLayout);
+        pnlNuevoUsuarioLayout.setHorizontalGroup(
+            pnlNuevoUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNuevoUsuarioLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(lblNombreDeAsignatura1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlNuevoUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(sepNuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(lblNombreDeAsignatura1Layout.createSequentialGroup()
+            .addGroup(pnlNuevoUsuarioLayout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addComponent(lblNombreAsignatura4)
+                .addComponent(lblNuevoUsuario)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        lblNombreDeAsignatura1Layout.setVerticalGroup(
-            lblNombreDeAsignatura1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lblNombreDeAsignatura1Layout.createSequentialGroup()
+        pnlNuevoUsuarioLayout.setVerticalGroup(
+            pnlNuevoUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNuevoUsuarioLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblNombreAsignatura4)
+                .addComponent(lblNuevoUsuario)
                 .addGap(4, 4, 4)
                 .addComponent(txtNuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(sepNuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        lblNombreAsignatura3.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
-        lblNombreAsignatura3.setForeground(new java.awt.Color(255, 255, 255));
-        lblNombreAsignatura3.setText("Confirmar contraseña");
+        lblConfirmarContrasenia.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
+        lblConfirmarContrasenia.setForeground(new java.awt.Color(255, 255, 255));
+        lblConfirmarContrasenia.setText("Confirmar contraseña:");
 
         javax.swing.GroupLayout pnlCentralLayout = new javax.swing.GroupLayout(pnlCentral);
         pnlCentral.setLayout(pnlCentralLayout);
         pnlCentralLayout.setHorizontalGroup(
             pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCentralLayout.createSequentialGroup()
-                .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(152, 152, 152)
-                        .addComponent(lblMensaje))
-                    .addGroup(pnlCentralLayout.createSequentialGroup()
-                        .addGap(294, 294, 294)
-                        .addComponent(lblNombreAsignatura)))
+                .addGap(152, 152, 152)
+                .addComponent(lblMensaje)
                 .addContainerGap(172, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 273, Short.MAX_VALUE)
                 .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                        .addComponent(pnlBoton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pnlActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(283, 283, 283))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                        .addComponent(lblNombreDeAsignatura, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(245, 245, 245))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                        .addComponent(lblUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(318, 318, 318))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                        .addComponent(lblNombreAsignatura3)
+                        .addComponent(lblConfirmarContrasenia)
                         .addGap(269, 269, 269))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlConfirmarContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(249, 249, 249))
             .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlCentralLayout.createSequentialGroup()
                     .addGap(264, 264, 264)
-                    .addComponent(lblNombreDeAsignatura1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlNuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(267, Short.MAX_VALUE)))
         );
         pnlCentralLayout.setVerticalGroup(
@@ -467,21 +427,17 @@ public class Actualizar extends javax.swing.JFrame {
             .addGroup(pnlCentralLayout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(lblMensaje)
-                .addGap(43, 43, 43)
-                .addComponent(lblNombreAsignatura)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblUsuario1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
-                .addComponent(lblNombreAsignatura3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                .addComponent(lblConfirmarContrasenia)
                 .addGap(18, 18, 18)
-                .addComponent(lblNombreDeAsignatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlConfirmarContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(pnlBoton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
             .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
                     .addContainerGap(212, Short.MAX_VALUE)
-                    .addComponent(lblNombreDeAsignatura1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlNuevoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(194, 194, 194)))
         );
 
@@ -493,8 +449,7 @@ public class Actualizar extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 1106, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -513,7 +468,7 @@ public class Actualizar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCronometroActionPerformed
 
     private void btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesActionPerformed
-        Actualizar actividad = new Actualizar(estudiante);
+        ActualizarUsuario actividad = new ActualizarUsuario(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
@@ -535,7 +490,7 @@ public class Actualizar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
 
     private void btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLActionPerformed
-        Actualizar actividad = new Actualizar(estudiante);
+        ActualizarUsuario actividad = new ActualizarUsuario(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
@@ -549,35 +504,59 @@ public class Actualizar extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCronometroLActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        Actividad2 actividad2 = new Actividad2(estudiante);
-        actividad2.setVisible(true);
-        actividad2.setLocationRelativeTo(null);
+        Configuracion configuracion = new Configuracion(estudiante);
+        configuracion.setVisible(true);
+        configuracion.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
 
-    private void lblGuardar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar3MouseClicked
-         
-    }//GEN-LAST:event_lblGuardar3MouseClicked
+    private void lblActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblActualizarMouseClicked
+           String nuevoUsuario = txtNuevoUsuario.getText();
+    String contraseniaIngresada = new String(txtPassword.getPassword());
 
-    private void lblGuardar3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar3MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblGuardar3MouseEntered
+    if (nuevoUsuario.isEmpty() || contraseniaIngresada.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos", "Campos vacíos", JOptionPane.WARNING_MESSAGE);
+        
+        return;
+    }
 
-    private void lblGuardar3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblGuardar3MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblGuardar3MouseExited
+    if (!this.estudiante.getContrasenia().equals(contraseniaIngresada)) {
+        JOptionPane.showMessageDialog(this, "La contraseña no coincide", "Error de autenticación", JOptionPane.ERROR_MESSAGE);
+        
+        return;
+    }
 
-    private void pnlBoton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton3MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton3MouseClicked
+  
+    this.estudiante.setNombre(nuevoUsuario);
 
-    private void pnlBoton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton3MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton3MouseEntered
+    
+    Controladora control = new Controladora();
+    boolean actualizado = control.actualizarEstudiante(this.estudiante);
 
-    private void pnlBoton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBoton3MouseExited
+    if (actualizado) {
+      
+        this.estudiante = control.traerEstudiantePorId(this.estudiante.getId_Estudiante());
+
+      
+        JOptionPane.showMessageDialog(this, "Nombre actualizado con éxito", "Actualización exitosa", JOptionPane.INFORMATION_MESSAGE);
+
+       
+        Configuracion configuracion = new Configuracion(this.estudiante);
+        configuracion.setVisible(true);
+        configuracion.setLocationRelativeTo(null);
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(this, "Ocurrió un error al actualizar el usuario", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_lblActualizarMouseClicked
+
+    private void lblActualizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblActualizarMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_pnlBoton3MouseExited
+    }//GEN-LAST:event_lblActualizarMouseEntered
+
+    private void lblActualizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblActualizarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblActualizarMouseExited
 
     private void txtNuevoUsuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNuevoUsuarioMousePressed
        
@@ -587,9 +566,68 @@ public class Actualizar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNuevoUsuarioActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_txtPasswordActionPerformed
+
+    private void pnlActualizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlActualizarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pnlActualizarMouseExited
+
+    private void pnlActualizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlActualizarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pnlActualizarMouseEntered
+
+    private void pnlActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlActualizarMouseClicked
+          String nuevoUsuario = txtNuevoUsuario.getText();
+    String contraseniaIngresada = new String(txtPassword.getPassword());
+
+    if (nuevoUsuario.isEmpty() || contraseniaIngresada.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos", "Campos vacíos", JOptionPane.WARNING_MESSAGE);
+        
+        return;
+    }
+
+    if (!this.estudiante.getContrasenia().equals(contraseniaIngresada)) {
+        JOptionPane.showMessageDialog(this, "La contraseña no coincide", "Error de autenticación", JOptionPane.ERROR_MESSAGE);
+        
+        return;
+    }
+
+  
+    this.estudiante.setNombre(nuevoUsuario);
+
+    
+    Controladora control = new Controladora();
+    boolean actualizado = control.actualizarEstudiante(this.estudiante);
+
+    if (actualizado) {
+      
+        this.estudiante = control.traerEstudiantePorId(this.estudiante.getId_Estudiante());
+
+      
+        JOptionPane.showMessageDialog(this, "Nombre actualizado con éxito", "Actualización exitosa", JOptionPane.INFORMATION_MESSAGE);
+
+       
+        Configuracion configuracion = new Configuracion(this.estudiante);
+        configuracion.setVisible(true);
+        configuracion.setLocationRelativeTo(null);
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(this, "Ocurrió un error al actualizar el usuario", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_pnlActualizarMouseClicked
+
+    private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
+        Configuracion configuracion = new Configuracion(estudiante);
+        configuracion.setVisible(true);
+        configuracion.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnConfiguracionActionPerformed
+
+    private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed
+        
+    }//GEN-LAST:event_btnEstadisticasActionPerformed
 
     
     
@@ -605,28 +643,24 @@ public class Actualizar extends javax.swing.JFrame {
     private javax.swing.JButton btnEstadisticasL;
     private javax.swing.JButton btnHorario;
     private javax.swing.JButton btnMenu;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JLabel lblGuardar3;
+    private javax.swing.JLabel lblActualizar;
+    private javax.swing.JLabel lblConfirmarContrasenia;
     private javax.swing.JLabel lblLogotipo;
     private javax.swing.JLabel lblMensaje;
-    private javax.swing.JLabel lblNombreAsignatura;
-    private javax.swing.JLabel lblNombreAsignatura3;
-    private javax.swing.JLabel lblNombreAsignatura4;
-    private javax.swing.JPanel lblNombreDeAsignatura;
-    private javax.swing.JPanel lblNombreDeAsignatura1;
+    private javax.swing.JLabel lblNuevoUsuario;
     private javax.swing.JLabel lblUsuario;
-    private javax.swing.JLabel lblUsuario1;
-    private javax.swing.JPanel pnlBoton3;
+    private javax.swing.JPanel pnlActualizar;
+    private javax.swing.JPanel pnlCamuflado;
     private javax.swing.JPanel pnlCentral;
+    private javax.swing.JPanel pnlConfirmarContrasenia;
     private javax.swing.JPanel pnlHead;
     private javax.swing.JPanel pnlMenulargo;
+    private javax.swing.JPanel pnlNuevoUsuario;
     private javax.swing.JPanel pnlPrincipal;
+    private javax.swing.JSeparator sepConfirmarContrasenia;
+    private javax.swing.JSeparator sepNuevoUsuario;
     private javax.swing.JTextField txtNuevoUsuario;
+    private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
 
 

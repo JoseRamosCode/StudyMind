@@ -17,26 +17,26 @@ public class Links extends javax.swing.JFrame {
 
     
  
-    public Links() {
+    public Links(Estudiante estudiante) {
           this.estudiante = estudiante;
     initComponents();
     lblUsuario.setText(estudiante.getNombre());
 
-        jButton1.setBackground(new java.awt.Color(82, 109, 130));
-        jButton1.setFont(new java.awt.Font("Roboto Condensed", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("INGRESA AQUI PARA ACCEDER AL JUEGO");
+        btnAccederLinks.setBackground(new java.awt.Color(82, 109, 130));
+        btnAccederLinks.setFont(new java.awt.Font("Roboto Condensed", 0, 24)); // NOI18N
+        btnAccederLinks.setForeground(new java.awt.Color(255, 255, 255));
+        btnAccederLinks.setText("INGRESA AQUI PARA ACCEDER AL JUEGO");
 
-        // Añadir el ActionListener para el botón
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        
+        btnAccederLinks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                abrirLinkAleatorio();  // Llamar al método para abrir un enlace aleatorio
+                abrirLinkAleatorio();  
             }
         });
     }
 
         private void abrirLinkAleatorio() {
-        // Definir los tres enlaces posibles
+        
         String[] links = {
             "https://www.cokitos.com/blinky-tablas-de-multiplicar/play/",
             "https://www.cokitos.com/problemas-matematicos/play/",
@@ -76,18 +76,18 @@ public class Links extends javax.swing.JFrame {
 
         };
 
-        // Crear un objeto Random para seleccionar un enlace aleatorio
+       
         Random rand = new Random();
-        int index = rand.nextInt(links.length);  // Generar un número aleatorio entre 0 y el tamaño del arreglo
+        int index = rand.nextInt(links.length);  
 
-        // Obtener el enlace aleatorio
+        
         String enlaceAleatorio = links[index];
 
         try {
-            // Abrir el enlace en el navegador
+            
             java.awt.Desktop.getDesktop().browse(java.net.URI.create(enlaceAleatorio));
         } catch (java.io.IOException e) {
-            e.printStackTrace();  // Manejo de errores
+            e.printStackTrace(); 
         }
     }
     @SuppressWarnings("unchecked")
@@ -104,17 +104,13 @@ public class Links extends javax.swing.JFrame {
         btnEstadisticas = new javax.swing.JButton();
         btnConfiguracion = new javax.swing.JButton();
         btnHorario = new javax.swing.JButton();
-        btnEstadisticasL = new javax.swing.JButton();
         btnConfiguracionL = new javax.swing.JButton();
-        btnActividadesL = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        btnCronometroL = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        btnCamuflado = new javax.swing.JPanel();
         pnlCentral = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        lblImagen = new javax.swing.JLabel();
         lblMensaje = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnAccederLinks = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -203,6 +199,11 @@ public class Links extends javax.swing.JFrame {
         btnConfiguracion.setBorder(null);
         btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConfiguracion.setFocusPainted(false);
+        btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConfiguracionActionPerformed(evt);
+            }
+        });
         pnlMenulargo.add(btnConfiguracion);
         btnConfiguracion.setBounds(20, 520, 52, 49);
 
@@ -219,20 +220,6 @@ public class Links extends javax.swing.JFrame {
         pnlMenulargo.add(btnHorario);
         btnHorario.setBounds(20, 150, 52, 49);
 
-        btnEstadisticasL.setBackground(new java.awt.Color(157, 178, 191));
-        btnEstadisticasL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
-        btnEstadisticasL.setForeground(new java.awt.Color(255, 255, 255));
-        btnEstadisticasL.setText("Estadisticas");
-        btnEstadisticasL.setBorder(null);
-        btnEstadisticasL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEstadisticasL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEstadisticasLActionPerformed(evt);
-            }
-        });
-        pnlMenulargo.add(btnEstadisticasL);
-        btnEstadisticasL.setBounds(90, 440, 120, 24);
-
         btnConfiguracionL.setBackground(new java.awt.Color(157, 178, 191));
         btnConfiguracionL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
         btnConfiguracionL.setForeground(new java.awt.Color(255, 255, 255));
@@ -246,52 +233,8 @@ public class Links extends javax.swing.JFrame {
         pnlMenulargo.add(btnConfiguracionL);
         btnConfiguracionL.setBounds(80, 530, 130, 24);
 
-        btnActividadesL.setBackground(new java.awt.Color(157, 178, 191));
-        btnActividadesL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
-        btnActividadesL.setForeground(new java.awt.Color(255, 255, 255));
-        btnActividadesL.setText("Actividades");
-        btnActividadesL.setBorder(null);
-        btnActividadesL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnActividadesL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActividadesLActionPerformed(evt);
-            }
-        });
-        pnlMenulargo.add(btnActividadesL);
-        btnActividadesL.setBounds(90, 340, 101, 24);
-
-        jPanel4.setBackground(new java.awt.Color(157, 178, 191));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-        );
-
-        pnlMenulargo.add(jPanel4);
-        jPanel4.setBounds(0, 130, 210, 90);
-
-        btnCronometroL.setBackground(new java.awt.Color(157, 178, 191));
-        btnCronometroL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
-        btnCronometroL.setForeground(new java.awt.Color(255, 255, 255));
-        btnCronometroL.setText("Cronometro");
-        btnCronometroL.setBorder(null);
-        btnCronometroL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCronometroL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCronometroLActionPerformed(evt);
-            }
-        });
-        pnlMenulargo.add(btnCronometroL);
-        btnCronometroL.setBounds(90, 260, 104, 24);
-
         btnMenu.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\menu.png")); // NOI18N
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu (1).png"))); // NOI18N
         btnMenu.setBorder(null);
         btnMenu.setFocusPainted(false);
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -302,43 +245,43 @@ public class Links extends javax.swing.JFrame {
         pnlMenulargo.add(btnMenu);
         btnMenu.setBounds(20, 10, 45, 45);
 
-        jPanel1.setBackground(new java.awt.Color(221, 230, 237));
+        btnCamuflado.setBackground(new java.awt.Color(221, 230, 237));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout btnCamufladoLayout = new javax.swing.GroupLayout(btnCamuflado);
+        btnCamuflado.setLayout(btnCamufladoLayout);
+        btnCamufladoLayout.setHorizontalGroup(
+            btnCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        btnCamufladoLayout.setVerticalGroup(
+            btnCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        pnlMenulargo.add(jPanel1);
-        jPanel1.setBounds(0, 320, 90, 90);
+        pnlMenulargo.add(btnCamuflado);
+        btnCamuflado.setBounds(0, 320, 90, 90);
 
         pnlPrincipal.add(pnlMenulargo);
         pnlMenulargo.setBounds(0, 100, 90, 600);
 
         pnlCentral.setBackground(new java.awt.Color(157, 178, 191));
 
-        jLabel2.setBackground(new java.awt.Color(240, 245, 250));
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\Baymax con mariposa(1)(1).png")); // NOI18N
+        lblImagen.setBackground(new java.awt.Color(240, 245, 250));
+        lblImagen.setIcon(new javax.swing.ImageIcon("C:\\Users\\cloai\\OneDrive\\Escritorio\\Studymind\\StudyMind\\Icon\\Baymax con mariposa(1)(1).png")); // NOI18N
 
         lblMensaje.setFont(new java.awt.Font("Roboto Condensed Black", 0, 36)); // NOI18N
         lblMensaje.setForeground(new java.awt.Color(255, 255, 255));
         lblMensaje.setText("Se ha generado la actividad con exito.");
 
-        jButton1.setBackground(new java.awt.Color(82, 109, 130));
-        jButton1.setFont(new java.awt.Font("Roboto Condensed", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("INGRESA AQUI PARA ACCEDER AL JUEGO");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAccederLinks.setBackground(new java.awt.Color(82, 109, 130));
+        btnAccederLinks.setFont(new java.awt.Font("Roboto Condensed", 0, 24)); // NOI18N
+        btnAccederLinks.setForeground(new java.awt.Color(255, 255, 255));
+        btnAccederLinks.setText("INGRESA AQUI PARA ACCEDER AL JUEGO");
+        btnAccederLinks.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAccederLinks.setFocusPainted(false);
+        btnAccederLinks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAccederLinksActionPerformed(evt);
             }
         });
 
@@ -348,9 +291,9 @@ public class Links extends javax.swing.JFrame {
             pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
                 .addContainerGap(58, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAccederLinks, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(pnlCentralLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
@@ -364,9 +307,9 @@ public class Links extends javax.swing.JFrame {
                 .addComponent(lblMensaje)
                 .addGap(34, 34, 34)
                 .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblImagen, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCentralLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnAccederLinks, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(120, 120, 120))))
         );
 
@@ -410,27 +353,9 @@ public class Links extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnHorarioActionPerformed
 
-    private void btnEstadisticasLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasLActionPerformed
-
-    }//GEN-LAST:event_btnEstadisticasLActionPerformed
-
     private void btnConfiguracionLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionLActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
-
-    private void btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLActionPerformed
-        Actividad actividad = new Actividad(estudiante);
-        actividad.setVisible(true);
-        actividad.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnActividadesLActionPerformed
-
-    private void btnCronometroLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroLActionPerformed
-        Cronometro Cronometro = new Cronometro(estudiante);
-        Cronometro.setVisible(true);
-        Cronometro.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_btnCronometroLActionPerformed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         Actividad2 actividad = new Actividad2(estudiante);
@@ -439,28 +364,32 @@ public class Links extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnMenuActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAccederLinksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccederLinksActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAccederLinksActionPerformed
+
+    private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
+        Configuracion configuracion = new Configuracion(estudiante);  
+        configuracion.setVisible(true);    
+        configuracion.pack();               
+        configuracion.setLocationRelativeTo(null);  
+        this.dispose();
+    }//GEN-LAST:event_btnConfiguracionActionPerformed
 
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAccederLinks;
     private javax.swing.JButton btnActividades;
-    private javax.swing.JButton btnActividadesL;
+    private javax.swing.JPanel btnCamuflado;
     private javax.swing.JButton btnConfiguracion;
     private javax.swing.JButton btnConfiguracionL;
     private javax.swing.JButton btnCronometro;
-    private javax.swing.JButton btnCronometroL;
     private javax.swing.JButton btnEstadisticas;
-    private javax.swing.JButton btnEstadisticasL;
     private javax.swing.JButton btnHorario;
     private javax.swing.JButton btnMenu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblLogotipo;
     private javax.swing.JLabel lblMensaje;
     private javax.swing.JLabel lblUsuario;
