@@ -77,7 +77,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="pnlDocente" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="pnlPrioridad" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblNombreDeAsignatura" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pnlNuevoNombre" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                                       <Component id="pnlBoton" min="-2" max="-2" attributes="0"/>
@@ -103,7 +103,7 @@
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                               <Component id="lblTitulo" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
-                              <Component id="lblNombreDeAsignatura" min="-2" max="-2" attributes="0"/>
+                              <Component id="pnlNuevoNombre" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="pnlDocente" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -129,7 +129,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="lblNombreDeAsignatura">
+            <Container class="javax.swing.JPanel" name="pnlNuevoNombre">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -142,9 +142,9 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
-                              <Component id="txtNombre" alignment="1" pref="371" max="32767" attributes="0"/>
-                              <Component id="lblNombreAsignatura" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="sepNombreMateria" alignment="1" max="32767" attributes="0"/>
+                              <Component id="txtNombreMateria" alignment="1" pref="371" max="32767" attributes="0"/>
+                              <Component id="lblNombreMateria" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
@@ -154,17 +154,17 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="lblNombreAsignatura" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblNombreMateria" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                          <Component id="txtNombre" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="txtNombreMateria" min="-2" pref="23" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jSeparator1" min="-2" pref="3" max="-2" attributes="0"/>
+                          <Component id="sepNombreMateria" min="-2" pref="3" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txtNombre">
+                <Component class="javax.swing.JTextField" name="txtNombreMateria">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -180,18 +180,18 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtNombreMousePressed"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreActionPerformed"/>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtNombreMateriaMousePressed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreMateriaActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JSeparator" name="jSeparator1">
+                <Component class="javax.swing.JSeparator" name="sepNombreMateria">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="82" green="6d" red="52" type="rgb"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="lblNombreAsignatura">
+                <Component class="javax.swing.JLabel" name="lblNombreMateria">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Roboto Condensed" size="18" style="3"/>
@@ -217,8 +217,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jSeparator3" alignment="1" max="32767" attributes="0"/>
-                              <Component id="txtDocente1" alignment="1" pref="371" max="32767" attributes="0"/>
+                              <Component id="sepDocente" alignment="1" max="32767" attributes="0"/>
+                              <Component id="txtDocente" alignment="1" pref="371" max="32767" attributes="0"/>
                               <Component id="lblDocente" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -231,15 +231,15 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="lblDocente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                          <Component id="txtDocente1" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="txtDocente" min="-2" pref="23" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jSeparator3" min="-2" pref="3" max="-2" attributes="0"/>
+                          <Component id="sepDocente" min="-2" pref="3" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txtDocente1">
+                <Component class="javax.swing.JTextField" name="txtDocente">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -255,11 +255,11 @@
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtDocente1MousePressed"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDocente1ActionPerformed"/>
+                    <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtDocenteMousePressed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDocenteActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JSeparator" name="jSeparator3">
+                <Component class="javax.swing.JSeparator" name="sepDocente">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="82" green="6d" red="52" type="rgb"/>
@@ -292,7 +292,7 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPrioridad" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="cmbPrioridad" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="260" max="32767" attributes="0"/>
@@ -303,7 +303,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblPrioridad" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="cmbPrioridad" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -311,7 +311,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel6">
+                <Component class="javax.swing.JLabel" name="lblPrioridad">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Roboto Condensed" size="18" style="3"/>
@@ -421,7 +421,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="pnlMenulargo1">
+        <Container class="javax.swing.JPanel" name="pnlMenulargo">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -559,7 +559,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Container class="javax.swing.JPanel" name="pnlCamuflado1">
+            <Container class="javax.swing.JPanel" name="pnlCamuflado">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ed" green="e6" red="dd" type="rgb"/>

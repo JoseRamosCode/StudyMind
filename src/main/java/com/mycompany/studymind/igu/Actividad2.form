@@ -226,7 +226,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="pnlMenulargo3">
+        <Container class="javax.swing.JPanel" name="pnlMenulargo">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -242,7 +242,7 @@
             <Property name="useNullLayout" type="boolean" value="true"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="btnEstadisticas3">
+            <Component class="javax.swing.JButton" name="btnEstadisticas">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -267,7 +267,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="btnConfiguracion3">
+            <Component class="javax.swing.JButton" name="btnConfiguracion">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -292,7 +292,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="btnHorario3">
+            <Component class="javax.swing.JButton" name="btnHorario">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -317,7 +317,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="btnEstadisticasL3">
+            <Component class="javax.swing.JButton" name="btnEstadisticasL">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -345,7 +345,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="btnConfiguracionL3">
+            <Component class="javax.swing.JButton" name="btnConfiguracionL">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -373,7 +373,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="btnCronometroL3">
+            <Component class="javax.swing.JButton" name="btnCronometroL">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -401,7 +401,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="btnMenu3">
+            <Component class="javax.swing.JButton" name="btnMenu">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="bf" green="b2" red="9d" type="rgb"/>
@@ -423,7 +423,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="btnActividades3">
+            <Component class="javax.swing.JButton" name="btnActividades">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ed" green="e6" red="dd" type="rgb"/>
@@ -465,7 +465,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="109" max="32767" attributes="0"/>
-                          <Component id="btnActividadesL3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnActividadesL" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -474,14 +474,14 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="37" max="32767" attributes="0"/>
-                          <Component id="btnActividadesL3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnActividadesL" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="btnActividadesL3">
+                <Component class="javax.swing.JButton" name="btnActividadesL">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ed" green="e6" red="dd" type="rgb"/>

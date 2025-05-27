@@ -61,10 +61,10 @@ public class Estadistico extends javax.swing.JFrame {
                 menuUsuario.show(lblUsuario1, 0, lblUsuario1.getHeight());
             }
         });
-        lblUsuario22.setText(estudiante.getNombre());
+        lblObsoleto.setText(estudiante.getNombre());
         generarGrafico();
-        jLabel2.setBounds(300, 350, 166, 196);
-        pnlPrincipal.setComponentZOrder(jLabel2, 0);
+        lblImagen1.setBounds(300, 350, 166, 196);
+        pnlPrincipal.setComponentZOrder(lblImagen1, 0);
         pnlPrincipal.repaint();
 
     }
@@ -131,6 +131,7 @@ public class Estadistico extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblObsoleto = new javax.swing.JLabel();
         pnlPrincipal = new javax.swing.JPanel();
         pnlHead = new javax.swing.JPanel();
         lblLogotipo = new javax.swing.JLabel();
@@ -152,8 +153,12 @@ public class Estadistico extends javax.swing.JFrame {
         btnMenu = new javax.swing.JButton();
         btnActividadesL = new javax.swing.JButton();
         btnActividades = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        lblUsuario22 = new javax.swing.JLabel();
+        lblImagen1 = new javax.swing.JLabel();
+
+        lblObsoleto.setBackground(new java.awt.Color(0, 102, 102));
+        lblObsoleto.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        lblObsoleto.setForeground(new java.awt.Color(255, 255, 255));
+        lblObsoleto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -236,11 +241,8 @@ public class Estadistico extends javax.swing.JFrame {
         );
 
         pnlCentral.setBackground(new java.awt.Color(157, 178, 191));
-        pnlCentral.setLayout(null);
 
         lblImagen.setBackground(new java.awt.Color(240, 245, 250));
-        pnlCentral.add(lblImagen);
-        lblImagen.setBounds(379, 470, 238, 0);
 
         javax.swing.GroupLayout panelGraficaLayout = new javax.swing.GroupLayout(panelGrafica);
         panelGrafica.setLayout(panelGraficaLayout);
@@ -253,8 +255,20 @@ public class Estadistico extends javax.swing.JFrame {
             .addGap(0, 452, Short.MAX_VALUE)
         );
 
-        pnlCentral.add(panelGrafica);
-        panelGrafica.setBounds(24, 6, 640, 452);
+        javax.swing.GroupLayout pnlCentralLayout = new javax.swing.GroupLayout(pnlCentral);
+        pnlCentral.setLayout(pnlCentralLayout);
+        pnlCentralLayout.setHorizontalGroup(
+            pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCentralLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(panelGrafica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        pnlCentralLayout.setVerticalGroup(
+            pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCentralLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(panelGrafica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pnlMenulargo.setBackground(new java.awt.Color(157, 178, 191));
         pnlMenulargo.setLayout(null);
@@ -389,13 +403,8 @@ public class Estadistico extends javax.swing.JFrame {
         pnlMenulargo.add(btnActividades);
         btnActividades.setBounds(20, 270, 52, 60);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/BaymaxAnalizando.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-
-        lblUsuario22.setBackground(new java.awt.Color(0, 102, 102));
-        lblUsuario22.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        lblUsuario22.setForeground(new java.awt.Color(255, 255, 255));
-        lblUsuario22.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        lblImagen1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/BaymaxAnalizando.png"))); // NOI18N
+        lblImagen1.setText("jLabel2");
 
         javax.swing.GroupLayout pnlPrincipalLayout = new javax.swing.GroupLayout(pnlPrincipal);
         pnlPrincipal.setLayout(pnlPrincipalLayout);
@@ -404,33 +413,21 @@ public class Estadistico extends javax.swing.JFrame {
             .addComponent(pnlHead, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(pnlPrincipalLayout.createSequentialGroup()
                 .addComponent(pnlMenulargo, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                                .addGap(620, 620, 620)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(pnlCentral, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                        .addGap(438, 438, 438)
-                        .addComponent(lblUsuario22, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(141, 141, 141)
+                .addComponent(pnlCentral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblImagen1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         pnlPrincipalLayout.setVerticalGroup(
-            pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(pnlPrincipalLayout.createSequentialGroup()
                 .addComponent(pnlHead, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlMenulargo, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(lblUsuario22, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                                .addGap(270, 270, 270)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(pnlCentral, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(90, 90, 90)
+                        .addComponent(pnlCentral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addComponent(lblImagen1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -513,13 +510,13 @@ public class Estadistico extends javax.swing.JFrame {
     private javax.swing.JButton btnHorario;
     private javax.swing.JButton btnHorarioL;
     private javax.swing.JButton btnMenu;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblIconoUsuario;
     private javax.swing.JLabel lblImagen;
+    private javax.swing.JLabel lblImagen1;
     private javax.swing.JLabel lblLogotipo;
     private javax.swing.JLabel lblLogotipo1;
+    private javax.swing.JLabel lblObsoleto;
     private javax.swing.JLabel lblUsuario1;
-    private javax.swing.JLabel lblUsuario22;
     private javax.swing.JPanel panelGrafica;
     private javax.swing.JPanel pnlCamulfado;
     private javax.swing.JPanel pnlCentral;

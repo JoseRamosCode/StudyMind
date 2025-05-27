@@ -36,19 +36,19 @@ public class ActualizarUsuario extends javax.swing.JFrame {
         pnlConfirmarContrasenia = new javax.swing.JPanel();
         sepConfirmarContrasenia = new javax.swing.JSeparator();
         txtPassword = new javax.swing.JPasswordField();
-        JButton = new javax.swing.JButton();
+        btnVerContrasenia = new javax.swing.JButton();
         pnlNuevoUsuario = new javax.swing.JPanel();
         txtNuevoUsuario = new javax.swing.JTextField();
         sepNuevoUsuario = new javax.swing.JSeparator();
         lblNuevoUsuario = new javax.swing.JLabel();
         lblConfirmarContrasenia = new javax.swing.JLabel();
-        pnlMenulargo2 = new javax.swing.JPanel();
-        btnEstadisticas2 = new javax.swing.JButton();
-        btnConfiguracion2 = new javax.swing.JButton();
-        btnHorario2 = new javax.swing.JButton();
-        btnMenu2 = new javax.swing.JButton();
-        btnActividades2 = new javax.swing.JButton();
-        pnlCamuflado2 = new javax.swing.JPanel();
+        pnlMenulargo = new javax.swing.JPanel();
+        btnEstadisticas = new javax.swing.JButton();
+        btnConfiguracion = new javax.swing.JButton();
+        btnHorario = new javax.swing.JButton();
+        btnMenu = new javax.swing.JButton();
+        btnActividades = new javax.swing.JButton();
+        pnlCamuflado = new javax.swing.JPanel();
         pnlHead = new javax.swing.JPanel();
         lblUsuario = new javax.swing.JLabel();
         lblLogotipo = new javax.swing.JLabel();
@@ -124,15 +124,15 @@ public class ActualizarUsuario extends javax.swing.JFrame {
             }
         });
 
-        JButton.setBackground(new java.awt.Color(157, 178, 191));
-        JButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/ojoContraseña.png"))); // NOI18N
-        JButton.setBorder(null);
-        JButton.setBorderPainted(false);
-        JButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        JButton.setFocusPainted(false);
-        JButton.addActionListener(new java.awt.event.ActionListener() {
+        btnVerContrasenia.setBackground(new java.awt.Color(157, 178, 191));
+        btnVerContrasenia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/ojoContraseña.png"))); // NOI18N
+        btnVerContrasenia.setBorder(null);
+        btnVerContrasenia.setBorderPainted(false);
+        btnVerContrasenia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVerContrasenia.setFocusPainted(false);
+        btnVerContrasenia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JButtonActionPerformed(evt);
+                btnVerContraseniaActionPerformed(evt);
             }
         });
 
@@ -147,7 +147,7 @@ public class ActualizarUsuario extends javax.swing.JFrame {
                     .addGroup(pnlConfirmarContraseniaLayout.createSequentialGroup()
                         .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(JButton))))
+                        .addComponent(btnVerContrasenia))))
         );
         pnlConfirmarContraseniaLayout.setVerticalGroup(
             pnlConfirmarContraseniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,7 +155,7 @@ public class ActualizarUsuario extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pnlConfirmarContraseniaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
-                    .addComponent(JButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(btnVerContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(sepConfirmarContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -261,91 +261,91 @@ public class ActualizarUsuario extends javax.swing.JFrame {
         pnlPrincipal.add(pnlCentral);
         pnlCentral.setBounds(370, 180, 700, 470);
 
-        pnlMenulargo2.setBackground(new java.awt.Color(157, 178, 191));
-        pnlMenulargo2.setLayout(null);
+        pnlMenulargo.setBackground(new java.awt.Color(157, 178, 191));
+        pnlMenulargo.setLayout(null);
 
-        btnEstadisticas2.setBackground(new java.awt.Color(157, 178, 191));
-        btnEstadisticas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/estadistico.png"))); // NOI18N
-        btnEstadisticas2.setBorder(null);
-        btnEstadisticas2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEstadisticas2.setFocusPainted(false);
-        btnEstadisticas2.addActionListener(new java.awt.event.ActionListener() {
+        btnEstadisticas.setBackground(new java.awt.Color(157, 178, 191));
+        btnEstadisticas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/estadistico.png"))); // NOI18N
+        btnEstadisticas.setBorder(null);
+        btnEstadisticas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEstadisticas.setFocusPainted(false);
+        btnEstadisticas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEstadisticas2ActionPerformed(evt);
+                btnEstadisticasActionPerformed(evt);
             }
         });
-        pnlMenulargo2.add(btnEstadisticas2);
-        btnEstadisticas2.setBounds(20, 400, 52, 49);
+        pnlMenulargo.add(btnEstadisticas);
+        btnEstadisticas.setBounds(20, 400, 52, 49);
 
-        btnConfiguracion2.setBackground(new java.awt.Color(221, 230, 237));
-        btnConfiguracion2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/conf45.png"))); // NOI18N
-        btnConfiguracion2.setBorder(null);
-        btnConfiguracion2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnConfiguracion2.setFocusPainted(false);
-        btnConfiguracion2.addActionListener(new java.awt.event.ActionListener() {
+        btnConfiguracion.setBackground(new java.awt.Color(221, 230, 237));
+        btnConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/conf45.png"))); // NOI18N
+        btnConfiguracion.setBorder(null);
+        btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConfiguracion.setFocusPainted(false);
+        btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfiguracion2ActionPerformed(evt);
+                btnConfiguracionActionPerformed(evt);
             }
         });
-        pnlMenulargo2.add(btnConfiguracion2);
-        btnConfiguracion2.setBounds(20, 500, 52, 49);
+        pnlMenulargo.add(btnConfiguracion);
+        btnConfiguracion.setBounds(20, 500, 52, 49);
 
-        btnHorario2.setBackground(new java.awt.Color(157, 178, 191));
-        btnHorario2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/horario.png"))); // NOI18N
-        btnHorario2.setBorder(null);
-        btnHorario2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnHorario2.setFocusPainted(false);
-        btnHorario2.addActionListener(new java.awt.event.ActionListener() {
+        btnHorario.setBackground(new java.awt.Color(157, 178, 191));
+        btnHorario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/horario.png"))); // NOI18N
+        btnHorario.setBorder(null);
+        btnHorario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnHorario.setFocusPainted(false);
+        btnHorario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHorario2ActionPerformed(evt);
+                btnHorarioActionPerformed(evt);
             }
         });
-        pnlMenulargo2.add(btnHorario2);
-        btnHorario2.setBounds(20, 190, 52, 49);
+        pnlMenulargo.add(btnHorario);
+        btnHorario.setBounds(20, 190, 52, 49);
 
-        btnMenu2.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu45.png"))); // NOI18N
-        btnMenu2.setBorder(null);
-        btnMenu2.setFocusPainted(false);
-        btnMenu2.addActionListener(new java.awt.event.ActionListener() {
+        btnMenu.setBackground(new java.awt.Color(157, 178, 191));
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu45.png"))); // NOI18N
+        btnMenu.setBorder(null);
+        btnMenu.setFocusPainted(false);
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenu2ActionPerformed(evt);
+                btnMenuActionPerformed(evt);
             }
         });
-        pnlMenulargo2.add(btnMenu2);
-        btnMenu2.setBounds(20, 10, 45, 45);
+        pnlMenulargo.add(btnMenu);
+        btnMenu.setBounds(20, 10, 45, 45);
 
-        btnActividades2.setBackground(new java.awt.Color(157, 178, 191));
-        btnActividades2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/actividad.png"))); // NOI18N
-        btnActividades2.setBorder(null);
-        btnActividades2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnActividades2.setFocusPainted(false);
-        btnActividades2.addActionListener(new java.awt.event.ActionListener() {
+        btnActividades.setBackground(new java.awt.Color(157, 178, 191));
+        btnActividades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/actividad.png"))); // NOI18N
+        btnActividades.setBorder(null);
+        btnActividades.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActividades.setFocusPainted(false);
+        btnActividades.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActividades2ActionPerformed(evt);
+                btnActividadesActionPerformed(evt);
             }
         });
-        pnlMenulargo2.add(btnActividades2);
-        btnActividades2.setBounds(20, 300, 52, 60);
+        pnlMenulargo.add(btnActividades);
+        btnActividades.setBounds(20, 300, 52, 60);
 
-        pnlCamuflado2.setBackground(new java.awt.Color(221, 230, 237));
+        pnlCamuflado.setBackground(new java.awt.Color(221, 230, 237));
 
-        javax.swing.GroupLayout pnlCamuflado2Layout = new javax.swing.GroupLayout(pnlCamuflado2);
-        pnlCamuflado2.setLayout(pnlCamuflado2Layout);
-        pnlCamuflado2Layout.setHorizontalGroup(
-            pnlCamuflado2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlCamufladoLayout = new javax.swing.GroupLayout(pnlCamuflado);
+        pnlCamuflado.setLayout(pnlCamufladoLayout);
+        pnlCamufladoLayout.setHorizontalGroup(
+            pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
-        pnlCamuflado2Layout.setVerticalGroup(
-            pnlCamuflado2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlCamufladoLayout.setVerticalGroup(
+            pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        pnlMenulargo2.add(pnlCamuflado2);
-        pnlCamuflado2.setBounds(0, 480, 90, 90);
+        pnlMenulargo.add(pnlCamuflado);
+        pnlCamuflado.setBounds(0, 480, 90, 90);
 
-        pnlPrincipal.add(pnlMenulargo2);
-        pnlMenulargo2.setBounds(0, 100, 90, 600);
+        pnlPrincipal.add(pnlMenulargo);
+        pnlMenulargo.setBounds(0, 100, 90, 600);
 
         pnlHead.setBackground(new java.awt.Color(82, 109, 130));
 
@@ -457,44 +457,44 @@ public class ActualizarUsuario extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnActividades1ActionPerformed
 
-    private void btnEstadisticas2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticas2ActionPerformed
+    private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed
         Estadistico configuracion = new Estadistico(estudiante);
         configuracion.setVisible(true);
         configuracion.pack();
         configuracion.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnEstadisticas2ActionPerformed
+    }//GEN-LAST:event_btnEstadisticasActionPerformed
 
-    private void btnConfiguracion2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracion2ActionPerformed
+    private void btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionActionPerformed
         Configuracion configuracion = new Configuracion(estudiante);
         configuracion.setVisible(true);
         configuracion.pack();
         configuracion.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnConfiguracion2ActionPerformed
+    }//GEN-LAST:event_btnConfiguracionActionPerformed
 
-    private void btnHorario2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorario2ActionPerformed
+    private void btnHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioActionPerformed
         Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnHorario2ActionPerformed
+    }//GEN-LAST:event_btnHorarioActionPerformed
 
-    private void btnMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu2ActionPerformed
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         Actividad2 actividad2 = new Actividad2(estudiante);
         actividad2.setVisible(true);
         actividad2.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnMenu2ActionPerformed
+    }//GEN-LAST:event_btnMenuActionPerformed
 
-    private void btnActividades2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividades2ActionPerformed
+    private void btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesActionPerformed
         Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnActividades2ActionPerformed
+    }//GEN-LAST:event_btnActividadesActionPerformed
 
-    private void JButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonActionPerformed
+    private void btnVerContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerContraseniaActionPerformed
         if (txtPassword.getEchoChar() == (char) 0) {
 
             txtPassword.setEchoChar('*');
@@ -504,7 +504,7 @@ public class ActualizarUsuario extends javax.swing.JFrame {
             txtPassword.setEchoChar((char) 0);
 
         }
-    }//GEN-LAST:event_JButtonActionPerformed
+    }//GEN-LAST:event_btnVerContraseniaActionPerformed
 
     private void pnlActualizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlActualizarMouseExited
         // TODO add your handling code here:
@@ -575,12 +575,12 @@ public class ActualizarUsuario extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JButton;
-    private javax.swing.JButton btnActividades2;
-    private javax.swing.JButton btnConfiguracion2;
-    private javax.swing.JButton btnEstadisticas2;
-    private javax.swing.JButton btnHorario2;
-    private javax.swing.JButton btnMenu2;
+    private javax.swing.JButton btnActividades;
+    private javax.swing.JButton btnConfiguracion;
+    private javax.swing.JButton btnEstadisticas;
+    private javax.swing.JButton btnHorario;
+    private javax.swing.JButton btnMenu;
+    private javax.swing.JButton btnVerContrasenia;
     private javax.swing.JLabel lblActualizar;
     private javax.swing.JLabel lblConfirmarContrasenia;
     private javax.swing.JLabel lblIconoUsuario;
@@ -589,11 +589,11 @@ public class ActualizarUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel lblNuevoUsuario;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JPanel pnlActualizar;
-    private javax.swing.JPanel pnlCamuflado2;
+    private javax.swing.JPanel pnlCamuflado;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlConfirmarContrasenia;
     private javax.swing.JPanel pnlHead;
-    private javax.swing.JPanel pnlMenulargo2;
+    private javax.swing.JPanel pnlMenulargo;
     private javax.swing.JPanel pnlNuevoUsuario;
     private javax.swing.JPanel pnlPrincipal;
     private javax.swing.JSeparator sepConfirmarContrasenia;

@@ -34,7 +34,6 @@ public class Actividad extends javax.swing.JFrame {
         btnEstadisticas = new javax.swing.JButton();
         btnConfiguracion = new javax.swing.JButton();
         btnHorario = new javax.swing.JButton();
-        btnEstadisticasL = new javax.swing.JButton();
         btnConfiguracionL = new javax.swing.JButton();
         btnCronometroL = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
@@ -98,20 +97,6 @@ public class Actividad extends javax.swing.JFrame {
         });
         pnlMenulargo.add(btnHorario);
         btnHorario.setBounds(20, 190, 52, 49);
-
-        btnEstadisticasL.setBackground(new java.awt.Color(157, 178, 191));
-        btnEstadisticasL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
-        btnEstadisticasL.setForeground(new java.awt.Color(255, 255, 255));
-        btnEstadisticasL.setText("Estadisticas");
-        btnEstadisticasL.setBorder(null);
-        btnEstadisticasL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEstadisticasL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEstadisticasLActionPerformed(evt);
-            }
-        });
-        pnlMenulargo.add(btnEstadisticasL);
-        btnEstadisticasL.setBounds(100, 410, 120, 24);
 
         btnConfiguracionL.setBackground(new java.awt.Color(157, 178, 191));
         btnConfiguracionL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
@@ -361,10 +346,6 @@ public class Actividad extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnConfiguracionLActionPerformed
 
-    private void btnEstadisticasLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasLActionPerformed
-
-    }//GEN-LAST:event_btnEstadisticasLActionPerformed
-
     private void btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLActionPerformed
         Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
@@ -389,7 +370,6 @@ public class Actividad extends javax.swing.JFrame {
     private javax.swing.JButton btnConfiguracionL;
     private javax.swing.JButton btnCronometroL;
     private javax.swing.JButton btnEstadisticas;
-    private javax.swing.JButton btnEstadisticasL;
     private javax.swing.JButton btnGeneraractividad;
     private javax.swing.JButton btnHorario;
     private javax.swing.JButton btnMenu;

@@ -24,48 +24,46 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jSeparator2 = new javax.swing.JSeparator();
-        jPanel1 = new javax.swing.JPanel();
+        Principal = new javax.swing.JPanel();
         Right = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        lblLogo = new javax.swing.JLabel();
+        lblFeet = new javax.swing.JLabel();
+        lblLogotipo = new javax.swing.JLabel();
         btnLogin1 = new javax.swing.JButton();
         Left = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
+        lblTituloCorreo = new javax.swing.JLabel();
         txtCorreo = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        lblContrasenia = new javax.swing.JLabel();
         txtContrasenia = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        lblRegistrarse = new javax.swing.JLabel();
         btnSignUp = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator3 = new javax.swing.JSeparator();
-        JButton = new javax.swing.JButton();
+        sepCorreo = new javax.swing.JSeparator();
+        sepContrasenia = new javax.swing.JSeparator();
+        btnVerContrasenia = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
-        jPanel1.setLayout(null);
+        Principal.setBackground(new java.awt.Color(255, 255, 255));
+        Principal.setPreferredSize(new java.awt.Dimension(800, 500));
+        Principal.setLayout(null);
 
         Right.setBackground(new java.awt.Color(82, 109, 130));
         Right.setPreferredSize(new java.awt.Dimension(400, 500));
 
-        jLabel6.setBackground(new java.awt.Color(0, 102, 102));
-        jLabel6.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/logotipoInicio.png"))); // NOI18N
+        lblLogo.setBackground(new java.awt.Color(0, 102, 102));
+        lblLogo.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        lblLogo.setForeground(new java.awt.Color(255, 255, 255));
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/logotipoInicio.png"))); // NOI18N
 
-        jLabel8.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("© 2025 StudyMind. Todos los derechos reservados.");
+        lblFeet.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        lblFeet.setForeground(new java.awt.Color(255, 255, 255));
+        lblFeet.setText("© 2025 StudyMind. Todos los derechos reservados.");
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/LogoCerebro.png"))); // NOI18N
+        lblLogotipo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/LogoCerebro.png"))); // NOI18N
 
         btnLogin1.setBackground(new java.awt.Color(157, 178, 191));
         btnLogin1.setFont(new java.awt.Font("Roboto Condensed", 0, 14)); // NOI18N
@@ -88,54 +86,45 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(RightLayout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
+                            .addComponent(lblFeet)
                             .addGroup(RightLayout.createSequentialGroup()
-                                .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addGroup(RightLayout.createSequentialGroup()
-                                        .addGap(64, 64, 64)
-                                        .addComponent(jLabel9)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel5))))
+                                .addGap(64, 64, 64)
+                                .addComponent(lblLogotipo))))
                     .addGroup(RightLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(58, Short.MAX_VALUE))
+                            .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         RightLayout.setVerticalGroup(
             RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(RightLayout.createSequentialGroup()
                 .addGap(115, 115, 115)
-                .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(lblLogotipo, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addComponent(btnLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
-                .addGap(42, 42, 42))
+                .addComponent(lblFeet)
+                .addGap(48, 48, 48))
         );
 
-        jPanel1.add(Right);
+        Principal.add(Right);
         Right.setBounds(0, 0, 400, 500);
 
         Left.setBackground(new java.awt.Color(157, 178, 191));
         Left.setToolTipText("");
         Left.setPreferredSize(new java.awt.Dimension(400, 500));
 
-        jLabel1.setFont(new java.awt.Font("Roboto Condensed", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Ingreso");
+        lblTitulo.setFont(new java.awt.Font("Roboto Condensed", 1, 24)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitulo.setText("Ingreso");
 
-        jLabel2.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Correo");
+        lblTituloCorreo.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        lblTituloCorreo.setForeground(new java.awt.Color(255, 255, 255));
+        lblTituloCorreo.setText("Correo");
 
         txtCorreo.setBackground(new java.awt.Color(157, 178, 191));
         txtCorreo.setFont(new java.awt.Font("Roboto", 0, 16)); // NOI18N
@@ -147,9 +136,9 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Contraseña");
+        lblContrasenia.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        lblContrasenia.setForeground(new java.awt.Color(255, 255, 255));
+        lblContrasenia.setText("Contraseña");
 
         txtContrasenia.setBackground(new java.awt.Color(157, 178, 191));
         txtContrasenia.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -173,10 +162,10 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("¿No tengo una cuenta?");
+        lblRegistrarse.setBackground(new java.awt.Color(255, 255, 255));
+        lblRegistrarse.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        lblRegistrarse.setForeground(new java.awt.Color(255, 255, 255));
+        lblRegistrarse.setText("¿No tengo una cuenta?");
 
         btnSignUp.setBackground(new java.awt.Color(82, 109, 130));
         btnSignUp.setFont(new java.awt.Font("Roboto Condensed", 0, 14)); // NOI18N
@@ -189,19 +178,19 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jSeparator1.setForeground(new java.awt.Color(82, 109, 130));
+        sepCorreo.setForeground(new java.awt.Color(82, 109, 130));
 
-        jSeparator3.setForeground(new java.awt.Color(82, 109, 130));
+        sepContrasenia.setForeground(new java.awt.Color(82, 109, 130));
 
-        JButton.setBackground(new java.awt.Color(157, 178, 191));
-        JButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/ojoContraseña.png"))); // NOI18N
-        JButton.setBorder(null);
-        JButton.setBorderPainted(false);
-        JButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        JButton.setFocusPainted(false);
-        JButton.addActionListener(new java.awt.event.ActionListener() {
+        btnVerContrasenia.setBackground(new java.awt.Color(157, 178, 191));
+        btnVerContrasenia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/ojoContraseña.png"))); // NOI18N
+        btnVerContrasenia.setBorder(null);
+        btnVerContrasenia.setBorderPainted(false);
+        btnVerContrasenia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVerContrasenia.setFocusPainted(false);
+        btnVerContrasenia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JButtonActionPerformed(evt);
+                btnVerContraseniaActionPerformed(evt);
             }
         });
 
@@ -211,7 +200,7 @@ public class Login extends javax.swing.JFrame {
             LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(lblTitulo)
                 .addGap(158, 158, 158))
             .addGroup(LeftLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
@@ -219,15 +208,15 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftLayout.createSequentialGroup()
                         .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(JButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jSeparator3)
-                    .addComponent(jSeparator1)
+                        .addComponent(btnVerContrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(sepContrasenia)
+                    .addComponent(sepCorreo)
                     .addGroup(LeftLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                        .addComponent(lblRegistrarse)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
+                    .addComponent(lblContrasenia)
+                    .addComponent(lblTituloCorreo)
                     .addGroup(LeftLayout.createSequentialGroup()
                         .addGap(110, 110, 110)
                         .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -240,42 +229,42 @@ public class Login extends javax.swing.JFrame {
             LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LeftLayout.createSequentialGroup()
                 .addGap(56, 56, 56)
-                .addComponent(jLabel1)
+                .addComponent(lblTitulo)
                 .addGap(33, 33, 33)
-                .addComponent(jLabel2)
+                .addComponent(lblTituloCorreo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sepCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
-                .addComponent(jLabel3)
+                .addComponent(lblContrasenia)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(JButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnVerContrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtContrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(sepContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(lblRegistrarse)
                     .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(65, 65, 65))
         );
 
-        jPanel1.add(Left);
+        Principal.add(Left);
         Left.setBounds(400, 0, 400, 500);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -321,7 +310,7 @@ public class Login extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnSignUpActionPerformed
 
-    private void JButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonActionPerformed
+    private void btnVerContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerContraseniaActionPerformed
         if (txtContrasenia.getEchoChar() == (char) 0) {  
         
         txtContrasenia.setEchoChar('*');
@@ -331,7 +320,7 @@ public class Login extends javax.swing.JFrame {
         txtContrasenia.setEchoChar((char) 0); 
        
     }
-    }//GEN-LAST:event_JButtonActionPerformed
+    }//GEN-LAST:event_btnVerContraseniaActionPerformed
 
     private void btnLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogin1ActionPerformed
         Inicial inicial = new Inicial();
@@ -354,25 +343,23 @@ public class Login extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JButton;
     private javax.swing.JPanel Left;
+    private javax.swing.JPanel Principal;
     private javax.swing.JPanel Right;
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnLogin1;
     private javax.swing.JButton btnSignUp;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JButton btnVerContrasenia;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JLabel lblContrasenia;
+    private javax.swing.JLabel lblFeet;
+    private javax.swing.JLabel lblLogo;
+    private javax.swing.JLabel lblLogotipo;
+    private javax.swing.JLabel lblRegistrarse;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblTituloCorreo;
+    private javax.swing.JSeparator sepContrasenia;
+    private javax.swing.JSeparator sepCorreo;
     private javax.swing.JPasswordField txtContrasenia;
     private javax.swing.JTextField txtCorreo;
     // End of variables declaration//GEN-END:variables

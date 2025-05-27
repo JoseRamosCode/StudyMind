@@ -25,8 +25,8 @@ public class ActualizarMateria extends javax.swing.JFrame {
         MenuUsuario.aplicarMenu(lblUsuario, this, estudiante);
 
         if (materia != null) {
-            txtNombre.setText(materia.getNombre());
-            txtDocente1.setText(materia.getDocente());
+            txtNombreMateria.setText(materia.getNombre());
+            txtDocente.setText(materia.getDocente());
             cmbPrioridad.setSelectedItem(materia.getImportancia()); 
         } else {
             mostrarMensaje("No se encontró la materia", "Error", "Error");
@@ -40,27 +40,27 @@ public class ActualizarMateria extends javax.swing.JFrame {
         pnlPrincipal = new javax.swing.JPanel();
         pnlCentral = new javax.swing.JPanel();
         lblImagen = new javax.swing.JLabel();
-        lblNombreDeAsignatura = new javax.swing.JPanel();
-        txtNombre = new javax.swing.JTextField();
-        jSeparator1 = new javax.swing.JSeparator();
-        lblNombreAsignatura = new javax.swing.JLabel();
+        pnlNuevoNombre = new javax.swing.JPanel();
+        txtNombreMateria = new javax.swing.JTextField();
+        sepNombreMateria = new javax.swing.JSeparator();
+        lblNombreMateria = new javax.swing.JLabel();
         pnlDocente = new javax.swing.JPanel();
-        txtDocente1 = new javax.swing.JTextField();
-        jSeparator3 = new javax.swing.JSeparator();
+        txtDocente = new javax.swing.JTextField();
+        sepDocente = new javax.swing.JSeparator();
         lblDocente = new javax.swing.JLabel();
         pnlPrioridad = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        lblPrioridad = new javax.swing.JLabel();
         cmbPrioridad = new javax.swing.JComboBox<>();
         lblTitulo = new javax.swing.JLabel();
         pnlBoton = new javax.swing.JPanel();
         lblGuardar = new javax.swing.JLabel();
-        pnlMenulargo1 = new javax.swing.JPanel();
+        pnlMenulargo = new javax.swing.JPanel();
         btnEstadisticas1 = new javax.swing.JButton();
         btnConfiguracion1 = new javax.swing.JButton();
         btnHorario1 = new javax.swing.JButton();
         btnMenu1 = new javax.swing.JButton();
         btnActividades1 = new javax.swing.JButton();
-        pnlCamuflado1 = new javax.swing.JPanel();
+        pnlCamuflado = new javax.swing.JPanel();
         pnlHead = new javax.swing.JPanel();
         lblUsuario = new javax.swing.JLabel();
         lblLogotipo = new javax.swing.JLabel();
@@ -79,70 +79,70 @@ public class ActualizarMateria extends javax.swing.JFrame {
         lblImagen.setBackground(new java.awt.Color(240, 245, 250));
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/Baymax.png"))); // NOI18N
 
-        lblNombreDeAsignatura.setBackground(new java.awt.Color(157, 178, 191));
+        pnlNuevoNombre.setBackground(new java.awt.Color(157, 178, 191));
 
-        txtNombre.setBackground(new java.awt.Color(157, 178, 191));
-        txtNombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txtNombre.setForeground(new java.awt.Color(230, 230, 230));
-        txtNombre.setBorder(null);
-        txtNombre.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtNombreMateria.setBackground(new java.awt.Color(157, 178, 191));
+        txtNombreMateria.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        txtNombreMateria.setForeground(new java.awt.Color(230, 230, 230));
+        txtNombreMateria.setBorder(null);
+        txtNombreMateria.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                txtNombreMousePressed(evt);
+                txtNombreMateriaMousePressed(evt);
             }
         });
-        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+        txtNombreMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreActionPerformed(evt);
+                txtNombreMateriaActionPerformed(evt);
             }
         });
 
-        jSeparator1.setForeground(new java.awt.Color(82, 109, 130));
+        sepNombreMateria.setForeground(new java.awt.Color(82, 109, 130));
 
-        lblNombreAsignatura.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
-        lblNombreAsignatura.setForeground(new java.awt.Color(255, 255, 255));
-        lblNombreAsignatura.setText("Nuevo nombre:");
+        lblNombreMateria.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
+        lblNombreMateria.setForeground(new java.awt.Color(255, 255, 255));
+        lblNombreMateria.setText("Nuevo nombre:");
 
-        javax.swing.GroupLayout lblNombreDeAsignaturaLayout = new javax.swing.GroupLayout(lblNombreDeAsignatura);
-        lblNombreDeAsignatura.setLayout(lblNombreDeAsignaturaLayout);
-        lblNombreDeAsignaturaLayout.setHorizontalGroup(
-            lblNombreDeAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lblNombreDeAsignaturaLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnlNuevoNombreLayout = new javax.swing.GroupLayout(pnlNuevoNombre);
+        pnlNuevoNombre.setLayout(pnlNuevoNombreLayout);
+        pnlNuevoNombreLayout.setHorizontalGroup(
+            pnlNuevoNombreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNuevoNombreLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(lblNombreDeAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jSeparator1)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
-                    .addComponent(lblNombreAsignatura, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGroup(pnlNuevoNombreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(sepNombreMateria)
+                    .addComponent(txtNombreMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
+                    .addComponent(lblNombreMateria, javax.swing.GroupLayout.Alignment.LEADING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        lblNombreDeAsignaturaLayout.setVerticalGroup(
-            lblNombreDeAsignaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lblNombreDeAsignaturaLayout.createSequentialGroup()
+        pnlNuevoNombreLayout.setVerticalGroup(
+            pnlNuevoNombreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNuevoNombreLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblNombreAsignatura)
+                .addComponent(lblNombreMateria)
                 .addGap(4, 4, 4)
-                .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNombreMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(sepNombreMateria, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pnlDocente.setBackground(new java.awt.Color(157, 178, 191));
 
-        txtDocente1.setBackground(new java.awt.Color(157, 178, 191));
-        txtDocente1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        txtDocente1.setForeground(new java.awt.Color(230, 230, 230));
-        txtDocente1.setBorder(null);
-        txtDocente1.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtDocente.setBackground(new java.awt.Color(157, 178, 191));
+        txtDocente.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        txtDocente.setForeground(new java.awt.Color(230, 230, 230));
+        txtDocente.setBorder(null);
+        txtDocente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                txtDocente1MousePressed(evt);
+                txtDocenteMousePressed(evt);
             }
         });
-        txtDocente1.addActionListener(new java.awt.event.ActionListener() {
+        txtDocente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDocente1ActionPerformed(evt);
+                txtDocenteActionPerformed(evt);
             }
         });
 
-        jSeparator3.setForeground(new java.awt.Color(82, 109, 130));
+        sepDocente.setForeground(new java.awt.Color(82, 109, 130));
 
         lblDocente.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
         lblDocente.setForeground(new java.awt.Color(255, 255, 255));
@@ -155,8 +155,8 @@ public class ActualizarMateria extends javax.swing.JFrame {
             .addGroup(pnlDocenteLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlDocenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jSeparator3)
-                    .addComponent(txtDocente1, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
+                    .addComponent(sepDocente)
+                    .addComponent(txtDocente, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
                     .addComponent(lblDocente, javax.swing.GroupLayout.Alignment.LEADING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -166,16 +166,16 @@ public class ActualizarMateria extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblDocente)
                 .addGap(4, 4, 4)
-                .addComponent(txtDocente1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDocente, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(sepDocente, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pnlPrioridad.setBackground(new java.awt.Color(157, 178, 191));
 
-        jLabel6.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Nueva prioridad:");
+        lblPrioridad.setFont(new java.awt.Font("Roboto Condensed", 3, 18)); // NOI18N
+        lblPrioridad.setForeground(new java.awt.Color(255, 255, 255));
+        lblPrioridad.setText("Nueva prioridad:");
 
         cmbPrioridad.setBackground(new java.awt.Color(157, 178, 191));
         cmbPrioridad.setFont(new java.awt.Font("Roboto Condensed", 2, 18)); // NOI18N
@@ -190,7 +190,7 @@ public class ActualizarMateria extends javax.swing.JFrame {
             .addGroup(pnlPrioridadLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlPrioridadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
+                    .addComponent(lblPrioridad)
                     .addComponent(cmbPrioridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(260, Short.MAX_VALUE))
         );
@@ -198,7 +198,7 @@ public class ActualizarMateria extends javax.swing.JFrame {
             pnlPrioridadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPrioridadLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6)
+                .addComponent(lblPrioridad)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cmbPrioridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -266,7 +266,7 @@ public class ActualizarMateria extends javax.swing.JFrame {
                         .addGroup(pnlCentralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pnlDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pnlPrioridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblNombreDeAsignatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pnlNuevoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnlCentralLayout.createSequentialGroup()
                                 .addGap(97, 97, 97)
                                 .addComponent(pnlBoton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -285,7 +285,7 @@ public class ActualizarMateria extends javax.swing.JFrame {
                         .addGap(25, 25, 25)
                         .addComponent(lblTitulo)
                         .addGap(65, 65, 65)
-                        .addComponent(lblNombreDeAsignatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pnlNuevoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(pnlDocente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -299,8 +299,8 @@ public class ActualizarMateria extends javax.swing.JFrame {
         pnlPrincipal.add(pnlCentral);
         pnlCentral.setBounds(370, 190, 700, 470);
 
-        pnlMenulargo1.setBackground(new java.awt.Color(157, 178, 191));
-        pnlMenulargo1.setLayout(null);
+        pnlMenulargo.setBackground(new java.awt.Color(157, 178, 191));
+        pnlMenulargo.setLayout(null);
 
         btnEstadisticas1.setBackground(new java.awt.Color(157, 178, 191));
         btnEstadisticas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/estadistico.png"))); // NOI18N
@@ -312,7 +312,7 @@ public class ActualizarMateria extends javax.swing.JFrame {
                 btnEstadisticas1ActionPerformed(evt);
             }
         });
-        pnlMenulargo1.add(btnEstadisticas1);
+        pnlMenulargo.add(btnEstadisticas1);
         btnEstadisticas1.setBounds(20, 400, 52, 49);
 
         btnConfiguracion1.setBackground(new java.awt.Color(157, 178, 191));
@@ -325,7 +325,7 @@ public class ActualizarMateria extends javax.swing.JFrame {
                 btnConfiguracion1ActionPerformed(evt);
             }
         });
-        pnlMenulargo1.add(btnConfiguracion1);
+        pnlMenulargo.add(btnConfiguracion1);
         btnConfiguracion1.setBounds(20, 500, 52, 49);
 
         btnHorario1.setBackground(new java.awt.Color(221, 230, 237));
@@ -338,7 +338,7 @@ public class ActualizarMateria extends javax.swing.JFrame {
                 btnHorario1ActionPerformed(evt);
             }
         });
-        pnlMenulargo1.add(btnHorario1);
+        pnlMenulargo.add(btnHorario1);
         btnHorario1.setBounds(20, 190, 52, 49);
 
         btnMenu1.setBackground(new java.awt.Color(157, 178, 191));
@@ -350,7 +350,7 @@ public class ActualizarMateria extends javax.swing.JFrame {
                 btnMenu1ActionPerformed(evt);
             }
         });
-        pnlMenulargo1.add(btnMenu1);
+        pnlMenulargo.add(btnMenu1);
         btnMenu1.setBounds(20, 10, 45, 45);
 
         btnActividades1.setBackground(new java.awt.Color(157, 178, 191));
@@ -363,27 +363,27 @@ public class ActualizarMateria extends javax.swing.JFrame {
                 btnActividades1ActionPerformed(evt);
             }
         });
-        pnlMenulargo1.add(btnActividades1);
+        pnlMenulargo.add(btnActividades1);
         btnActividades1.setBounds(20, 300, 52, 60);
 
-        pnlCamuflado1.setBackground(new java.awt.Color(221, 230, 237));
+        pnlCamuflado.setBackground(new java.awt.Color(221, 230, 237));
 
-        javax.swing.GroupLayout pnlCamuflado1Layout = new javax.swing.GroupLayout(pnlCamuflado1);
-        pnlCamuflado1.setLayout(pnlCamuflado1Layout);
-        pnlCamuflado1Layout.setHorizontalGroup(
-            pnlCamuflado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlCamufladoLayout = new javax.swing.GroupLayout(pnlCamuflado);
+        pnlCamuflado.setLayout(pnlCamufladoLayout);
+        pnlCamufladoLayout.setHorizontalGroup(
+            pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
-        pnlCamuflado1Layout.setVerticalGroup(
-            pnlCamuflado1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnlCamufladoLayout.setVerticalGroup(
+            pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        pnlMenulargo1.add(pnlCamuflado1);
-        pnlCamuflado1.setBounds(0, 170, 90, 90);
+        pnlMenulargo.add(pnlCamuflado);
+        pnlCamuflado.setBounds(0, 170, 90, 90);
 
-        pnlPrincipal.add(pnlMenulargo1);
-        pnlMenulargo1.setBounds(0, 100, 90, 600);
+        pnlPrincipal.add(pnlMenulargo);
+        pnlMenulargo.setBounds(0, 100, 90, 600);
 
         pnlHead.setBackground(new java.awt.Color(82, 109, 130));
 
@@ -446,42 +446,42 @@ public class ActualizarMateria extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreMousePressed
-        if (txtNombre.getText().equals("Ingrese el nombre de la materia")) {
-            txtNombre.setText("");
-            txtNombre.setForeground(Color.white);
+    private void txtNombreMateriaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreMateriaMousePressed
+        if (txtNombreMateria.getText().equals("Ingrese el nombre de la materia")) {
+            txtNombreMateria.setText("");
+            txtNombreMateria.setForeground(Color.white);
         }
 
-        if (txtDocente1.getText().isEmpty()) {
-            txtDocente1.setText("Ingrese el nombre del docente a cargo");
+        if (txtDocente.getText().isEmpty()) {
+            txtDocente.setText("Ingrese el nombre del docente a cargo");
         }
 
-    }//GEN-LAST:event_txtNombreMousePressed
+    }//GEN-LAST:event_txtNombreMateriaMousePressed
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+    private void txtNombreMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreMateriaActionPerformed
 
-    }//GEN-LAST:event_txtNombreActionPerformed
+    }//GEN-LAST:event_txtNombreMateriaActionPerformed
 
-    private void txtDocente1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDocente1MousePressed
-        if (txtDocente1.getText().equals("Ingrese el nombre del docente a cargo")) {
-            txtDocente1.setText("");
-            txtDocente1.setForeground(Color.white);
+    private void txtDocenteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDocenteMousePressed
+        if (txtDocente.getText().equals("Ingrese el nombre del docente a cargo")) {
+            txtDocente.setText("");
+            txtDocente.setForeground(Color.white);
         }
 
-        if (txtNombre.getText().isEmpty()) {
-            txtNombre.setText("Ingrese el nombre de la materia");
+        if (txtNombreMateria.getText().isEmpty()) {
+            txtNombreMateria.setText("Ingrese el nombre de la materia");
 
         }
 
-    }//GEN-LAST:event_txtDocente1MousePressed
+    }//GEN-LAST:event_txtDocenteMousePressed
 
-    private void txtDocente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDocente1ActionPerformed
+    private void txtDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDocenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDocente1ActionPerformed
+    }//GEN-LAST:event_txtDocenteActionPerformed
  // ActualizarMateria.java
 public void ActualizarMateria() {
-    String nuevoNombre = txtNombre.getText().trim();
-    String nuevoDocente = txtDocente1.getText().trim();
+    String nuevoNombre = txtNombreMateria.getText().trim();
+    String nuevoDocente = txtDocente.getText().trim();
     String nuevaImportancia = (String) cmbPrioridad.getSelectedItem();
 
     // Validación de campos vacíos o incorrectos
@@ -555,14 +555,14 @@ public void ActualizarMateria() {
         this.dispose();
     }//GEN-LAST:event_btnCronometroActionPerformed
 
-    private void btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesActionPerformed
+    private void btnActividades1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesActionPerformed
         Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnActividadesActionPerformed
 
-    private void btnHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioActionPerformed
+    private void btnHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorarioActionPerformed
         Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
@@ -591,7 +591,7 @@ public void ActualizarMateria() {
         this.dispose();
     }//GEN-LAST:event_btnCronometroLActionPerformed
 
-    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+    private void btnMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
         Actividad2 actividad2 = new Actividad2(estudiante);
         actividad2.setVisible(true);
         actividad2.setLocationRelativeTo(null);
@@ -614,21 +614,21 @@ public void ActualizarMateria() {
         this.dispose();
     }//GEN-LAST:event_btnConfiguracion1ActionPerformed
 
-    private void btnHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorario1ActionPerformed
+    private void btnHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorario1ActionPerformed
         Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnHorario1ActionPerformed
 
-    private void btnMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu1ActionPerformed
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu1ActionPerformed
         Actividad2 actividad2 = new Actividad2(estudiante);
         actividad2.setVisible(true);
         actividad2.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnMenu1ActionPerformed
 
-    private void btnActividades1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividades1ActionPerformed
+    private void btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividades1ActionPerformed
         Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
@@ -643,28 +643,28 @@ public void ActualizarMateria() {
     private javax.swing.JButton btnHorario1;
     private javax.swing.JButton btnMenu1;
     private javax.swing.JComboBox<String> cmbPrioridad;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel lblDocente;
     private javax.swing.JLabel lblGuardar;
     private javax.swing.JLabel lblIconoUsuario;
     private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblLogotipo;
-    private javax.swing.JLabel lblNombreAsignatura;
-    private javax.swing.JPanel lblNombreDeAsignatura;
+    private javax.swing.JLabel lblNombreMateria;
+    private javax.swing.JLabel lblPrioridad;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JPanel pnlBoton;
-    private javax.swing.JPanel pnlCamuflado1;
+    private javax.swing.JPanel pnlCamuflado;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlDocente;
     private javax.swing.JPanel pnlHead;
-    private javax.swing.JPanel pnlMenulargo1;
+    private javax.swing.JPanel pnlMenulargo;
+    private javax.swing.JPanel pnlNuevoNombre;
     private javax.swing.JPanel pnlPrincipal;
     private javax.swing.JPanel pnlPrioridad;
-    private javax.swing.JTextField txtDocente1;
-    private javax.swing.JTextField txtNombre;
+    private javax.swing.JSeparator sepDocente;
+    private javax.swing.JSeparator sepNombreMateria;
+    private javax.swing.JTextField txtDocente;
+    private javax.swing.JTextField txtNombreMateria;
     // End of variables declaration//GEN-END:variables
 
 }

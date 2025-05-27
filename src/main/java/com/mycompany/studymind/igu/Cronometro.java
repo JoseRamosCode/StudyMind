@@ -61,7 +61,7 @@ private Materia materia;
         btnPausar = new javax.swing.JButton();
         btnReiniciar = new javax.swing.JButton();
         lblMateria = new javax.swing.JLabel();
-        pnlMenulargo1 = new javax.swing.JPanel();
+        pnlMenulargo = new javax.swing.JPanel();
         btnEstadisticas1 = new javax.swing.JButton();
         btnConfiguracion1 = new javax.swing.JButton();
         btnHorario1 = new javax.swing.JButton();
@@ -178,8 +178,8 @@ private Materia materia;
         pnlPrincipal.add(pnlCentral);
         pnlCentral.setBounds(370, 180, 700, 460);
 
-        pnlMenulargo1.setBackground(new java.awt.Color(157, 178, 191));
-        pnlMenulargo1.setLayout(null);
+        pnlMenulargo.setBackground(new java.awt.Color(157, 178, 191));
+        pnlMenulargo.setLayout(null);
 
         btnEstadisticas1.setBackground(new java.awt.Color(157, 178, 191));
         btnEstadisticas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/estadistico.png"))); // NOI18N
@@ -191,7 +191,7 @@ private Materia materia;
                 btnEstadisticas1ActionPerformed(evt);
             }
         });
-        pnlMenulargo1.add(btnEstadisticas1);
+        pnlMenulargo.add(btnEstadisticas1);
         btnEstadisticas1.setBounds(20, 400, 52, 49);
 
         btnConfiguracion1.setBackground(new java.awt.Color(157, 178, 191));
@@ -204,7 +204,7 @@ private Materia materia;
                 btnConfiguracion1ActionPerformed(evt);
             }
         });
-        pnlMenulargo1.add(btnConfiguracion1);
+        pnlMenulargo.add(btnConfiguracion1);
         btnConfiguracion1.setBounds(20, 500, 52, 49);
 
         btnHorario1.setBackground(new java.awt.Color(157, 178, 191));
@@ -217,7 +217,7 @@ private Materia materia;
                 btnHorario1ActionPerformed(evt);
             }
         });
-        pnlMenulargo1.add(btnHorario1);
+        pnlMenulargo.add(btnHorario1);
         btnHorario1.setBounds(20, 190, 52, 49);
 
         btnMenu1.setBackground(new java.awt.Color(157, 178, 191));
@@ -229,7 +229,7 @@ private Materia materia;
                 btnMenu1ActionPerformed(evt);
             }
         });
-        pnlMenulargo1.add(btnMenu1);
+        pnlMenulargo.add(btnMenu1);
         btnMenu1.setBounds(20, 10, 45, 45);
 
         btnActividades1.setBackground(new java.awt.Color(157, 178, 191));
@@ -242,7 +242,7 @@ private Materia materia;
                 btnActividades1ActionPerformed(evt);
             }
         });
-        pnlMenulargo1.add(btnActividades1);
+        pnlMenulargo.add(btnActividades1);
         btnActividades1.setBounds(20, 300, 52, 60);
 
         pnlCamuflado1.setBackground(new java.awt.Color(157, 178, 191));
@@ -258,11 +258,11 @@ private Materia materia;
             .addGap(0, 90, Short.MAX_VALUE)
         );
 
-        pnlMenulargo1.add(pnlCamuflado1);
+        pnlMenulargo.add(pnlCamuflado1);
         pnlCamuflado1.setBounds(0, 280, 90, 90);
 
-        pnlPrincipal.add(pnlMenulargo1);
-        pnlMenulargo1.setBounds(0, 100, 90, 600);
+        pnlPrincipal.add(pnlMenulargo);
+        pnlMenulargo.setBounds(0, 100, 90, 600);
 
         pnlHead.setBackground(new java.awt.Color(82, 109, 130));
 
@@ -466,7 +466,7 @@ private Materia materia;
     private javax.swing.JPanel pnlCamuflado1;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlHead;
-    private javax.swing.JPanel pnlMenulargo1;
+    private javax.swing.JPanel pnlMenulargo;
     private javax.swing.JPanel pnlPrincipal;
     private javax.swing.JLabel pnlmagen;
     // End of variables declaration//GEN-END:variables

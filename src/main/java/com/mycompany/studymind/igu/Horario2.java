@@ -108,17 +108,17 @@ public class Horario2 extends javax.swing.JFrame {
         scrollMaterias = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         btnEstudiar = new javax.swing.JButton();
-        pnlMenulargo3 = new javax.swing.JPanel();
-        btnEstadisticas3 = new javax.swing.JButton();
-        btnConfiguracion3 = new javax.swing.JButton();
-        btnEstadisticasL3 = new javax.swing.JButton();
-        btnConfiguracionL3 = new javax.swing.JButton();
-        btnMenu3 = new javax.swing.JButton();
-        btnActividades3 = new javax.swing.JButton();
-        pnlCamuflado3 = new javax.swing.JPanel();
-        btnCronometroL3 = new javax.swing.JButton();
-        btnHorario3 = new javax.swing.JButton();
-        btnActividadesL3 = new javax.swing.JButton();
+        pnlMenulargo = new javax.swing.JPanel();
+        btnEstadisticas = new javax.swing.JButton();
+        btnConfiguracion = new javax.swing.JButton();
+        btnEstadisticasL = new javax.swing.JButton();
+        btnConfiguracionL = new javax.swing.JButton();
+        btnMenu = new javax.swing.JButton();
+        btnActividades = new javax.swing.JButton();
+        pnlCamuflado = new javax.swing.JPanel();
+        btnCronometroL = new javax.swing.JButton();
+        btnHorario = new javax.swing.JButton();
+        btnActividadesL = new javax.swing.JButton();
         pnlHead = new javax.swing.JPanel();
         lblUsuario = new javax.swing.JLabel();
         lblLogotipo = new javax.swing.JLabel();
@@ -236,156 +236,156 @@ public class Horario2 extends javax.swing.JFrame {
         pnlPrincipal.add(pnlCentral);
         pnlCentral.setBounds(370, 180, 700, 470);
 
-        pnlMenulargo3.setBackground(new java.awt.Color(157, 178, 191));
-        pnlMenulargo3.setLayout(null);
+        pnlMenulargo.setBackground(new java.awt.Color(157, 178, 191));
+        pnlMenulargo.setLayout(null);
 
-        btnEstadisticas3.setBackground(new java.awt.Color(157, 178, 191));
-        btnEstadisticas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/estadistico.png"))); // NOI18N
-        btnEstadisticas3.setBorder(null);
-        btnEstadisticas3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEstadisticas3.setFocusPainted(false);
-        btnEstadisticas3.addActionListener(new java.awt.event.ActionListener() {
+        btnEstadisticas.setBackground(new java.awt.Color(157, 178, 191));
+        btnEstadisticas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/estadistico.png"))); // NOI18N
+        btnEstadisticas.setBorder(null);
+        btnEstadisticas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEstadisticas.setFocusPainted(false);
+        btnEstadisticas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEstadisticas3btnEstadisticasActionPerformed(evt);
+                btnEstadisticasbtnEstadisticasActionPerformed(evt);
             }
         });
-        pnlMenulargo3.add(btnEstadisticas3);
-        btnEstadisticas3.setBounds(20, 400, 52, 49);
+        pnlMenulargo.add(btnEstadisticas);
+        btnEstadisticas.setBounds(20, 400, 52, 49);
 
-        btnConfiguracion3.setBackground(new java.awt.Color(157, 178, 191));
-        btnConfiguracion3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/conf45.png"))); // NOI18N
-        btnConfiguracion3.setBorder(null);
-        btnConfiguracion3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnConfiguracion3.setFocusPainted(false);
-        btnConfiguracion3.addActionListener(new java.awt.event.ActionListener() {
+        btnConfiguracion.setBackground(new java.awt.Color(157, 178, 191));
+        btnConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/conf45.png"))); // NOI18N
+        btnConfiguracion.setBorder(null);
+        btnConfiguracion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConfiguracion.setFocusPainted(false);
+        btnConfiguracion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfiguracion3btnConfiguracionActionPerformed(evt);
+                btnConfiguracionbtnConfiguracionActionPerformed(evt);
             }
         });
-        pnlMenulargo3.add(btnConfiguracion3);
-        btnConfiguracion3.setBounds(20, 500, 52, 49);
+        pnlMenulargo.add(btnConfiguracion);
+        btnConfiguracion.setBounds(20, 500, 52, 49);
 
-        btnEstadisticasL3.setBackground(new java.awt.Color(157, 178, 191));
-        btnEstadisticasL3.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
-        btnEstadisticasL3.setForeground(new java.awt.Color(255, 255, 255));
-        btnEstadisticasL3.setText("Estadisticas");
-        btnEstadisticasL3.setBorder(null);
-        btnEstadisticasL3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEstadisticasL3.addActionListener(new java.awt.event.ActionListener() {
+        btnEstadisticasL.setBackground(new java.awt.Color(157, 178, 191));
+        btnEstadisticasL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
+        btnEstadisticasL.setForeground(new java.awt.Color(255, 255, 255));
+        btnEstadisticasL.setText("Estadisticas");
+        btnEstadisticasL.setBorder(null);
+        btnEstadisticasL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEstadisticasL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEstadisticasL3btnEstadisticasLActionPerformed(evt);
+                btnEstadisticasLbtnEstadisticasLActionPerformed(evt);
             }
         });
-        pnlMenulargo3.add(btnEstadisticasL3);
-        btnEstadisticasL3.setBounds(100, 410, 120, 24);
+        pnlMenulargo.add(btnEstadisticasL);
+        btnEstadisticasL.setBounds(100, 410, 120, 24);
 
-        btnConfiguracionL3.setBackground(new java.awt.Color(157, 178, 191));
-        btnConfiguracionL3.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
-        btnConfiguracionL3.setForeground(new java.awt.Color(255, 255, 255));
-        btnConfiguracionL3.setText("Ajustes");
-        btnConfiguracionL3.setBorder(null);
-        btnConfiguracionL3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnConfiguracionL3.addActionListener(new java.awt.event.ActionListener() {
+        btnConfiguracionL.setBackground(new java.awt.Color(157, 178, 191));
+        btnConfiguracionL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
+        btnConfiguracionL.setForeground(new java.awt.Color(255, 255, 255));
+        btnConfiguracionL.setText("Ajustes");
+        btnConfiguracionL.setBorder(null);
+        btnConfiguracionL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnConfiguracionL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfiguracionL3btnConfiguracionLActionPerformed(evt);
+                btnConfiguracionLbtnConfiguracionLActionPerformed(evt);
             }
         });
-        pnlMenulargo3.add(btnConfiguracionL3);
-        btnConfiguracionL3.setBounds(90, 520, 130, 24);
+        pnlMenulargo.add(btnConfiguracionL);
+        btnConfiguracionL.setBounds(90, 520, 130, 24);
 
-        btnMenu3.setBackground(new java.awt.Color(157, 178, 191));
-        btnMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu45.png"))); // NOI18N
-        btnMenu3.setBorder(null);
-        btnMenu3.setFocusPainted(false);
-        btnMenu3.addActionListener(new java.awt.event.ActionListener() {
+        btnMenu.setBackground(new java.awt.Color(157, 178, 191));
+        btnMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/menu45.png"))); // NOI18N
+        btnMenu.setBorder(null);
+        btnMenu.setFocusPainted(false);
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenu3btnMenuActionPerformed(evt);
+                btnMenubtnMenuActionPerformed(evt);
             }
         });
-        pnlMenulargo3.add(btnMenu3);
-        btnMenu3.setBounds(20, 10, 45, 45);
+        pnlMenulargo.add(btnMenu);
+        btnMenu.setBounds(20, 10, 45, 45);
 
-        btnActividades3.setBackground(new java.awt.Color(157, 178, 191));
-        btnActividades3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/actividad.png"))); // NOI18N
-        btnActividades3.setBorder(null);
-        btnActividades3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnActividades3.setFocusPainted(false);
-        btnActividades3.addActionListener(new java.awt.event.ActionListener() {
+        btnActividades.setBackground(new java.awt.Color(157, 178, 191));
+        btnActividades.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/actividad.png"))); // NOI18N
+        btnActividades.setBorder(null);
+        btnActividades.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActividades.setFocusPainted(false);
+        btnActividades.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActividades3btnActividadesActionPerformed(evt);
+                btnActividadesbtnActividadesActionPerformed(evt);
             }
         });
-        pnlMenulargo3.add(btnActividades3);
-        btnActividades3.setBounds(20, 290, 52, 60);
+        pnlMenulargo.add(btnActividades);
+        btnActividades.setBounds(20, 290, 52, 60);
 
-        pnlCamuflado3.setBackground(new java.awt.Color(221, 230, 237));
+        pnlCamuflado.setBackground(new java.awt.Color(221, 230, 237));
 
-        btnCronometroL3.setBackground(new java.awt.Color(221, 230, 237));
-        btnCronometroL3.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
-        btnCronometroL3.setForeground(new java.awt.Color(255, 255, 255));
-        btnCronometroL3.setText("Horario");
-        btnCronometroL3.setBorder(null);
-        btnCronometroL3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCronometroL3.addActionListener(new java.awt.event.ActionListener() {
+        btnCronometroL.setBackground(new java.awt.Color(221, 230, 237));
+        btnCronometroL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
+        btnCronometroL.setForeground(new java.awt.Color(255, 255, 255));
+        btnCronometroL.setText("Horario");
+        btnCronometroL.setBorder(null);
+        btnCronometroL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCronometroL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCronometroL3btnCronometroLActionPerformed(evt);
-            }
-        });
-
-        btnHorario3.setBackground(new java.awt.Color(221, 230, 237));
-        btnHorario3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/horario.png"))); // NOI18N
-        btnHorario3.setBorder(null);
-        btnHorario3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnHorario3.setFocusPainted(false);
-        btnHorario3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHorario3btnHorarioActionPerformed(evt);
+                btnCronometroLbtnCronometroLActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout pnlCamuflado3Layout = new javax.swing.GroupLayout(pnlCamuflado3);
-        pnlCamuflado3.setLayout(pnlCamuflado3Layout);
-        pnlCamuflado3Layout.setHorizontalGroup(
-            pnlCamuflado3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCamuflado3Layout.createSequentialGroup()
+        btnHorario.setBackground(new java.awt.Color(221, 230, 237));
+        btnHorario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/horario.png"))); // NOI18N
+        btnHorario.setBorder(null);
+        btnHorario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnHorario.setFocusPainted(false);
+        btnHorario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHorariobtnHorarioActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlCamufladoLayout = new javax.swing.GroupLayout(pnlCamuflado);
+        pnlCamuflado.setLayout(pnlCamufladoLayout);
+        pnlCamufladoLayout.setHorizontalGroup(
+            pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCamufladoLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(btnHorario3, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(btnCronometroL3)
+                .addComponent(btnCronometroL)
                 .addGap(56, 56, 56))
         );
-        pnlCamuflado3Layout.setVerticalGroup(
-            pnlCamuflado3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlCamuflado3Layout.createSequentialGroup()
-                .addGroup(pnlCamuflado3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlCamuflado3Layout.createSequentialGroup()
+        pnlCamufladoLayout.setVerticalGroup(
+            pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCamufladoLayout.createSequentialGroup()
+                .addGroup(pnlCamufladoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlCamufladoLayout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(btnCronometroL3))
-                    .addGroup(pnlCamuflado3Layout.createSequentialGroup()
+                        .addComponent(btnCronometroL))
+                    .addGroup(pnlCamufladoLayout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addComponent(btnHorario3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        pnlMenulargo3.add(pnlCamuflado3);
-        pnlCamuflado3.setBounds(0, 180, 240, 90);
+        pnlMenulargo.add(pnlCamuflado);
+        pnlCamuflado.setBounds(0, 180, 240, 90);
 
-        btnActividadesL3.setBackground(new java.awt.Color(157, 178, 191));
-        btnActividadesL3.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
-        btnActividadesL3.setForeground(new java.awt.Color(255, 255, 255));
-        btnActividadesL3.setText("Actividades");
-        btnActividadesL3.setBorder(null);
-        btnActividadesL3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnActividadesL3.addActionListener(new java.awt.event.ActionListener() {
+        btnActividadesL.setBackground(new java.awt.Color(157, 178, 191));
+        btnActividadesL.setFont(new java.awt.Font("Roboto Medium", 2, 20)); // NOI18N
+        btnActividadesL.setForeground(new java.awt.Color(255, 255, 255));
+        btnActividadesL.setText("Actividades");
+        btnActividadesL.setBorder(null);
+        btnActividadesL.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActividadesL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActividadesL3btnActividadesLActionPerformed(evt);
+                btnActividadesLbtnActividadesLActionPerformed(evt);
             }
         });
-        pnlMenulargo3.add(btnActividadesL3);
-        btnActividadesL3.setBounds(110, 310, 101, 24);
+        pnlMenulargo.add(btnActividadesL);
+        btnActividadesL.setBounds(110, 310, 101, 24);
 
-        pnlPrincipal.add(pnlMenulargo3);
-        pnlMenulargo3.setBounds(0, 100, 240, 600);
+        pnlPrincipal.add(pnlMenulargo);
+        pnlMenulargo.setBounds(0, 100, 240, 600);
 
         pnlHead.setBackground(new java.awt.Color(82, 109, 130));
 
@@ -534,70 +534,70 @@ public class Horario2 extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnEstudiarActionPerformed
 
-    private void btnEstadisticas3btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticas3btnEstadisticasActionPerformed
+    private void btnEstadisticasbtnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasbtnEstadisticasActionPerformed
         Estadistico estadistico = new Estadistico(estudiante);
         estadistico.setVisible(true);
         estadistico.pack();
         estadistico.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnEstadisticas3btnEstadisticasActionPerformed
+    }//GEN-LAST:event_btnEstadisticasbtnEstadisticasActionPerformed
 
-    private void btnConfiguracion3btnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracion3btnConfiguracionActionPerformed
+    private void btnConfiguracionbtnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionbtnConfiguracionActionPerformed
         Configuracion configuracion = new Configuracion(estudiante);
         configuracion.setVisible(true);
         configuracion.pack();
         configuracion.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnConfiguracion3btnConfiguracionActionPerformed
+    }//GEN-LAST:event_btnConfiguracionbtnConfiguracionActionPerformed
 
-    private void btnHorario3btnHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorario3btnHorarioActionPerformed
+    private void btnHorariobtnHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHorariobtnHorarioActionPerformed
         Horario Horario = new Horario(estudiante);
         Horario.setVisible(true);
         Horario.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnHorario3btnHorarioActionPerformed
+    }//GEN-LAST:event_btnHorariobtnHorarioActionPerformed
 
-    private void btnEstadisticasL3btnEstadisticasLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasL3btnEstadisticasLActionPerformed
+    private void btnEstadisticasLbtnEstadisticasLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasLbtnEstadisticasLActionPerformed
         Estadistico estadistico = new Estadistico(estudiante);
         estadistico.setVisible(true);
         estadistico.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnEstadisticasL3btnEstadisticasLActionPerformed
+    }//GEN-LAST:event_btnEstadisticasLbtnEstadisticasLActionPerformed
 
-    private void btnConfiguracionL3btnConfiguracionLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionL3btnConfiguracionLActionPerformed
+    private void btnConfiguracionLbtnConfiguracionLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfiguracionLbtnConfiguracionLActionPerformed
         Configuracion configuracion = new Configuracion(estudiante);
         configuracion.setVisible(true);
         configuracion.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnConfiguracionL3btnConfiguracionLActionPerformed
+    }//GEN-LAST:event_btnConfiguracionLbtnConfiguracionLActionPerformed
 
-    private void btnCronometroL3btnCronometroLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroL3btnCronometroLActionPerformed
+    private void btnCronometroLbtnCronometroLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCronometroLbtnCronometroLActionPerformed
         Horario horario = new Horario(estudiante);
         horario.setVisible(true);
         horario.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnCronometroL3btnCronometroLActionPerformed
+    }//GEN-LAST:event_btnCronometroLbtnCronometroLActionPerformed
 
-    private void btnMenu3btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenu3btnMenuActionPerformed
+    private void btnMenubtnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenubtnMenuActionPerformed
         Horario horario = new Horario(estudiante);
         horario.setVisible(true);
         horario.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnMenu3btnMenuActionPerformed
+    }//GEN-LAST:event_btnMenubtnMenuActionPerformed
 
-    private void btnActividades3btnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividades3btnActividadesActionPerformed
+    private void btnActividadesbtnActividadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesbtnActividadesActionPerformed
         Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnActividades3btnActividadesActionPerformed
+    }//GEN-LAST:event_btnActividadesbtnActividadesActionPerformed
 
-    private void btnActividadesL3btnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesL3btnActividadesLActionPerformed
+    private void btnActividadesLbtnActividadesLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActividadesLbtnActividadesLActionPerformed
         Actividad actividad = new Actividad(estudiante);
         actividad.setVisible(true);
         actividad.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_btnActividadesL3btnActividadesLActionPerformed
+    }//GEN-LAST:event_btnActividadesLbtnActividadesLActionPerformed
     public void actualizarFilaEnTabla(Materia materiaActualizada) {
 
         for (int i = 0; i < jTable1.getRowCount(); i++) {
@@ -614,28 +614,28 @@ public class Horario2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnActividades3;
-    private javax.swing.JButton btnActividadesL3;
-    private javax.swing.JButton btnConfiguracion3;
-    private javax.swing.JButton btnConfiguracionL3;
-    private javax.swing.JButton btnCronometroL3;
-    private javax.swing.JButton btnEstadisticas3;
-    private javax.swing.JButton btnEstadisticasL3;
+    private javax.swing.JButton btnActividades;
+    private javax.swing.JButton btnActividadesL;
+    private javax.swing.JButton btnConfiguracion;
+    private javax.swing.JButton btnConfiguracionL;
+    private javax.swing.JButton btnCronometroL;
+    private javax.swing.JButton btnEstadisticas;
+    private javax.swing.JButton btnEstadisticasL;
     private javax.swing.JButton btnEstudiar;
     private javax.swing.JButton btnGuardar;
-    private javax.swing.JButton btnHorario3;
+    private javax.swing.JButton btnHorario;
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnLimpiar1;
-    private javax.swing.JButton btnMenu3;
+    private javax.swing.JButton btnMenu;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblIconoUsuario;
     private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblLogotipo;
     private javax.swing.JLabel lblUsuario;
-    private javax.swing.JPanel pnlCamuflado3;
+    private javax.swing.JPanel pnlCamuflado;
     private javax.swing.JPanel pnlCentral;
     private javax.swing.JPanel pnlHead;
-    private javax.swing.JPanel pnlMenulargo3;
+    private javax.swing.JPanel pnlMenulargo;
     private javax.swing.JPanel pnlPrincipal;
     private javax.swing.JScrollPane scrollMaterias;
     // End of variables declaration//GEN-END:variables
