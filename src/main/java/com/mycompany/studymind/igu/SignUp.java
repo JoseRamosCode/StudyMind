@@ -1,20 +1,19 @@
 package com.mycompany.studymind.igu;
 
- 
-
 import com.mycompany.studymind.logica.Controladora;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
- 
+
 public class SignUp extends javax.swing.JFrame {
 
-   Controladora control = new Controladora();
-    
+    Controladora control = new Controladora();
+
     public SignUp() {
         initComponents();
     }
 
-     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -35,15 +34,18 @@ public class SignUp extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
+        JButton = new javax.swing.JButton();
         Right = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        btnLogin1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sign Up");
+        setResizable(false);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
         jPanel1.setLayout(null);
@@ -88,9 +90,10 @@ public class SignUp extends javax.swing.JFrame {
         });
 
         btnSignUp.setBackground(new java.awt.Color(82, 109, 130));
-        btnSignUp.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnSignUp.setFont(new java.awt.Font("Roboto Condensed", 0, 14)); // NOI18N
         btnSignUp.setForeground(new java.awt.Color(255, 255, 255));
         btnSignUp.setText("Registrarse");
+        btnSignUp.setFocusPainted(false);
         btnSignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSignUpActionPerformed(evt);
@@ -103,9 +106,10 @@ public class SignUp extends javax.swing.JFrame {
         jLabel4.setText("¿Ya tengo una cuenta?");
 
         btnLogin.setBackground(new java.awt.Color(82, 109, 130));
-        btnLogin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnLogin.setFont(new java.awt.Font("Roboto Condensed", 0, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Ingresar");
+        btnLogin.setFocusPainted(false);
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
@@ -132,39 +136,55 @@ public class SignUp extends javax.swing.JFrame {
 
         jSeparator3.setForeground(new java.awt.Color(82, 109, 130));
 
+        JButton.setBackground(new java.awt.Color(157, 178, 191));
+        JButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/ojoContraseña.png"))); // NOI18N
+        JButton.setBorder(null);
+        JButton.setBorderPainted(false);
+        JButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        JButton.setFocusPainted(false);
+        JButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout LeftLayout = new javax.swing.GroupLayout(Left);
         Left.setLayout(LeftLayout);
         LeftLayout.setHorizontalGroup(
             LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(158, 158, 158))
             .addGroup(LeftLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSeparator1)
-                    .addComponent(jLabel9)
+                .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(LeftLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtContraseña)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
-                    .addComponent(txtCorreo)
-                    .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                    .addComponent(jSeparator2)
-                    .addComponent(jSeparator3))
-                .addContainerGap(27, Short.MAX_VALUE))
+                        .addGap(41, 41, 41)
+                        .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jSeparator1)
+                            .addComponent(txtCorreo, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
+                            .addComponent(txtNombre)
+                            .addComponent(jSeparator2)
+                            .addComponent(jSeparator3)
+                            .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addGroup(LeftLayout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(LeftLayout.createSequentialGroup()
+                                .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(LeftLayout.createSequentialGroup()
+                        .addGap(166, 166, 166)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         LeftLayout.setVerticalGroup(
             LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LeftLayout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel1)
-                .addGap(15, 15, 15)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -179,12 +199,14 @@ public class SignUp extends javax.swing.JFrame {
                 .addGap(7, 7, 7)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(btnSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addGap(8, 8, 8)
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
@@ -229,6 +251,18 @@ public class SignUp extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/logotipoInicio.png"))); // NOI18N
 
+        btnLogin1.setBackground(new java.awt.Color(157, 178, 191));
+        btnLogin1.setFont(new java.awt.Font("Roboto Condensed", 0, 14)); // NOI18N
+        btnLogin1.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin1.setText("Cronometro");
+        btnLogin1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLogin1.setFocusPainted(false);
+        btnLogin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogin1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout RightLayout = new javax.swing.GroupLayout(Right);
         Right.setLayout(RightLayout);
         RightLayout.setHorizontalGroup(
@@ -247,7 +281,9 @@ public class SignUp extends javax.swing.JFrame {
                             .addComponent(jLabel7)))
                     .addGroup(RightLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(RightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
         RightLayout.setVerticalGroup(
@@ -259,7 +295,9 @@ public class SignUp extends javax.swing.JFrame {
                     .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
+                .addComponent(btnLogin1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7)
@@ -294,47 +332,104 @@ public class SignUp extends javax.swing.JFrame {
     private void txtContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseñaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtContraseñaActionPerformed
-
-    private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
-            String nombre = txtNombre.getText();
-String correo = txtCorreo.getText();
-char[] contraseniaChars = txtContraseña.getPassword();
-String contrasenia = new String(contraseniaChars);
-
-if (nombre.isEmpty() || correo.isEmpty() || contrasenia.isEmpty()) {
-    mostrarMensaje("Debe completar todos los campos", "Error", "Campos incompletos");
-} else if (!correo.contains("@")) {
-    mostrarMensaje("El correo debe contener un '@'", "Error", "Correo inválido");
-} else if (contrasenia.length() < 6) {
-    mostrarMensaje("La contraseña debe tener al menos 6 caracteres", "Error", "Contraseña inválida");
-    txtContraseña.setText(""); // Limpia el campo para que el usuario reintente
-} else {
-    control.guardar(nombre, correo, contrasenia);
-
-    mostrarMensaje("Ha realizado su registro de manera correcta", "Info", "Registro exitoso");
-
-    Login login = new Login();
-    login.setVisible(true);
-    login.pack();
-    login.setLocationRelativeTo(null);
-    this.dispose();
+    private String hashPassword(String password) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hashedBytes = md.digest(password.getBytes());
+            StringBuilder sb = new StringBuilder();
+            for (byte b : hashedBytes) {
+                sb.append(String.format("%02x", b));
+            }
+            return sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
-        
-    }//GEN-LAST:event_btnSignUpActionPerformed
+    private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
+        String nombre = txtNombre.getText();
+        String correo = txtCorreo.getText().toLowerCase(); 
+        char[] contraseniaChars = txtContraseña.getPassword();
+        String contrasenia = new String(contraseniaChars);
 
+        if (nombre.isEmpty() || correo.isEmpty() || contrasenia.isEmpty()) {
+            mostrarMensaje("Debe completar todos los campos", "Error", "Campos incompletos");
+        } else if (!validarCorreo(correo)) {
+            mostrarMensaje("El correo ingresado no tiene un formato válido", "Error", "Correo inválido");
+        } else if (contrasenia.length() < 6) {
+            mostrarMensaje("La contraseña debe tener al menos 6 caracteres", "Error", "Contraseña inválida");
+            txtContraseña.setText("");
+        } else if (control.existeEstudiante(nombre, correo)) {
+            mostrarMensaje("El nombre de usuario o correo ya están registrados. Intente con otros.", "Error", "Duplicado");
+        } else {
+            control.guardarEstudiante(nombre, correo, contrasenia);
+            mostrarMensaje("Ha realizado su registro de manera correcta", "Info", "Registro exitoso");
+
+            Login login = new Login();
+            login.setVisible(true);
+            login.pack();
+            login.setLocationRelativeTo(null);
+            this.dispose();
+        }
+
+
+    }//GEN-LAST:event_btnSignUpActionPerformed
+    public class Encriptacion {
+    public static String encriptarContrasenia(String contrasenia) {
+        try {
+            // Crear una instancia de MessageDigest para SHA-256
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+
+            // Obtener el hash de la contraseña como un arreglo de bytes
+            byte[] hash = digest.digest(contrasenia.getBytes());
+
+            // Convertir el arreglo de bytes en un string en formato hexadecimal
+            StringBuilder hexString = new StringBuilder();
+            for (byte b : hash) {
+                hexString.append(Integer.toHexString(0xff & b));
+            }
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("Error al encriptar la contraseña", e);
+        }
+    }
+}
+    
+    private boolean validarCorreo(String correo) {
+        String regex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
+        return correo.matches(regex);
+    }
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         Login login = new Login();
-       login.setVisible(true);
-       login.pack();
-       login.setLocationRelativeTo(null);
-       this.dispose();
+        login.setVisible(true);
+        login.pack();
+        login.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void txtCorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorreoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCorreoActionPerformed
 
-  
+    private void JButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonActionPerformed
+        if (txtContraseña.getEchoChar() == (char) 0) {
+
+            txtContraseña.setEchoChar('*');
+
+        } else {
+
+            txtContraseña.setEchoChar((char) 0);
+
+        }
+    }//GEN-LAST:event_JButtonActionPerformed
+
+    private void btnLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogin1ActionPerformed
+        Inicial inicial = new Inicial();
+        inicial.setVisible(true);
+        inicial.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnLogin1ActionPerformed
+
     public void mostrarMensaje(String mensaje, String tipo, String titulo) {
         JOptionPane optionPane = new JOptionPane(mensaje);
         if (tipo.equals("Info")) {
@@ -348,9 +443,11 @@ if (nombre.isEmpty() || correo.isEmpty() || contrasenia.isEmpty()) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JButton;
     private javax.swing.JPanel Left;
     private javax.swing.JPanel Right;
     private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnLogin1;
     private javax.swing.JButton btnSignUp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -371,6 +468,5 @@ if (nombre.isEmpty() || correo.isEmpty() || contrasenia.isEmpty()) {
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
-
 
 }

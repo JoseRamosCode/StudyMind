@@ -19,8 +19,8 @@ public class SesionEstudio implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_Sesion;
-    private String nombre,descripcion;
-//    private Timer tiempo;
+    private int tiempoEstudio;
+
     
     @ManyToOne
     @JoinColumn(name = "id_Estudiante")
@@ -36,18 +36,14 @@ public class SesionEstudio implements Serializable {
     public SesionEstudio() {
     }
 
-    public SesionEstudio(int id_Sesion, String nombre, String descripcion, Estudiante estudiante, Materia materia, List<Juegos> juegos) {
+    public SesionEstudio(int id_Sesion, int tiempoEstudio, Estudiante estudiante, Materia materia, List<Juegos> juegos) {
         this.id_Sesion = id_Sesion;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
+        this.tiempoEstudio = tiempoEstudio;
         this.estudiante = estudiante;
         this.materia = materia;
         this.juegos = juegos;
     }
 
-  
-
-    
 
     public int getId_Sesion() {
         return id_Sesion;
@@ -55,22 +51,6 @@ public class SesionEstudio implements Serializable {
 
     public void setId_Sesion(int id_Sesion) {
         this.id_Sesion = id_Sesion;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
     }
 
     public Estudiante getEstudiante() {
@@ -95,6 +75,14 @@ public class SesionEstudio implements Serializable {
 
     public void setMateria(Materia materia) {
         this.materia = materia;
+    }
+
+    public int getTiempoEstudio() {
+        return tiempoEstudio;
+    }
+
+    public void setTiempoEstudio(int tiempoEstudio) {
+        this.tiempoEstudio = tiempoEstudio;
     }
 
    

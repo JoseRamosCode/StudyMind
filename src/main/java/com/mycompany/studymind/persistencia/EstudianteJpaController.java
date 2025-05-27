@@ -1,4 +1,4 @@
- 
+
 package com.mycompany.studymind.persistencia;
 
 import com.mycompany.studymind.logica.Estudiante;
@@ -14,18 +14,19 @@ import com.mycompany.studymind.logica.Materia;
 import com.mycompany.studymind.persistencia.exceptions.NonexistentEntityException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 
- 
+
 public class EstudianteJpaController implements Serializable {
 
     public EstudianteJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
+    
      public EstudianteJpaController( ) {
         emf = Persistence.createEntityManagerFactory("StudyMindPU");
     }
-    
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
@@ -147,6 +148,8 @@ public class EstudianteJpaController implements Serializable {
             }
         }
     }
+    
+ 
 
     public void destroy(int id) throws NonexistentEntityException {
         EntityManager em = null;

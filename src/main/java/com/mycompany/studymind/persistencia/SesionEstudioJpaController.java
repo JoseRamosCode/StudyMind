@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 
 
@@ -27,7 +28,6 @@ public class SesionEstudioJpaController implements Serializable {
      public SesionEstudioJpaController( ) {
         emf = Persistence.createEntityManagerFactory("StudyMindPU");
     }
-    
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
@@ -83,7 +83,22 @@ public class SesionEstudioJpaController implements Serializable {
             }
         }
     }
-
+ public SesionEstudio busqueda(Estudiante estudiante, Materia materia) {
+    try {
+        EntityManager em = getEntityManager();
+        return em.createQuery(
+            "SELECT s FROM SesionEstudio s WHERE s.estudiante.id_Estudiante = :idEst AND s.materia.id_Materia = :idMat",
+            SesionEstudio.class)
+            .setParameter("idEst", estudiante.getId_Estudiante())
+            .setParameter("idMat", materia.getId_Materia())
+            .getSingleResult();
+    } catch (NoResultException e) {
+        return null;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return null;
+    }
+}
     public void edit(SesionEstudio sesionEstudio) throws NonexistentEntityException, Exception {
         EntityManager em = null;
         try {

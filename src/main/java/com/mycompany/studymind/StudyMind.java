@@ -1,16 +1,17 @@
 
 package com.mycompany.studymind;
 
-import com.mycompany.studymind.igu.Horario;
-import com.mycompany.studymind.igu.Login;
+
+import com.mycompany.studymind.igu.Inicial;
+
 
  
 public class StudyMind {
 
     public static void main(String[] args) {
-       Login login = new Login();
-       login.setVisible(true);
-       login.pack();
-       login.setLocationRelativeTo(null);
+       Inicial inicial = new Inicial();
+       inicial.setVisible(true);
+       inicial.pack();
+       inicial.setLocationRelativeTo(null);
     }
 }

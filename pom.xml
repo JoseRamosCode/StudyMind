@@ -52,6 +52,11 @@
             <version>2.7.10</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>1.5.3</version>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -59,4 +64,5 @@
         <maven.compiler.target>17</maven.compiler.target>
         <exec.mainClass>com.mycompany.studymind.StudyMind</exec.mainClass>
     </properties>
+    <name>StudyMind</name>
 </project>
